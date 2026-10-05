@@ -1,0 +1,15 @@
+{
+    "phase": "14F2",
+    "aggregation": "FedProx",
+    "mu": 0.01,
+    "best_round": 20,
+    "validation_loss": 0.3227439994291589,
+    "accuracy": 0.93332,
+    "balanced_accuracy": 0.7098585710331338,
+    "macro_precision": 0.9682729654195289,
+    "macro_recall": 0.7098585710331338,
+    "macro_f1": 0.8001579376128828,
+    "weighted_f1": 0.9265024435690968,
+    "extension_seconds": 304.0702736999956,
+    "locked_test_used": false
+}

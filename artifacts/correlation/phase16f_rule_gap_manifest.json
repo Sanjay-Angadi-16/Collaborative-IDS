@@ -1,0 +1,29 @@
+{
+    "phase": "16F",
+    "version": "phase16f_v1",
+    "status": "PASS",
+    "purpose": "Test whether the GNN adds correlation capacity on privacy-safe multi-stage campaigns deliberately outside frozen R1/R2/R3.",
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "gnn_architecture": "Phase16D 2-layer dense GCN with mean/max pooling",
+    "hybrid_policy": {
+        "policy": "FROZEN_RULE_POSITIVE_OR_GNN_RESCUE",
+        "gnn_rescue_threshold": 0.9,
+        "threshold_is_predeclared": true
+    },
+    "important_limitations": [
+        "The benchmark is synthetic.",
+        "The multi-stage campaign grammars are predeclared engineered patterns.",
+        "A positive GNN result demonstrates capacity on this benchmark, not production superiority.",
+        "No locked IDS test data are used.",
+        "Fresh-alert_id semantic replay remains outside this phase."
+    ],
+    "recommended_next_step": "If GNN or hybrid materially improves rule-gap recall without excessive false positives, run repeated-seed Phase16G on this independent benchmark before any final GNN claim.",
+    "locked_test_used": false
+}

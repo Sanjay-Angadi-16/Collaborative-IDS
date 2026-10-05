@@ -1,0 +1,10 @@
+{
+    "mask17_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_selected_mask.npy",
+    "mask17_file_sha256": "6addc3f291c1b95658afee825b8d402d8ea43cfcc97661baec4d763489956f8c",
+    "mask17_normalized_sha256": "8fdd02adbedb86f9d2cf32eece77087660ea21a175c89983a8d2252c390abafd",
+    "mask17_selected_count": 17,
+    "mask37_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase7_hybrid\\hybrid_feature_mask.csv",
+    "mask37_file_sha256": "534b03bdbc80ec0836d55c2ca92bda5f423895b00adb0ad24563cdb8c65f3a1f",
+    "mask37_normalized_sha256": "33efc9d9dbd1ac51bf1b61cb927a671566e074c15186c2bddc685a32247d2dd5",
+    "mask37_selected_count": 37
+}

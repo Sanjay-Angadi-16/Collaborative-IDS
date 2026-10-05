@@ -1,0 +1,81 @@
+{
+    "phase": "14G1",
+    "client_id": 3,
+    "true_class": "PortScan",
+    "validation_sample_index": 5074,
+    "locked_test_used": false,
+    "model_artifacts": {
+        "random_forest": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\detection\\random_forest_client_3.joblib",
+        "personalized_autoencoder": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\detection\\autoencoder_client_3.pt",
+        "fedprox70": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\phase10\\fedprox70\\non_iid\\seed_42\\fedprox70_model.pt",
+        "cnn_bilstm": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\detection\\phase14f2\\cnn_bilstm_fedprox_mu001_best_round_1_to_30.pt"
+    },
+    "autoencoder": {
+        "artifact": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\detection\\autoencoder_client_3.pt",
+        "backend": "torch_state_dict_reconstructed",
+        "architecture_source": "phase14b_train_personalized_autoencoder.py::PersonalizedAutoencoder",
+        "raw_reconstruction_error": 0.03120880387723446,
+        "raw_threshold": 0.4170443117618561,
+        "raw_is_anomaly": false,
+        "normalized_anomaly_score": 0.05238331299082407,
+        "normalization": "clip(0.70 * raw_error / personalized_threshold, 0, 1)",
+        "normalized_score_is_probability": false
+    },
+    "always_run_all": {
+        "rf": {
+            "model": "Random Forest",
+            "predicted_class": "PortScan",
+            "class_id": 5,
+            "confidence": 0.9998209468981613
+        },
+        "fedprox70": {
+            "model": "FedProx70 MLP",
+            "predicted_class": "BENIGN",
+            "class_id": 0,
+            "confidence": 0.9700606465339661
+        },
+        "cnn_bilstm": {
+            "model": "CNN-BiLSTM",
+            "predicted_class": "BENIGN",
+            "class_id": 0,
+            "confidence": 0.9996101260185242
+        },
+        "risk_fusion": {
+            "risk_score": 0.2169399482615826,
+            "severity": "LOW",
+            "final_class": "PortScan",
+            "confidence": 0.9998209468981613,
+            "decision_source": "Random Forest"
+        },
+        "timings_ms": {
+            "random_forest": 30.07670000079088,
+            "autoencoder": 0.9799000108614564,
+            "fedprox70": 1.1344999948050827,
+            "cnn_bilstm": 3.6035999946761876,
+            "risk_fusion": 0.04889999399892986,
+            "all_models_plus_fusion": 35.843599995132536
+        }
+    },
+    "adaptive_alert": {
+        "timestamp_utc": "2026-09-14T07:57:14.832605+00:00",
+        "client_id": 3,
+        "classification": "PortScan",
+        "severity": "CRITICAL",
+        "risk_score": 0.9998209468981613,
+        "confidence": 0.9998209468981613,
+        "decision_source": "Random Forest",
+        "processing_path": "FAST_ATTACK_PATH",
+        "rf": {
+            "model": "Random Forest",
+            "predicted_class": "PortScan",
+            "class_id": 5,
+            "confidence": 0.9998209468981613
+        },
+        "autoencoder": null,
+        "fedprox70": null,
+        "cnn_bilstm": null
+    },
+    "adaptive_pipeline_latency_ms": 30.75240002362989,
+    "scientific_note": "Validation-only real-model wiring. No locked-test evaluation. AE normalized anomaly score is an engineering threshold-relative fusion score, not a calibrated probability.",
+    "scientific_label": "SOURCE-ORDERED CNN-BiLSTM sequences; NOT timestamp-confirmed temporal sequences."
+}

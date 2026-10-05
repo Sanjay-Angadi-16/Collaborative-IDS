@@ -1,0 +1,11 @@
+selected_order,active_feature_position,original_scaler_position,feature_name
+1,7,7,Fwd Packet Length Min
+2,10,10,Bwd Packet Length Max
+3,14,14,Flow Bytes/s
+4,19,19,Flow IAT Min
+5,42,44,SYN Flag Count
+6,48,50,ECE Flag Count
+7,54,62,Subflow Fwd Packets
+8,57,65,Subflow Bwd Bytes
+9,58,66,Init_Win_bytes_forward
+10,66,74,Idle Mean

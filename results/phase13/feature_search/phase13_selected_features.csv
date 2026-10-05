@@ -1,0 +1,18 @@
+selected_order,active_feature_index,feature_name
+1,0,Destination Port
+2,3,Total Backward Packets
+3,8,Fwd Packet Length Mean
+4,13,Bwd Packet Length Std
+5,15,Flow Packets/s
+6,22,Fwd IAT Std
+7,24,Fwd IAT Min
+8,27,Bwd IAT Std
+9,35,Bwd Packets/s
+10,41,FIN Flag Count
+11,42,SYN Flag Count
+12,45,ACK Flag Count
+13,46,URG Flag Count
+14,54,Subflow Fwd Packets
+15,62,Active Mean
+16,68,Idle Max
+17,69,Idle Min

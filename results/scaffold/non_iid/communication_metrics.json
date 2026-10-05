@@ -1,0 +1,12 @@
+{
+    "phase4_parameter_count": 60614,
+    "scaffold_parameter_count": 52166,
+    "parameter_reduction_ratio": 0.1393737420397928,
+    "phase4_model_payload_mib": 0.23122406005859375,
+    "scaffold_model_payload_mib": 0.19899749755859375,
+    "scaffold_control_payload_mib": 0.19899749755859375,
+    "phase4_total_communication_mib": 23.122406005859375,
+    "scaffold_total_communication_mib": 39.79949951171875,
+    "communication_change_ratio_vs_phase4": 0.7212525159204144,
+    "note": "Unlike FedAvg/FedProx/FedNova, SCAFFOLD requires control-variate communication. This estimate includes model and control payloads but excludes protocol overhead."
+}

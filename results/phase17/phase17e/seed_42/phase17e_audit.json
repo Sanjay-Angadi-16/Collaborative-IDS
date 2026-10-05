@@ -1,0 +1,152 @@
+{
+    "phase": "17E",
+    "version": "phase17e_v1",
+    "scenario": "non_iid",
+    "seed": 42,
+    "rounds": 10,
+    "matrix": "full",
+    "experiments_completed": [
+        "E0_CLEAN",
+        "E_SCALE_C1",
+        "E_SCALE_C2",
+        "E_SCALE_C3",
+        "E_SCALE_C4",
+        "E_SCALE_C5",
+        "E_RANDOM_C1",
+        "E_RANDOM_C2",
+        "E_RANDOM_C3",
+        "E_RANDOM_C4",
+        "E_RANDOM_C5",
+        "E_SCALE_C1_C2",
+        "E_RANDOM_C1_C2"
+    ],
+    "prerequisite_audit": {
+        "phase17a_status": "FROZEN",
+        "phase17db_status": "PASS",
+        "source_hashes": {
+            "scripts/phase10_fedprox70.py": {
+                "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+                "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+                "match": true
+            },
+            "scripts/phase9_fedavg70.py": {
+                "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+                "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+                "match": true
+            }
+        }
+    },
+    "attack_audits": {
+        "E0_CLEAN": {
+            "attack_type": "NONE",
+            "malicious_events": 0,
+            "passed": true
+        },
+        "E_SCALE_C1": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 4.466444991635399e-09,
+            "minimum_update_cosine": 0.9999999999999938,
+            "passed": true
+        },
+        "E_SCALE_C2": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 3.8875027641438464e-09,
+            "minimum_update_cosine": 0.9999999999999954,
+            "passed": true
+        },
+        "E_SCALE_C3": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 5.337746245004382e-09,
+            "minimum_update_cosine": 0.9999999999999958,
+            "passed": true
+        },
+        "E_SCALE_C4": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 4.335954706391476e-09,
+            "minimum_update_cosine": 0.9999999999999967,
+            "passed": true
+        },
+        "E_SCALE_C5": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 7.06681024809086e-09,
+            "minimum_update_cosine": 0.999999999999997,
+            "passed": true
+        },
+        "E_RANDOM_C1": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 2.67083155591763e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.002972579258213582,
+            "passed": true
+        },
+        "E_RANDOM_C2": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 2.5604123266020906e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.003964211484266352,
+            "passed": true
+        },
+        "E_RANDOM_C3": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 4.755519533716779e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.0019288337845539017,
+            "passed": true
+        },
+        "E_RANDOM_C4": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 3.3876137450761235e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.0022122566548448703,
+            "passed": true
+        },
+        "E_RANDOM_C5": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 10,
+            "max_norm_ratio_abs_error": 2.8078641634010637e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.0032343197196907656,
+            "passed": true
+        },
+        "E_SCALE_C1_C2": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_events": 20,
+            "max_norm_ratio_abs_error": 7.34107619138058e-09,
+            "minimum_update_cosine": 0.9999999999999976,
+            "passed": true
+        },
+        "E_RANDOM_C1_C2": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_events": 20,
+            "max_norm_ratio_abs_error": 5.219914278598026e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.0037673620072274138,
+            "passed": true
+        }
+    },
+    "robust_defense_used": false,
+    "locked_test_used": false,
+    "all_tests_passed": true,
+    "status_meaning": "PASS means requested experiments completed and attack transformations passed integrity audits. It does not mean the system is robust."
+}

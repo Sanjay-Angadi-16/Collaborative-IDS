@@ -1,0 +1,24 @@
+{
+  "phase_version": "phase16c_v1",
+  "selection_policy": {
+    "material_f1_improvement": 0.01,
+    "material_false_correlation_improvement": 0.01,
+    "minimum_recall": 1.0,
+    "tie_policy": "retain_existing_baseline"
+  },
+  "freeze_policy": {
+    "require_phase16b_all_tests_passed": true,
+    "require_locked_test_unused": true,
+    "require_boundary_audit_pass": true,
+    "require_permutation_invariance": true,
+    "require_delayed_arrival_invariance": true,
+    "require_missing_evidence_boundary": true,
+    "require_exact_duplicate_replay_defense": true
+  },
+  "scientific_policy": {
+    "do_not_switch_to_equal_scoring_configuration_post_hoc": true,
+    "correlation_priority_is_not_probability": true,
+    "phase14_risk_semantics_unchanged": true,
+    "new_id_semantic_replay_is_known_limitation_not_hidden": true
+  }
+}

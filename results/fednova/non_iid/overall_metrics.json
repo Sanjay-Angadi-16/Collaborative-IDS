@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.9051282119579259,
+    "balanced_accuracy": 0.41834499915128265,
+    "macro_precision": 0.5406874125353262,
+    "macro_recall": 0.41834499915128265,
+    "macro_f1": 0.45815682850383466,
+    "weighted_f1": 0.879527300685558,
+    "test_samples": 375433,
+    "training_time_seconds": 285.9477245999733,
+    "inference_time_seconds": 2.9838038999587297,
+    "selected_feature_count": 37,
+    "feature_reduction_ratio": 0.4714285714285714,
+    "fednova_effective_tau_final": 174.90584165214477,
+    "equal_local_step_counts": false
+}

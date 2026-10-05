@@ -1,0 +1,4 @@
+method,features,feature_reduction_ratio,parameter_count,model_size_mib_float32,communication_bytes_raw_estimate,communication_mib_raw_estimate,communication_formula,parameter_reduction_vs_70
+FedProx70,70,0.0,60614,0.23122406005859375,24245600,23.122406005859375,2 * clients * rounds * parameter_count * 4 bytes,0.0
+FedProx37,37,0.4714285714285714,52166,0.19899749755859375,20866400,19.899749755859375,2 * clients * rounds * parameter_count * 4 bytes,0.1393737420397928
+FedProx17,17,0.7571428571428571,47046,0.17946624755859375,18818400,17.946624755859375,2 * clients * rounds * parameter_count * 4 bytes,0.2238426766093642

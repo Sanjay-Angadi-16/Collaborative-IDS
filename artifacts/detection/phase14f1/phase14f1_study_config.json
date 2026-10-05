@@ -1,0 +1,57 @@
+{
+    "phase": "14F1",
+    "study": "cnn_bilstm_fedavg_fedprox_mu_sensitivity",
+    "seed": 42,
+    "device": "cpu",
+    "experiments": [
+        {
+            "experiment_id": "fedavg_mu0",
+            "aggregation": "FedAvg",
+            "mu": 0.0
+        },
+        {
+            "experiment_id": "fedprox_mu0001",
+            "aggregation": "FedProx",
+            "mu": 0.001
+        },
+        {
+            "experiment_id": "fedprox_mu001",
+            "aggregation": "FedProx",
+            "mu": 0.01
+        }
+    ],
+    "clients": 5,
+    "client_sequence_counts": {
+        "1": 50000,
+        "2": 50000,
+        "3": 50000,
+        "4": 50000,
+        "5": 50000
+    },
+    "rounds_per_experiment": 20,
+    "local_epochs": 1,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 5.0,
+    "aggregation_weighting": "client_sequence_count",
+    "same_initial_state": true,
+    "same_client_shuffle_schedule": true,
+    "class_weight_mode": "sqrt_max_over_count",
+    "class_weight_cap": 20.0,
+    "class_weights": [
+        0.22667430341243744,
+        0.5405869483947754,
+        2.009272575378418,
+        0.4051307141780853,
+        2.3222012519836426,
+        0.49613407254219055
+    ],
+    "validation_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\sequences\\validation_sequences.npz",
+    "locked_test_path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\test_locked.csv",
+    "locked_test_used": false,
+    "parameter_count": 126982,
+    "sequence_length": 20,
+    "feature_count": 70,
+    "scientific_label": "SOURCE-ORDERED flow sequences; NOT timestamp-confirmed temporal sequences."
+}

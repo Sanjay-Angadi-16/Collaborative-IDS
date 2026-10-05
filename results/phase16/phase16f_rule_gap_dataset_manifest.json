@@ -1,0 +1,91 @@
+{
+    "phase": "16F",
+    "version": "phase16f_v1",
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "train_graphs": 1600,
+    "validation_graphs": 400,
+    "test_graphs": 500,
+    "train_subtypes": {
+        "RULE_GAP_CHAIN_C": 173,
+        "RULE_GAP_CHAIN_B": 173,
+        "RULE_GAP_CHAIN_A": 174,
+        "RULE_POSITIVE_SHARED_SOURCE": 96,
+        "HARD_NEGATIVE_WRONG_CLIENT_ORDER": 200,
+        "HARD_NEGATIVE_SHUFFLED_A": 200,
+        "RULE_POSITIVE_SHARED_DESTINATION": 90,
+        "HARD_NEGATIVE_TOO_SLOW": 200,
+        "HARD_NEGATIVE_RANDOM_BURST": 200,
+        "RULE_POSITIVE_MIXED_WITH_DECOYS": 94
+    },
+    "validation_subtypes": {
+        "RULE_POSITIVE_SHARED_DESTINATION": 21,
+        "HARD_NEGATIVE_SHUFFLED_A": 50,
+        "RULE_GAP_CHAIN_C": 43,
+        "HARD_NEGATIVE_WRONG_CLIENT_ORDER": 50,
+        "RULE_GAP_CHAIN_B": 43,
+        "RULE_GAP_CHAIN_A": 44,
+        "RULE_POSITIVE_MIXED_WITH_DECOYS": 26,
+        "HARD_NEGATIVE_TOO_SLOW": 50,
+        "RULE_POSITIVE_SHARED_SOURCE": 23,
+        "HARD_NEGATIVE_RANDOM_BURST": 50
+    },
+    "test_subtypes": {
+        "HARD_NEGATIVE_TOO_SLOW": 62,
+        "RULE_GAP_CHAIN_A": 54,
+        "RULE_POSITIVE_MIXED_WITH_DECOYS": 25,
+        "RULE_POSITIVE_SHARED_DESTINATION": 31,
+        "HARD_NEGATIVE_WRONG_CLIENT_ORDER": 63,
+        "RULE_GAP_CHAIN_C": 54,
+        "RULE_GAP_CHAIN_B": 54,
+        "HARD_NEGATIVE_SHUFFLED_A": 63,
+        "HARD_NEGATIVE_RANDOM_BURST": 62,
+        "RULE_POSITIVE_SHARED_SOURCE": 32
+    },
+    "train_rule_gap_audit": {
+        "rule_gap_positive_count": 520,
+        "frozen_rule_silent_on_rule_gap_count": 520,
+        "frozen_rule_silent_on_rule_gap_rate": 1.0,
+        "hard_negative_count": 800,
+        "frozen_rule_silent_on_hard_negative_count": 800,
+        "frozen_rule_silent_on_hard_negative_rate": 1.0,
+        "passed": true
+    },
+    "validation_rule_gap_audit": {
+        "rule_gap_positive_count": 130,
+        "frozen_rule_silent_on_rule_gap_count": 130,
+        "frozen_rule_silent_on_rule_gap_rate": 1.0,
+        "hard_negative_count": 200,
+        "frozen_rule_silent_on_hard_negative_count": 200,
+        "frozen_rule_silent_on_hard_negative_rate": 1.0,
+        "passed": true
+    },
+    "test_rule_gap_audit": {
+        "rule_gap_positive_count": 162,
+        "frozen_rule_silent_on_rule_gap_count": 162,
+        "frozen_rule_silent_on_rule_gap_rate": 1.0,
+        "hard_negative_count": 250,
+        "frozen_rule_silent_on_hard_negative_count": 250,
+        "frozen_rule_silent_on_hard_negative_rate": 1.0,
+        "passed": true
+    },
+    "campaign_grammars": [
+        "CHAIN_A: PortScan -> FTP-Patator -> DoS GoldenEye -> DDoS",
+        "CHAIN_B: PortScan -> DoS GoldenEye -> DoS Hulk",
+        "CHAIN_C: FTP-Patator -> PortScan -> DDoS"
+    ],
+    "hard_negative_controls": [
+        "same timing/client pattern but shuffled attack stages",
+        "same attack stages but wrong client progression",
+        "same stage order but spread over a long time",
+        "random attack burst with similar size/timing"
+    ],
+    "raw_identifiers_used": false,
+    "locked_test_used": false
+}

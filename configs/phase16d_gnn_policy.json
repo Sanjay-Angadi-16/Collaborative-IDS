@@ -1,0 +1,37 @@
+{
+  "phase_version": "phase16d_v1",
+  "dataset": {
+    "train_graphs": 1200,
+    "validation_graphs": 300,
+    "test_graphs": 300,
+    "train_seed": 1601,
+    "validation_seed": 1602,
+    "test_seed": 1603,
+    "positive_fraction": 0.5,
+    "raw_identifiers": false,
+    "locked_test": false
+  },
+  "gnn": {
+    "hidden_dim": 64,
+    "dropout": 0.2,
+    "epochs": 40,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 8,
+    "training_seed": 42
+  },
+  "evaluation": {
+    "primary_metric": "macro_f1",
+    "threshold": 0.5,
+    "compare_against_frozen_phase16c_rules": true,
+    "do_not_claim_superiority_unless_measured": true
+  },
+  "scientific_policy": {
+    "phase16c_rule_baseline_remains_frozen": true,
+    "phase14_risk_semantics_unchanged": true,
+    "synthetic_graphs_are_not_ids_detection_evidence": true,
+    "no_locked_ids_test": true,
+    "gnn_checkpoint_is_baseline_not_final": true
+  }
+}

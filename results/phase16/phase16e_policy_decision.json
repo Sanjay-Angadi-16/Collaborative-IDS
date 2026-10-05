@@ -1,0 +1,42 @@
+{
+    "selected_policy": "RULE_ONLY",
+    "reason": "No alternative met all predeclared replacement criteria; the frozen Phase16C rule correlator remains the operational policy.",
+    "candidates": [
+        {
+            "method": "gnn",
+            "mean_macro_f1": 0.9943992446502582,
+            "mean_precision": 0.9983803278688524,
+            "macro_f1_gain_vs_rule": -0.005600755349741804,
+            "precision_drop_vs_rule": 0.0016196721311475537,
+            "paired_sign_test": {
+                "wins": 0,
+                "losses": 5,
+                "ties": 5,
+                "non_tied_pairs": 5,
+                "two_sided_exact_p": 0.0625
+            },
+            "qualifies": false
+        },
+        {
+            "method": "hybrid",
+            "mean_macro_f1": 1.0,
+            "mean_precision": 1.0,
+            "macro_f1_gain_vs_rule": 0.0,
+            "precision_drop_vs_rule": 0.0,
+            "paired_sign_test": {
+                "wins": 0,
+                "losses": 0,
+                "ties": 10,
+                "non_tied_pairs": 0,
+                "two_sided_exact_p": 1.0
+            },
+            "qualifies": false
+        }
+    ],
+    "selection_criteria": {
+        "minimum_material_macro_f1_gain": 0.005,
+        "significance_alpha": 0.05,
+        "max_precision_drop": 0.005
+    },
+    "scope": "Synthetic Phase16 correlation benchmark only; not a production or real-world superiority claim."
+}

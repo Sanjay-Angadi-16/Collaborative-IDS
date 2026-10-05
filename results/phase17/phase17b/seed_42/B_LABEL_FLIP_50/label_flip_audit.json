@@ -1,0 +1,53 @@
+{
+  "api_version": "phase17b_label_flip_api_v1",
+  "benign_label": "BENIGN",
+  "benign_rows_modified": 0,
+  "class_distribution_after": {
+    "BENIGN": 353783,
+    "DoS Hulk": 60475
+  },
+  "class_distribution_before": {
+    "BENIGN": 293308,
+    "DoS Hulk": 120950
+  },
+  "eligible_attack_rows": 120950,
+  "features_modified": false,
+  "label_column": "Label",
+  "original_file_modified": false,
+  "poison_rate_actual": 0.5,
+  "poison_rate_requested": 0.5,
+  "poisoned_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\poisoning\\phase17b\\seed_42\\B_LABEL_FLIP_50\\poisoned_data\\client_1.csv",
+  "poisoned_rows": 60475,
+  "poisoned_sha256": "41e818dd8a9236aac048e29d06a1db82db403ad4499560b9bd68bbe9704b2940",
+  "seed": 42,
+  "selected_row_indices_preview": [
+    4,
+    11,
+    17,
+    20,
+    22,
+    23,
+    26,
+    34,
+    39,
+    48,
+    52,
+    54,
+    62,
+    65,
+    74,
+    102,
+    110,
+    118,
+    121,
+    123
+  ],
+  "selected_row_indices_sha256": "ea55ef4a72d2170fcb9008aa98742eb44c044c930d1d844408278cf09553f227",
+  "source_attack_labels": [
+    "DoS Hulk"
+  ],
+  "source_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\federated\\non_iid\\client_1.csv",
+  "source_sha256": "3105834720b8178b115e89fdf385e8d7573e9849dfa65601f305a491c10a6ccc",
+  "total_rows": 414258,
+  "unexpected_label_changes": 0
+}

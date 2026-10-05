@@ -1,0 +1,15 @@
+{
+  "aggregator": "fedavg",
+  "aggregator_display": "FedAvg",
+  "attack_type": "NONE",
+  "experiment_id": "E0_CLEAN",
+  "final_state_sha256": "7e08d6d2ce66dd73eff86ee6c8c72f83d818efcafd7ac7ed04f88acd48a07d79",
+  "magnitude": 1.0,
+  "malicious_clients": [],
+  "malicious_ratio": 0.0,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 132,
+  "specialized_attacks": [],
+  "trim_count": null
+}

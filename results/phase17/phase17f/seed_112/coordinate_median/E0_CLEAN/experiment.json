@@ -1,0 +1,15 @@
+{
+  "aggregator": "coordinate_median",
+  "aggregator_display": "Coordinate Median",
+  "attack_type": "NONE",
+  "experiment_id": "E0_CLEAN",
+  "final_state_sha256": "28eafd7ae85a0d7ef9087ffede4576236aa45afe769053d5e9f6a176a8acc056",
+  "magnitude": 1.0,
+  "malicious_clients": [],
+  "malicious_ratio": 0.0,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 112,
+  "specialized_attacks": [],
+  "trim_count": null
+}

@@ -1,0 +1,8 @@
+{
+    "alerts_inserted": 20,
+    "mean_insert_ms": 5.524325001169927,
+    "median_insert_ms": 5.186100010178052,
+    "min_insert_ms": 3.795700002228841,
+    "max_insert_ms": 9.22159999026917,
+    "database_bytes": 81920
+}

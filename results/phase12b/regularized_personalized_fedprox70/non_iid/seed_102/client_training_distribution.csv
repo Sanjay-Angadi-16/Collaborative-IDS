@@ -1,0 +1,31 @@
+seed,client_id,class,count,is_seen_attack,is_unseen_attack
+102,1,BENIGN,293308,False,False
+102,1,DDoS,0,False,True
+102,1,DoS GoldenEye,0,False,True
+102,1,DoS Hulk,120950,True,False
+102,1,FTP-Patator,0,False,True
+102,1,PortScan,0,False,True
+102,2,BENIGN,293308,False,False
+102,2,DDoS,89572,True,False
+102,2,DoS GoldenEye,0,False,True
+102,2,DoS Hulk,0,False,True
+102,2,FTP-Patator,0,False,True
+102,2,PortScan,0,False,True
+102,3,BENIGN,293308,False,False
+102,3,DDoS,0,False,True
+102,3,DoS GoldenEye,0,False,True
+102,3,DoS Hulk,0,False,True
+102,3,FTP-Patator,0,False,True
+102,3,PortScan,63482,True,False
+102,4,BENIGN,293308,False,False
+102,4,DDoS,0,False,True
+102,4,DoS GoldenEye,7242,True,False
+102,4,DoS Hulk,0,False,True
+102,4,FTP-Patator,0,False,True
+102,4,PortScan,0,False,True
+102,5,BENIGN,293307,False,False
+102,5,DDoS,0,False,True
+102,5,DoS GoldenEye,0,False,True
+102,5,DoS Hulk,0,False,True
+102,5,FTP-Patator,4168,True,False
+102,5,PortScan,0,False,True

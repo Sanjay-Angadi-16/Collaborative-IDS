@@ -1,0 +1,157 @@
+[
+    {
+        "correlation_id": "58db80eb-577c-4b96-aee3-72b78b7a6447",
+        "phase_version": "phase16a_v1",
+        "rule_id": "R3_SHARED_DESTINATION_MULTI_SOURCE",
+        "correlation_priority": "CRITICAL",
+        "event_start": "2026-09-14T10:15:35+00:00",
+        "event_end": "2026-09-14T10:16:18+00:00",
+        "window_seconds": 60,
+        "alert_count": 20,
+        "distinct_clients": 5,
+        "distinct_classifications": 5,
+        "distinct_sources": 6,
+        "distinct_destinations": 1,
+        "client_ids": [
+            "client_1",
+            "client_2",
+            "client_3",
+            "client_4",
+            "client_5"
+        ],
+        "classifications": [
+            "DDoS",
+            "DoS GoldenEye",
+            "DoS Hulk",
+            "FTP-Patator",
+            "PortScan"
+        ],
+        "source_tokens": [
+            "src_0cf6a3bb9077764546714749af4e9ce5",
+            "src_1081c1c27d0c2ddcb60becf82dd47a7f",
+            "src_2409103d5d9203d634c127da979fc24b",
+            "src_5648dc2d3015cd45db98c4a1abe058ea",
+            "src_5c6df2097f425e7f6d46ee69ddefbb0d",
+            "src_d0a1391e36a833164c9cd1ad2871920d"
+        ],
+        "destination_tokens": [
+            "dst_590ee80acba80180f8ba6bdcb8ccb04f"
+        ],
+        "destination_ports": [
+            443
+        ],
+        "evidence_alert_ids": [
+            "c5d9edd5-3690-404c-9c4d-d3dc04f876d5",
+            "f6c39e0a-46f5-45de-a0d9-12f3437d4309",
+            "8199f6c5-5f5d-46a0-996f-9f7c2d603d94",
+            "1330b7b6-b109-430b-aa89-5864c4967754",
+            "700ece62-8ca8-4f98-94ba-ecb5e09358d4",
+            "2994dc84-1971-4801-8d5a-e771d9a923ea",
+            "d390293f-8fa6-42fd-92fe-e63aee5b1011",
+            "b1f172b3-a2dc-49f6-994c-ac0636ffd96a",
+            "ce9ba057-6e50-4988-a96d-4aae106d968b",
+            "73a618c8-97c7-4d3f-a666-7e025061794b",
+            "0e6d2565-ed93-4773-b533-e61209de1440",
+            "b8d64d9a-a9ce-40e4-9782-221bb71dfe84",
+            "8743db74-9a6c-4ee6-a6d7-f4be146a2611",
+            "a05fb5c8-3003-477c-9b5b-992d13437cfd",
+            "a92b0161-d0e2-4f18-8f93-1ca5fcad43bb",
+            "9022e1ce-bc07-43a1-a3a1-f64b23d2e27b",
+            "2aaddaec-ad64-4ffc-b461-6e440c84ac79",
+            "58597cd0-f26b-4056-9a18-6cf1ac3e9f67",
+            "5b2db982-c945-4934-b0cb-2e96e253a53a",
+            "dd086b10-68da-48c5-a6a8-721cdf2990a9"
+        ],
+        "explanation": "One privacy-safe destination/port received alerts from 6 pseudonymous sources across 5 clients within 60 seconds."
+    },
+    {
+        "correlation_id": "d9b1cc9f-2470-4ccc-986e-92118669ae9e",
+        "phase_version": "phase16a_v1",
+        "rule_id": "R1_CROSS_CLIENT_SHARED_SOURCE",
+        "correlation_priority": "CRITICAL",
+        "event_start": "2026-09-14T10:15:38+00:00",
+        "event_end": "2026-09-14T10:16:18+00:00",
+        "window_seconds": 60,
+        "alert_count": 5,
+        "distinct_clients": 5,
+        "distinct_classifications": 5,
+        "distinct_sources": 1,
+        "distinct_destinations": 1,
+        "client_ids": [
+            "client_1",
+            "client_2",
+            "client_3",
+            "client_4",
+            "client_5"
+        ],
+        "classifications": [
+            "DDoS",
+            "DoS GoldenEye",
+            "DoS Hulk",
+            "FTP-Patator",
+            "PortScan"
+        ],
+        "source_tokens": [
+            "src_2409103d5d9203d634c127da979fc24b"
+        ],
+        "destination_tokens": [
+            "dst_590ee80acba80180f8ba6bdcb8ccb04f"
+        ],
+        "destination_ports": [
+            443
+        ],
+        "evidence_alert_ids": [
+            "1330b7b6-b109-430b-aa89-5864c4967754",
+            "b1f172b3-a2dc-49f6-994c-ac0636ffd96a",
+            "b8d64d9a-a9ce-40e4-9782-221bb71dfe84",
+            "9022e1ce-bc07-43a1-a3a1-f64b23d2e27b",
+            "dd086b10-68da-48c5-a6a8-721cdf2990a9"
+        ],
+        "explanation": "The same privacy-safe source pseudonym appeared across 5 clients within 60 seconds."
+    },
+    {
+        "correlation_id": "91a32691-653a-4339-9616-515f7da997e2",
+        "phase_version": "phase16a_v1",
+        "rule_id": "R2_MULTI_CLASS_SHARED_SOURCE",
+        "correlation_priority": "CRITICAL",
+        "event_start": "2026-09-14T10:15:38+00:00",
+        "event_end": "2026-09-14T10:16:18+00:00",
+        "window_seconds": 60,
+        "alert_count": 5,
+        "distinct_clients": 5,
+        "distinct_classifications": 5,
+        "distinct_sources": 1,
+        "distinct_destinations": 1,
+        "client_ids": [
+            "client_1",
+            "client_2",
+            "client_3",
+            "client_4",
+            "client_5"
+        ],
+        "classifications": [
+            "DDoS",
+            "DoS GoldenEye",
+            "DoS Hulk",
+            "FTP-Patator",
+            "PortScan"
+        ],
+        "source_tokens": [
+            "src_2409103d5d9203d634c127da979fc24b"
+        ],
+        "destination_tokens": [
+            "dst_590ee80acba80180f8ba6bdcb8ccb04f"
+        ],
+        "destination_ports": [
+            443
+        ],
+        "evidence_alert_ids": [
+            "1330b7b6-b109-430b-aa89-5864c4967754",
+            "b1f172b3-a2dc-49f6-994c-ac0636ffd96a",
+            "b8d64d9a-a9ce-40e4-9782-221bb71dfe84",
+            "9022e1ce-bc07-43a1-a3a1-f64b23d2e27b",
+            "dd086b10-68da-48c5-a6a8-721cdf2990a9"
+        ],
+        "explanation": "One privacy-safe source pseudonym was associated with 5 attack classifications across 5 clients within 60 seconds."
+    }
+]

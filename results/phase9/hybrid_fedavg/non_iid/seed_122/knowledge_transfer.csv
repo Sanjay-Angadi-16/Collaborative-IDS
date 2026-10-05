@@ -1,0 +1,6 @@
+client,local_seen_attack,local_unseen_attack_recall,federated_unseen_attack_recall,knowledge_transfer_gain
+client_1,DoS Hulk,0.0,0.18740386290155778,0.18740386290155778
+client_2,DDoS,0.0,0.25773394391615984,0.25773394391615984
+client_3,PortScan,0.0,0.37825468993460076,0.37825468993460076
+client_4,DoS GoldenEye,0.0,0.3113715730514839,0.3113715730514839
+client_5,FTP-Patator,0.0,0.37825468993460076,0.37825468993460076

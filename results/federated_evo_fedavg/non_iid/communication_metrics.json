@@ -1,0 +1,15 @@
+{
+    "phase4_parameter_count": 60614,
+    "phase5b_parameter_count": 51910,
+    "parameter_reduction_ratio": 0.14359718876827132,
+    "phase4_model_payload_bytes": 242456,
+    "phase5b_model_payload_bytes": 207640,
+    "phase4_model_payload_mib": 0.23122406005859375,
+    "phase5b_model_payload_mib": 0.19802093505859375,
+    "phase4_total_communication_bytes": 24245600,
+    "phase5b_total_communication_bytes": 20764000,
+    "phase4_total_communication_mib": 23.122406005859375,
+    "phase5b_total_communication_mib": 19.802093505859375,
+    "communication_reduction_ratio": 0.14359718876827132,
+    "assumption": "Full float32 model upload and download for each client each round; network protocol overhead excluded."
+}

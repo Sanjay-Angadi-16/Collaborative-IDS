@@ -1,0 +1,4 @@
+samples_or_exposures,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,anomalous_predictions,anomalous_rate,experiment,unique_validation_samples,client_exposures,client_assignment,fast_path_count,fast_path_rate,deep_path_count
+1000,0.792,0.7914410005112752,0.8900484980859109,0.7914410005112752,0.8099011682964209,0.8094315940156945,12,0.012,A_balanced_round_robin,1000,1000,deterministic round-robin; true label not used,165,0.165,835
+1000,0.939,0.8051909249596693,0.9291343691544522,0.8051909249596693,0.8534652383426372,0.9381748599297011,6,0.006,B_natural_round_robin,1000,1000,deterministic round-robin; true label not used,39,0.039,961
+5000,0.9368,0.7892293159284036,0.9233098114952645,0.7892293159284036,0.8441067248004012,0.9369638209173509,38,0.0076,C_natural_phase14h_all_clients,1000,5000,Phase14H-style: same validation subset replayed independently through all 5 clients,215,0.043,4785

@@ -1,0 +1,8 @@
+{
+    "accuracy_delta": 0.017142872363377748,
+    "balanced_accuracy_delta": 0.029560063287347005,
+    "macro_precision_delta": 0.04812083974931447,
+    "macro_recall_delta": 0.029560063287347005,
+    "macro_f1_delta": 0.030118255495453605,
+    "weighted_f1_delta": 0.018248381578014228
+}

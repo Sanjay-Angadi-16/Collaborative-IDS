@@ -1,0 +1,81 @@
+{
+    "phase": "Phase 5 - Independent EVO Feature Selection",
+    "optimizer": "Energy Valley Optimizer",
+    "random_state": 42,
+    "starting_feature_count": 70,
+    "zero_variance_features_removed": [
+        "Bwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd PSH Flags",
+        "Bwd URG Flags",
+        "Fwd Avg Bulk Rate",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk"
+    ],
+    "search_protocol": {
+        "search_source": "training.csv only",
+        "optimization_sample_rows": 120000,
+        "optimization_validation_fraction": 0.25,
+        "official_validation_used_during_search": false,
+        "locked_test_used": false
+    },
+    "optimizer_configuration": {
+        "population_size": 20,
+        "max_iterations": 30,
+        "lower_bound": -6.0,
+        "upper_bound": 6.0,
+        "optimizer_iterations": 30,
+        "optimizer_evaluations": 935,
+        "classifier_evaluations": 455,
+        "cache_hits": 481,
+        "optimization_runtime_seconds": 307.6441167999292
+    },
+    "fitness": {
+        "objective": "minimize",
+        "macro_f1_weight": 0.5,
+        "balanced_accuracy_weight": 0.35,
+        "feature_reduction_weight": 0.15
+    },
+    "search_best_result": {
+        "fitness": 0.02933341798095246,
+        "utility": 0.9706665820190475,
+        "macro_f1": 0.990698150760529,
+        "balanced_accuracy": 0.9907030801924415,
+        "feature_reduction": 0.8571428571428572,
+        "selected_count": 10,
+        "selected_features": [
+            "Fwd Packet Length Min",
+            "Bwd Packet Length Max",
+            "Flow Bytes/s",
+            "Flow IAT Min",
+            "SYN Flag Count",
+            "ECE Flag Count",
+            "Subflow Fwd Packets",
+            "Subflow Bwd Bytes",
+            "Init_Win_bytes_forward",
+            "Idle Mean"
+        ]
+    },
+    "full_validation_baseline": {
+        "accuracy": 0.9915926161007088,
+        "balanced_accuracy": 0.42670687783912975,
+        "macro_f1": 0.4206850319052348,
+        "weighted_f1": 0.9880968976826445,
+        "selected_count": 70,
+        "runtime_seconds": 69.57158800004981
+    },
+    "full_validation_evo_subset": {
+        "accuracy": 0.9912964138368772,
+        "balanced_accuracy": 0.4273821529188406,
+        "macro_f1": 0.4166927133679281,
+        "weighted_f1": 0.9878118264228255,
+        "selected_count": 10,
+        "runtime_seconds": 52.24407980008982
+    },
+    "full_validation_change": {
+        "macro_f1_delta": -0.003992318537306694,
+        "balanced_accuracy_delta": 0.0006752750797108242
+    },
+    "locked_test_used": false
+}

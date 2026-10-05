@@ -1,0 +1,21 @@
+{
+  "aggregator": "trimmed_mean",
+  "aggregator_display": "Trimmed Mean",
+  "attack_type": "RANDOM",
+  "experiment_id": "E_RANDOM_C1_C2",
+  "final_state_sha256": "ef4b3a2bf1ac5f43beddcc38137e916e8e9ec96d6d62908bc0a0a2c9cc52d9fb",
+  "magnitude": 5.0,
+  "malicious_clients": [
+    1,
+    2
+  ],
+  "malicious_ratio": 0.4,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 72,
+  "specialized_attacks": [
+    "DoS Hulk",
+    "DDoS"
+  ],
+  "trim_count": 1
+}

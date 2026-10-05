@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.8937706594785221,
+    "balanced_accuracy": 0.3306537115592189,
+    "macro_precision": 0.2570904718391415,
+    "macro_recall": 0.3306537115592189,
+    "macro_f1": 0.28603432342500307,
+    "weighted_f1": 0.8533377224722135,
+    "local_seen_attack": "DoS Hulk",
+    "seen_attack_recall": 0.999002187511993,
+    "seen_attack_f1": 0.7597519153593579,
+    "mean_unseen_attack_recall": 0.0,
+    "mean_unseen_attack_f1": 0.0,
+    "training_time_seconds": 28.24253759998828,
+    "inference_time_seconds": 2.9582269999664277
+}

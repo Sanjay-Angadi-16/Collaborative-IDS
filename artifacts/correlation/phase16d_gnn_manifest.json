@@ -1,0 +1,38 @@
+{
+    "phase": "16D",
+    "version": "phase16d_v1",
+    "status": "PASS",
+    "model_type": "2-layer dense GCN + mean/max graph pooling",
+    "task": "binary graph-level correlated-campaign classification",
+    "node_features": [
+        "attack-class one-hot",
+        "client one-hot",
+        "severity one-hot",
+        "protocol one-hot",
+        "processing-path one-hot",
+        "risk-mode one-hot",
+        "normalized destination port",
+        "confidence",
+        "evidence score",
+        "risk score with zero for null FAST path",
+        "relative event-time position"
+    ],
+    "edge_relations": [
+        "same source pseudonym",
+        "same destination pseudonym + port",
+        "same client weak relation",
+        "continuous temporal proximity"
+    ],
+    "important_privacy_note": "HMAC tokens are used only for equality relations. Opaque token characters are not converted into semantic numeric features.",
+    "scientific_limitations": [
+        "Dataset is synthetic and privacy-safe.",
+        "This does not measure IDS attack-classification accuracy.",
+        "One training seed is a baseline only.",
+        "The GNN checkpoint is not frozen as the final correlator.",
+        "Phase16C deterministic rules remain frozen and unchanged.",
+        "Cross-role source-to-destination entity linking is unavailable because Phase15 HMAC uses domain-separated source/destination pseudonyms.",
+        "No superiority claim over rules is allowed from Phase16D alone."
+    ],
+    "locked_test_used": false,
+    "ready_for_phase16e": true
+}

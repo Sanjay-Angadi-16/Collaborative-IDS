@@ -1,0 +1,187 @@
+{
+    "phase": "17D-B",
+    "version": "phase17db_v1",
+    "status": "PASS",
+    "baseline": {
+        "algorithm": "FedProx70",
+        "scenario": "non_iid",
+        "features": 70,
+        "clients": 5,
+        "rounds": 10,
+        "local_epochs": 1,
+        "batch_size": 2048,
+        "chunk_size": 100000,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "fedprox_mu": 0.01,
+        "aggregation": "sample-weighted parameter averaging",
+        "seed": 42
+    },
+    "threat_model": {
+        "malicious_clients": [
+            1
+        ],
+        "malicious_ratio": "1/5 = 20%",
+        "client_1_specialized_attack": "DoS Hulk",
+        "server": "honest coordinator",
+        "attacker_controls_own_update": true,
+        "attacker_cannot_modify_other_clients": true,
+        "attacker_cannot_modify_server": true,
+        "attacker_cannot_modify_validation_or_test": true
+    },
+    "experiments": [
+        {
+            "id": "DB0_CLEAN",
+            "attack_spec": {
+                "attack_type": "NONE",
+                "malicious_clients": [],
+                "magnitude": 1.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "NONE",
+                "malicious_events": 0,
+                "passed": true,
+                "reason": "Clean control contains no malicious transformation."
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "DB_SCALE_X2",
+            "attack_spec": {
+                "attack_type": "SCALE",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 2.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "SCALE",
+                "malicious_events": 10,
+                "requested_magnitude": 2.0,
+                "max_norm_ratio_abs_error": 2.8229203419272153e-09,
+                "minimum_update_cosine": 0.9999999999999863,
+                "passed": true,
+                "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+            },
+            "final_state_sha256": "35670e549061e12a292698da74de451fc596d2bca072503d6d06825b8f6d9d72"
+        },
+        {
+            "id": "DB_SCALE_X5",
+            "attack_spec": {
+                "attack_type": "SCALE",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 5.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "SCALE",
+                "malicious_events": 10,
+                "requested_magnitude": 5.0,
+                "max_norm_ratio_abs_error": 4.466444991635399e-09,
+                "minimum_update_cosine": 0.9999999999999938,
+                "passed": true,
+                "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+            },
+            "final_state_sha256": "c24cd1495f9433be9e4198041bc0cbaf9ad65c073d68e883b13f23637db6448a"
+        },
+        {
+            "id": "DB_SCALE_X10",
+            "attack_spec": {
+                "attack_type": "SCALE",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 10.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "SCALE",
+                "malicious_events": 10,
+                "requested_magnitude": 10.0,
+                "max_norm_ratio_abs_error": 5.2675588335659995e-09,
+                "minimum_update_cosine": 0.9999999999999981,
+                "passed": true,
+                "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+            },
+            "final_state_sha256": "a5d37e3fbf4ab0daebba1cd9b8f05464a5c87513b5f8f19a988f5c25571c9efb"
+        },
+        {
+            "id": "DB_RANDOM_X1",
+            "attack_spec": {
+                "attack_type": "RANDOM",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 1.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "RANDOM",
+                "malicious_events": 10,
+                "requested_magnitude": 1.0,
+                "max_norm_ratio_abs_error": 3.006740079136705e-09,
+                "all_random_events_seeded": true,
+                "mean_abs_cosine_with_legitimate_update": 0.002669668218898848,
+                "passed": true,
+                "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+            },
+            "final_state_sha256": "27b589564dd634d599fe7bff7e523c2b55f99c03fb42c073edae9c8421bf54f8"
+        },
+        {
+            "id": "DB_RANDOM_X2",
+            "attack_spec": {
+                "attack_type": "RANDOM",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 2.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "RANDOM",
+                "malicious_events": 10,
+                "requested_magnitude": 2.0,
+                "max_norm_ratio_abs_error": 3.3738345450728957e-09,
+                "all_random_events_seeded": true,
+                "mean_abs_cosine_with_legitimate_update": 0.0030725929555857753,
+                "passed": true,
+                "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+            },
+            "final_state_sha256": "4da72e0f899c3c93266646bee5353e05f9c9b7fa1df1883258a71a8d06c7d9ad"
+        },
+        {
+            "id": "DB_RANDOM_X5",
+            "attack_spec": {
+                "attack_type": "RANDOM",
+                "malicious_clients": [
+                    1
+                ],
+                "magnitude": 5.0,
+                "attack_seed": 1704
+            },
+            "attack_audit": {
+                "attack_type": "RANDOM",
+                "malicious_events": 10,
+                "requested_magnitude": 5.0,
+                "max_norm_ratio_abs_error": 2.67083155591763e-09,
+                "all_random_events_seeded": true,
+                "mean_abs_cosine_with_legitimate_update": 0.002972579258213582,
+                "passed": true,
+                "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+            },
+            "final_state_sha256": "7096deb02a01eb962e01014ccbf490e3f4c13ce4f23e3537a2554ae5a6f8fbdf"
+        }
+    ],
+    "scientific_rules": {
+        "defense_tuning_in_this_phase": false,
+        "trimmed_mean_or_median_used": false,
+        "locked_test_used": false,
+        "phase_pass_means": "Attack transformations executed and passed implementation/audit checks. PASS does not mean the attack is effective or that the model is robust."
+    },
+    "locked_test_used": false,
+    "recommended_next_step": "After reviewing attack effectiveness, proceed to Phase17E malicious-client identity/ratio analysis. Do not tune a defense from these test-free development runs unless the defense phase is explicitly versioned."
+}

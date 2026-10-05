@@ -1,0 +1,19 @@
+{
+  "aggregator": "fedavg",
+  "aggregator_display": "FedAvg",
+  "attack_type": "SCALE",
+  "experiment_id": "E_SCALE_C1",
+  "final_state_sha256": "b0653d8669b20a1e3ac760e36e36f10b2c288812686f15d65bd3a6fff09ab907",
+  "magnitude": 5.0,
+  "malicious_clients": [
+    1
+  ],
+  "malicious_ratio": 0.2,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 82,
+  "specialized_attacks": [
+    "DoS Hulk"
+  ],
+  "trim_count": null
+}

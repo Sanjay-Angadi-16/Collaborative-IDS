@@ -1,0 +1,32 @@
+{
+    "phase": "14G2",
+    "policy_version": "phase14g2_v1",
+    "true_class": "PortScan",
+    "validation_sequence_index": 5074,
+    "alert": {
+        "timestamp_utc": "2026-09-14T08:05:39.999435+00:00",
+        "client_id": 3,
+        "classification": "PortScan",
+        "confidence": 0.9998209468981613,
+        "decision_source": "Random Forest",
+        "processing_path": "FAST_ATTACK_PATH",
+        "severity": "HIGH",
+        "severity_basis": "High-confidence known-attack RF gate. Severity is an operational fast-path category; it is not derived from ensemble risk.",
+        "risk_score": null,
+        "evidence_score": 0.9998209468981613,
+        "risk_mode": "FAST_PATH_RF_CONFIDENCE",
+        "risk_basis": "Single local Random Forest confidence. No ensemble risk was computed because deeper models were intentionally skipped.",
+        "risk_score_comparable_to_full_fusion": false,
+        "rf": {
+            "model": "Random Forest",
+            "predicted_class": "PortScan",
+            "class_id": 5,
+            "confidence": 0.9998209468981613
+        },
+        "autoencoder": null,
+        "fedprox70": null,
+        "cnn_bilstm": null
+    },
+    "operational_latency_ms": 29.41710001323372,
+    "locked_test_used": false
+}

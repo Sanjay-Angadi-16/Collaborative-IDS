@@ -1,0 +1,7 @@
+pattern,count,share_of_221_style_misses
+RF predicted BENIGN,221,1.0
+FedProx70 predicted BENIGN,221,1.0
+CNN-BiLSTM predicted BENIGN,221,1.0
+FedProx70 + CNN both BENIGN,221,1.0
+RF + FedProx70 + CNN all BENIGN,221,1.0
+AE flagged anomaly,0,0.0

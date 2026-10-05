@@ -1,0 +1,49 @@
+{
+  "source": "validation",
+  "validation_mode": "natural",
+  "sample_count": 1000,
+  "total_flows": 1000,
+  "normal_traffic": 809,
+  "attack_alerts": 191,
+  "attack_rate": 0.191,
+  "anomalous_predictions": 6,
+  "anomalous_rate": 0.006,
+  "fast_path_count": 39,
+  "deep_path_count": 961,
+  "metrics": {
+    "accuracy": 0.939,
+    "balanced_accuracy": 0.8051909249596693,
+    "macro_precision": 0.9291343691544522,
+    "macro_recall": 0.8051909249596693,
+    "macro_f1": 0.8534652383426372,
+    "weighted_f1": 0.9381748599297011
+  },
+  "model_metrics": {
+    "random_forest": {
+      "accuracy": 0.813,
+      "balanced_accuracy": 0.3588813151563753,
+      "macro_f1": 0.4555315599433247
+    },
+    "fedprox70": {
+      "accuracy": 0.907,
+      "balanced_accuracy": 0.6167577606577423,
+      "macro_f1": 0.7078637862148041
+    },
+    "cnn_bilstm": {
+      "accuracy": 0.931,
+      "balanced_accuracy": 0.7372311090476793,
+      "macro_f1": 0.8204166313759318
+    },
+    "autoencoder": {
+      "anomaly_count": 93,
+      "anomaly_rate": 0.093,
+      "mean_anomaly_score": 0.13542798161506653
+    }
+  },
+  "sampling_policy": "uniform random validation sampling",
+  "client_assignment_policy": "deterministic round-robin; true label not used",
+  "inference_seconds": 0.9959244999918155,
+  "locked_test_used": false,
+  "models_retrained": false,
+  "created_utc": "2026-09-29T06:51:56.820283+00:00"
+}

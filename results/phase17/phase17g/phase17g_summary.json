@@ -1,0 +1,36 @@
+{
+    "phase": "17G",
+    "title": "Final 10-Seed Statistical Confirmation",
+    "seeds": [
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102,
+        112,
+        122,
+        132
+    ],
+    "number_of_seeds": 10,
+    "total_runs": 150,
+    "experiments": [
+        "E0_CLEAN",
+        "E_RANDOM_C1",
+        "E_RANDOM_C1_C2",
+        "E_SCALE_C1",
+        "E_SCALE_C1_C2"
+    ],
+    "aggregators": [
+        "fedavg",
+        "coordinate_median",
+        "trimmed_mean"
+    ],
+    "validation_poisoned": false,
+    "locked_test_used": false,
+    "attack_audits_pass": true,
+    "scipy_available": true,
+    "graphs_generated": true,
+    "status": "PASS"
+}

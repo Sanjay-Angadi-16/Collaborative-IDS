@@ -1,0 +1,21 @@
+{
+  "aggregator": "fedavg",
+  "aggregator_display": "FedAvg",
+  "attack_type": "RANDOM",
+  "experiment_id": "E_RANDOM_C1_C2",
+  "final_state_sha256": "c2ca5e694f74cc1b569c816beacba652ea4b5c5110dab304901e70bfa82584ad",
+  "magnitude": 5.0,
+  "malicious_clients": [
+    1,
+    2
+  ],
+  "malicious_ratio": 0.4,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 102,
+  "specialized_attacks": [
+    "DoS Hulk",
+    "DDoS"
+  ],
+  "trim_count": null
+}

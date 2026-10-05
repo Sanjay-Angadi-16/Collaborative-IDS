@@ -1,0 +1,28 @@
+{
+    "phase": "13A",
+    "mode": "local_70_feature_baseline_only",
+    "scenario": "non_iid",
+    "seed": 42,
+    "features": 70,
+    "local_search_epochs": 1,
+    "local_search_mu": 0.01,
+    "retention_requirement": 0.8,
+    "mean_local_attack_recall": 0.9835432175719081,
+    "worst_local_attack_recall": 0.9466,
+    "local_attack_recalls": {
+        "DoS Hulk": 0.9466,
+        "DDoS": 0.999,
+        "PortScan": 0.9853,
+        "DoS GoldenEye": 0.9913563829787234,
+        "FTP-Patator": 0.9954597048808173
+    },
+    "local_thresholds": {
+        "DoS Hulk": 0.7572800000000001,
+        "DDoS": 0.7992,
+        "PortScan": 0.78824,
+        "DoS GoldenEye": 0.7930851063829788,
+        "FTP-Patator": 0.7963677639046538
+    },
+    "baseline_viability_passed": true,
+    "locked_test_used": false
+}

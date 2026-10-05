@@ -1,0 +1,59 @@
+{
+    "phase": "17A",
+    "version": "phase17a_v1_2",
+    "scenario": "non_iid",
+    "seed": 42,
+    "matrix": "full",
+    "source_hash_audit": {
+        "scripts/phase10_fedprox70.py": {
+            "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+            "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+            "match": true
+        },
+        "scripts/phase9_fedavg70.py": {
+            "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+            "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+            "match": true
+        }
+    },
+    "validation_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+    "locked_test_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\test_locked.csv",
+    "locked_test_used": false,
+    "experiments": [
+        {
+            "experiment_id": "A1_CLEAN",
+            "passed": true,
+            "reason": "clean reference"
+        },
+        {
+            "experiment_id": "A2_ONE_MALICIOUS_NOOP",
+            "passed": true,
+            "reason": "NOOP must reproduce the clean model exactly and preserve metrics."
+        },
+        {
+            "experiment_id": "A3_TWO_MALICIOUS_NOOP",
+            "passed": true,
+            "reason": "NOOP must reproduce the clean model exactly and preserve metrics."
+        },
+        {
+            "experiment_id": "A4_ONE_MALICIOUS_SCALE1",
+            "passed": true,
+            "reason": "UPDATE_SCALE=1.0 must be an exact identity control: same final state hash, zero state drift, and preserved metrics."
+        },
+        {
+            "experiment_id": "A5_TWO_MALICIOUS_SCALE1",
+            "passed": true,
+            "reason": "UPDATE_SCALE=1.0 must be an exact identity control: same final state hash, zero state drift, and preserved metrics."
+        }
+    ],
+    "identity_acceptance": {
+        "no_op_requires_exact_state_hash_match": true,
+        "scale1_max_state_abs_diff": 0.0,
+        "overall_metric_abs_tolerance": 1e-06,
+        "per_class_recall_abs_tolerance": 1e-06,
+        "attack_event_identity_error_tolerance": 0.0,
+        "scale1_requires_exact_state_hash_match": true
+    },
+    "all_tests_passed": true,
+    "damaging_poisoning_injected": false
+}

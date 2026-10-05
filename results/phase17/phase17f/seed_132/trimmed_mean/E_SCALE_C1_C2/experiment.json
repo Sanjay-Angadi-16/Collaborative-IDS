@@ -1,0 +1,21 @@
+{
+  "aggregator": "trimmed_mean",
+  "aggregator_display": "Trimmed Mean",
+  "attack_type": "SCALE",
+  "experiment_id": "E_SCALE_C1_C2",
+  "final_state_sha256": "aec1933940689408bc98043232d706ab8e2c07dc11f65a782aaee23b6c566151",
+  "magnitude": 5.0,
+  "malicious_clients": [
+    1,
+    2
+  ],
+  "malicious_ratio": 0.4,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 132,
+  "specialized_attacks": [
+    "DoS Hulk",
+    "DDoS"
+  ],
+  "trim_count": 1
+}

@@ -1,0 +1,27 @@
+{
+    "phase": "12B",
+    "experiment": "Regularized Personalized FedProx70",
+    "scenario": "non_iid",
+    "completed_seeds": [
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102,
+        112,
+        122,
+        132
+    ],
+    "number_of_completed_seeds": 10,
+    "mean_personalization_gain": 0.4313443482535815,
+    "mean_global_knowledge_loss": 0.019040831121298677,
+    "mean_global_knowledge_preservation_ratio": 0.9567543167430628,
+    "mean_local_recovery_ratio": 0.986890406761465,
+    "mean_global_utility": 0.5541374688154206,
+    "mean_personalized_utility": 0.760289227381562,
+    "feasible_selection_rate": 0.86,
+    "locked_test_used_for_selection": false,
+    "selection_basis": "validation only"
+}

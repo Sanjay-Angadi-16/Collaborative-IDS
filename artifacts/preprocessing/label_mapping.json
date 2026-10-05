@@ -1,0 +1,8 @@
+{
+    "BENIGN": 0,
+    "DDoS": 1,
+    "DoS GoldenEye": 2,
+    "DoS Hulk": 3,
+    "FTP-Patator": 4,
+    "PortScan": 5
+}

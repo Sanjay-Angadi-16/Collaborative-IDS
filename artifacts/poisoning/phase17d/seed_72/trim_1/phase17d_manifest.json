@@ -1,0 +1,144 @@
+{
+  "attack": {
+    "formula": "delta_poisoned = -scale * (local_state - global_state)",
+    "location": "after local FedProx training, before server aggregation",
+    "type": "Byzantine model-update sign flip"
+  },
+  "client_partitions_frozen": true,
+  "defense": {
+    "aggregation": "coordinate_wise_trimmed_mean",
+    "control_mode_note": null,
+    "defense_active": true,
+    "total_client_values": 5,
+    "trim_count": 1,
+    "values_retained": 3,
+    "weighted": false
+  },
+  "experiments": [
+    {
+      "attack_spec": {
+        "attack_type": "NONE",
+        "formula": "identity",
+        "malicious_client": null,
+        "sign_flip_scale": null
+      },
+      "defense_spec": {
+        "aggregation": "coordinate_wise_trimmed_mean",
+        "defense_active": true,
+        "non_float_policy": "preserve_current_global_state",
+        "num_clients": 5,
+        "trim_count": 1,
+        "values_retained": 3,
+        "weighted": false,
+        "weighting_note": "unweighted robust coordinate aggregation"
+      },
+      "experiment_id": "D0_TRIMMED_MEAN_CLEAN",
+      "final_state_sha256": "76108599958b05e93862d64b684aacd6b36324be56ee89b51a487d195a6b3ec4"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 1.0
+      },
+      "defense_spec": {
+        "aggregation": "coordinate_wise_trimmed_mean",
+        "defense_active": true,
+        "non_float_policy": "preserve_current_global_state",
+        "num_clients": 5,
+        "trim_count": 1,
+        "values_retained": 3,
+        "weighted": false,
+        "weighting_note": "unweighted robust coordinate aggregation"
+      },
+      "experiment_id": "D_SIGN_FLIP_X1_TRIMMED_MEAN",
+      "final_state_sha256": "c33cde534dd51e324979f0c67b5b727af14712da83114ca6d0d70b82226bb27c"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 2.0
+      },
+      "defense_spec": {
+        "aggregation": "coordinate_wise_trimmed_mean",
+        "defense_active": true,
+        "non_float_policy": "preserve_current_global_state",
+        "num_clients": 5,
+        "trim_count": 1,
+        "values_retained": 3,
+        "weighted": false,
+        "weighting_note": "unweighted robust coordinate aggregation"
+      },
+      "experiment_id": "D_SIGN_FLIP_X2_TRIMMED_MEAN",
+      "final_state_sha256": "b2eaed8c635d1cb0c505eaa7c2aa8580e44a29e15b380ab4dc47f31d667261cd"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 5.0
+      },
+      "defense_spec": {
+        "aggregation": "coordinate_wise_trimmed_mean",
+        "defense_active": true,
+        "non_float_policy": "preserve_current_global_state",
+        "num_clients": 5,
+        "trim_count": 1,
+        "values_retained": 3,
+        "weighted": false,
+        "weighting_note": "unweighted robust coordinate aggregation"
+      },
+      "experiment_id": "D_SIGN_FLIP_X5_TRIMMED_MEAN",
+      "final_state_sha256": "40b9f0d111871725b976c2a1d8bd2b76ec584f47b3251c9d082ff95b37d870f8"
+    }
+  ],
+  "feature_set_frozen": true,
+  "fedavg_reproduction_control": {
+    "active": false,
+    "max_metric_abs_difference": null,
+    "passed": null,
+    "tolerance": 1e-06
+  },
+  "local_epochs": 1,
+  "local_training": {
+    "algorithm": "FedProx",
+    "frozen_from_phase17c": true,
+    "mu": 0.01
+  },
+  "locked_test_used": false,
+  "malicious_client": 1,
+  "max_sign_flip_norm_error": 1.3201871595924786e-08,
+  "max_trimmed_mean_envelope_violation": 0.0,
+  "model_architecture_frozen": true,
+  "next": "Run/verify trim_count=0 reproduction control, then run trim_count=1 defense for seed 42. Only after seed 42 is validated should seeds 52, 62, 72 and 82 be repeated.",
+  "num_clients": 5,
+  "original_client_data_modified": false,
+  "phase": "17D",
+  "phase17c_fedavg_comparison_available": true,
+  "rounds": 10,
+  "scenario": "non_iid",
+  "seed": 72,
+  "sign_flip_scales": [
+    1.0,
+    2.0,
+    5.0
+  ],
+  "source_hash_audit": {
+    "scripts/phase10_fedprox70.py": {
+      "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+      "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+      "match": true
+    },
+    "scripts/phase9_fedavg70.py": {
+      "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+      "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+      "match": true
+    }
+  },
+  "status": "PASS",
+  "validation_poisoned": false
+}

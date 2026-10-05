@@ -1,0 +1,47 @@
+{
+    "phase": 11,
+    "experiment": "FedProx70 knowledge transfer + local knowledge retention",
+    "scenario": "non_iid",
+    "seed": 82,
+    "clients": 5,
+    "features": 70,
+    "benign_label": "BENIGN",
+    "attack_classes": [
+        "DDoS",
+        "DoS GoldenEye",
+        "DoS Hulk",
+        "FTP-Patator",
+        "PortScan"
+    ],
+    "fedprox70_model": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\phase10\\fedprox70\\non_iid\\seed_82\\fedprox70_model.pt",
+    "fedprox70_metrics": {
+        "accuracy": 0.9521166226730202,
+        "balanced_accuracy": 0.5943067654013621,
+        "macro_precision": 0.7929697052800179,
+        "macro_recall": 0.5943067654013621,
+        "macro_f1": 0.6625591889984316,
+        "weighted_f1": 0.9462226889018417,
+        "test_samples": 375433
+    },
+    "fedprox70_inference_seconds": 3.337359999997716,
+    "training_protocol": {
+        "pseudo_rounds": 10,
+        "local_epochs_per_round": 1,
+        "total_local_epochs": 10,
+        "batch_size": 2048,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "optimizer": "AdamW recreated each pseudo-round",
+        "class_weights": "same global class weights as Phase 9/10"
+    },
+    "definitions": {
+        "retention_delta": "FedProx70 seen recall - LocalOnly seen recall",
+        "retention_ratio": "FedProx70 seen recall / LocalOnly seen recall",
+        "transfer_gain": "FedProx70 unseen recall - LocalOnly unseen recall"
+    },
+    "locked_test_used_during_training": false,
+    "locked_test_used_for": "post-training evaluation only",
+    "mean_retention_delta": -0.4852494649767167,
+    "mean_retention_ratio": 0.5136904788696601,
+    "mean_transfer_gain": 0.5133781363331518
+}

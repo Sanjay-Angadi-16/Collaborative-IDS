@@ -1,0 +1,6 @@
+experiment_id,attack_type,malicious_clients,state_sha256,exact_state_hash_match_vs_clean,max_state_abs_diff_vs_clean,max_overall_metric_abs_diff_vs_clean,max_per_class_recall_abs_diff_vs_clean,max_attack_event_identity_error,accuracy_drop,balanced_accuracy_drop,macro_f1_drop,macro_f1_relative_drop_pct,weighted_f1_drop,worst_class_recall_drop,worst_attack_recall_drop,benign_fpr_increase,identity_gate_pass
+A1_CLEAN,NONE,,3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+A2_ONE_MALICIOUS_NOOP,NOOP,1,3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+A3_TWO_MALICIOUS_NOOP,NOOP,"1,2",3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+A4_ONE_MALICIOUS_SCALE1,UPDATE_SCALE,1,3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+A5_TWO_MALICIOUS_SCALE1,UPDATE_SCALE,"1,2",3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a,True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True

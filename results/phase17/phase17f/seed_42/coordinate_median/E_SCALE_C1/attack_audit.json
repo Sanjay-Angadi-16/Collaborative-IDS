@@ -1,0 +1,8 @@
+{
+  "attack_type": "SCALE",
+  "magnitude": 5.0,
+  "malicious_events": 10,
+  "max_norm_ratio_abs_error": 8.58054338692682e-09,
+  "minimum_update_cosine": 0.9999999999999974,
+  "passed": true
+}

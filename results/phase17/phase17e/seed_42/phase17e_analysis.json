@@ -1,0 +1,257 @@
+{
+    "identity_rows": [
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_client": 1,
+            "specialized_attack": "DoS Hulk",
+            "macro_f1": 0.4759281908938083,
+            "balanced_accuracy": 0.44977956551450776,
+            "weighted_f1": 0.8604236693375746,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.3107605016933149,
+            "balanced_accuracy_drop_vs_clean": 0.25754064985592645,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_client": 2,
+            "specialized_attack": "DDoS",
+            "macro_f1": 0.4688044219808148,
+            "balanced_accuracy": 0.45099632684766694,
+            "weighted_f1": 0.8840273032286776,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.31788427060630836,
+            "balanced_accuracy_drop_vs_clean": 0.2563238885227673,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_client": 3,
+            "specialized_attack": "PortScan",
+            "macro_f1": 0.5601747061962897,
+            "balanced_accuracy": 0.5188285123782203,
+            "weighted_f1": 0.9200362072397823,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.22651398639083342,
+            "balanced_accuracy_drop_vs_clean": 0.18849170299221396,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_client": 4,
+            "specialized_attack": "DoS GoldenEye",
+            "macro_f1": 0.6767238828405208,
+            "balanced_accuracy": 0.6314349690095478,
+            "weighted_f1": 0.9470337711541293,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.10996480974660239,
+            "balanced_accuracy_drop_vs_clean": 0.07588524636088645,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_client": 5,
+            "specialized_attack": "FTP-Patator",
+            "macro_f1": 0.5861627859441836,
+            "balanced_accuracy": 0.5329748558861124,
+            "weighted_f1": 0.9258103691258275,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.20052590664293957,
+            "balanced_accuracy_drop_vs_clean": 0.17434535948432184,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_client": 1,
+            "specialized_attack": "DoS Hulk",
+            "macro_f1": 0.40470516830926245,
+            "balanced_accuracy": 0.4009168845110546,
+            "weighted_f1": 0.86989256794192,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9988389643562058,
+            "target_attack_worst_recall": 0.9988389643562058,
+            "macro_f1_drop_vs_clean": 0.3819835242778607,
+            "balanced_accuracy_drop_vs_clean": 0.3064033308593796,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_client": 2,
+            "specialized_attack": "DDoS",
+            "macro_f1": 0.5684538199231038,
+            "balanced_accuracy": 0.528329724841687,
+            "weighted_f1": 0.9225183503001776,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9989666218869484,
+            "target_attack_worst_recall": 0.9989666218869484,
+            "macro_f1_drop_vs_clean": 0.2182348726640193,
+            "balanced_accuracy_drop_vs_clean": 0.17899049052874716,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_client": 3,
+            "specialized_attack": "PortScan",
+            "macro_f1": 0.6483908961137631,
+            "balanced_accuracy": 0.624018486940464,
+            "weighted_f1": 0.9414469119564146,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9971334068357222,
+            "target_attack_worst_recall": 0.9971334068357222,
+            "macro_f1_drop_vs_clean": 0.13829779647336005,
+            "balanced_accuracy_drop_vs_clean": 0.08330172842997019,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_client": 4,
+            "specialized_attack": "DoS GoldenEye",
+            "macro_f1": 0.4725156206694543,
+            "balanced_accuracy": 0.5380683889354989,
+            "weighted_f1": 0.8999892319958852,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9920212765957447,
+            "target_attack_worst_recall": 0.9920212765957447,
+            "macro_f1_drop_vs_clean": 0.31417307191766886,
+            "balanced_accuracy_drop_vs_clean": 0.1692518264349353,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_client": 5,
+            "specialized_attack": "FTP-Patator",
+            "macro_f1": 0.6752543415726325,
+            "balanced_accuracy": 0.6381704954389619,
+            "weighted_f1": 0.9039583520996811,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9875141884222475,
+            "target_attack_worst_recall": 0.9875141884222475,
+            "macro_f1_drop_vs_clean": 0.11143435101449062,
+            "balanced_accuracy_drop_vs_clean": 0.06914971993147234,
+            "attack_audit_pass": true
+        }
+    ],
+    "ratio_rows": [
+        {
+            "attack_type": "CLEAN",
+            "magnitude": 1.0,
+            "malicious_clients": [],
+            "malicious_ratio": 0.0,
+            "macro_f1": 0.7866886925871232,
+            "balanced_accuracy": 0.7073202153704342,
+            "weighted_f1": 0.9501119963036709,
+            "worst_attack_recall": 0.42513781697905184,
+            "target_attack_mean_recall": null,
+            "target_attack_worst_recall": null,
+            "macro_f1_drop_vs_clean": 0.0,
+            "balanced_accuracy_drop_vs_clean": 0.0,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1
+            ],
+            "malicious_ratio": 0.2,
+            "macro_f1": 0.40470516830926245,
+            "balanced_accuracy": 0.4009168845110546,
+            "weighted_f1": 0.86989256794192,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.9988389643562058,
+            "target_attack_worst_recall": 0.9988389643562058,
+            "macro_f1_drop_vs_clean": 0.3819835242778607,
+            "balanced_accuracy_drop_vs_clean": 0.3064033308593796,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1,
+                2
+            ],
+            "malicious_ratio": 0.4,
+            "macro_f1": 0.4798802199799446,
+            "balanced_accuracy": 0.4885410727025757,
+            "weighted_f1": 0.8805259388236357,
+            "worst_attack_recall": 0.026106696935300794,
+            "target_attack_mean_recall": 0.7319009336528659,
+            "target_attack_worst_recall": 0.49038958354862044,
+            "macro_f1_drop_vs_clean": 0.30680847260717853,
+            "balanced_accuracy_drop_vs_clean": 0.21877914266785853,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1
+            ],
+            "malicious_ratio": 0.2,
+            "macro_f1": 0.4759281908938083,
+            "balanced_accuracy": 0.44977956551450776,
+            "weighted_f1": 0.8604236693375746,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.3107605016933149,
+            "balanced_accuracy_drop_vs_clean": 0.25754064985592645,
+            "attack_audit_pass": true
+        },
+        {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1,
+                2
+            ],
+            "malicious_ratio": 0.4,
+            "macro_f1": 0.22655517458804786,
+            "balanced_accuracy": 0.2564298707061703,
+            "weighted_f1": 0.7833971758298077,
+            "worst_attack_recall": 0.0,
+            "target_attack_mean_recall": 0.0,
+            "target_attack_worst_recall": 0.0,
+            "macro_f1_drop_vs_clean": 0.5601335179990753,
+            "balanced_accuracy_drop_vs_clean": 0.4508903446642639,
+            "attack_audit_pass": true
+        }
+    ],
+    "worst_identity_by_attack": {
+        "SCALE": {
+            "lowest_macro_f1_client": 1,
+            "lowest_macro_f1": 0.40470516830926245,
+            "lowest_target_recall_client": 5,
+            "lowest_target_recall_attack": "FTP-Patator",
+            "lowest_target_recall": 0.9875141884222475
+        },
+        "RANDOM": {
+            "lowest_macro_f1_client": 2,
+            "lowest_macro_f1": 0.4688044219808148,
+            "lowest_target_recall_client": 1,
+            "lowest_target_recall_attack": "DoS Hulk",
+            "lowest_target_recall": 0.0
+        }
+    }
+}

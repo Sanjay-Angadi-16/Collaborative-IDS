@@ -1,0 +1,51 @@
+seed,experiment_id,attack_type,malicious_ratio,aggregator,aggregator_display,macro_f1,tie
+42,E0_CLEAN,NONE,0.0,fedavg,FedAvg,0.7866886925871232,False
+42,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6290105288273798,False
+42,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4342955272318702,False
+42,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.7241613049878911,False
+42,E_SCALE_C1_C2,SCALE,0.4,coordinate_median,Coordinate Median,0.7318898383413887,False
+52,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7704858554731824,False
+52,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6667545571587269,False
+52,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4411213814933974,False
+52,E_SCALE_C1,SCALE,0.2,coordinate_median,Coordinate Median,0.7599840057733224,False
+52,E_SCALE_C1_C2,SCALE,0.4,coordinate_median,Coordinate Median,0.7963437607226358,False
+62,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7760682243167799,False
+62,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6658855571888025,False
+62,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.437438549968957,False
+62,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.7757559780262029,False
+62,E_SCALE_C1_C2,SCALE,0.4,coordinate_median,Coordinate Median,0.7814535421153184,False
+72,E0_CLEAN,NONE,0.0,fedavg,FedAvg,0.7863701250431502,False
+72,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6517803165059041,False
+72,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4428431103082131,False
+72,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.7525099342607623,False
+72,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.7093697524480599,False
+82,E0_CLEAN,NONE,0.0,coordinate_median,Coordinate Median,0.7717194004251922,False
+82,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.660941970636836,False
+82,E_RANDOM_C1_C2,RANDOM,0.4,coordinate_median,Coordinate Median,0.4423645841934494,False
+82,E_SCALE_C1,SCALE,0.2,coordinate_median,Coordinate Median,0.7159370923497703,False
+82,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.7566868838374079,False
+92,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7185999026277954,False
+92,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6499267471497716,False
+92,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4454808146584861,False
+92,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.6934882757350883,False
+92,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.779290422538336,False
+102,E0_CLEAN,NONE,0.0,fedavg,FedAvg,0.8001418081761632,False
+102,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6379735166805605,False
+102,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4288254301412608,False
+102,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.7464459384691966,False
+102,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.7959681663543475,False
+112,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7684907291018188,False
+112,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6521441721112734,False
+112,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4471306328613999,False
+112,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.7237847384946527,False
+112,E_SCALE_C1_C2,SCALE,0.4,coordinate_median,Coordinate Median,0.7667181837454872,False
+122,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7361155164069225,False
+122,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6306091482654442,False
+122,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4391953542943594,False
+122,E_SCALE_C1,SCALE,0.2,coordinate_median,Coordinate Median,0.7215617145853241,False
+122,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.761388336453274,False
+132,E0_CLEAN,NONE,0.0,trimmed_mean,Trimmed Mean,0.7477581798395772,False
+132,E_RANDOM_C1,RANDOM,0.2,trimmed_mean,Trimmed Mean,0.6612190549345591,False
+132,E_RANDOM_C1_C2,RANDOM,0.4,trimmed_mean,Trimmed Mean,0.4462613441004874,False
+132,E_SCALE_C1,SCALE,0.2,trimmed_mean,Trimmed Mean,0.632419380161816,False
+132,E_SCALE_C1_C2,SCALE,0.4,trimmed_mean,Trimmed Mean,0.7515687639277532,False

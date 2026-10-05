@@ -1,0 +1,20 @@
+{
+    "dual_correlation_evidence_supported": true,
+    "recommended_phase16_research_architecture": "FROZEN_RULES_PLUS_GNN_RULE_GAP_BRANCH",
+    "rule_macro_f1_mean": 0.636617749825297,
+    "gnn_macro_f1_mean": 0.9949999124980469,
+    "macro_f1_gain": 0.3583821626727499,
+    "rule_gap_recall_mean_rule": 0.0,
+    "rule_gap_recall_mean_gnn": 1.0,
+    "rule_gap_recall_gain": 1.0,
+    "gnn_precision_mean": 0.9925644056943007,
+    "macro_f1_p_value": 0.001953125,
+    "rule_gap_recall_p_value": 0.001953125,
+    "criteria": {
+        "minimum_macro_f1_gain": 0.05,
+        "minimum_rule_gap_recall_gain": 0.2,
+        "minimum_gnn_precision": 0.99,
+        "significance_alpha": 0.05
+    },
+    "scope": "Controlled synthetic privacy-safe rule-gap benchmark only. No production or real-world superiority claim."
+}

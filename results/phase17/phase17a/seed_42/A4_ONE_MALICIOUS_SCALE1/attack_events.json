@@ -1,0 +1,452 @@
+[
+    {
+        "round": 1,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 1,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 1,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 1,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 1,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 2,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 2,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 2,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 2,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 2,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 3,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 3,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 3,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 3,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 3,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 4,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 4,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 4,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 4,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 4,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 5,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 5,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 5,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 5,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 5,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 6,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 6,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 6,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 6,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 6,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 7,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 7,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 7,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 7,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 7,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 8,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 8,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 8,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 8,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 8,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 9,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 9,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 9,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 9,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 9,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 10,
+        "client_id": 1,
+        "declared_malicious": true,
+        "attack_type": "UPDATE_SCALE",
+        "update_scale": 1.0,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 10,
+        "client_id": 2,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 10,
+        "client_id": 3,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 10,
+        "client_id": 4,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    },
+    {
+        "round": 10,
+        "client_id": 5,
+        "declared_malicious": false,
+        "attack_type": "HONEST",
+        "update_scale": null,
+        "identity_error": 0.0,
+        "state_modified": false
+    }
+]

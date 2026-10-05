@@ -1,0 +1,3 @@
+alert_type,local_json_bytes,shared_json_bytes,size_reduction_percent,filter_plus_schema_ms
+FAST,767,642,16.297262059973924,0.2510999911464751
+DEEP,693,600,13.41991341991342,0.22899999748915434

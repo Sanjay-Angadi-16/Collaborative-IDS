@@ -1,0 +1,17 @@
+dataset,class_id,class_name,sequences,percentage
+client_1,0,BENIGN,31798,63.596
+client_1,3,DoS Hulk,18202,36.403999999999996
+client_2,0,BENIGN,39777,79.554
+client_2,1,DDoS,10223,20.446
+client_3,0,BENIGN,37863,75.726
+client_3,5,PortScan,12137,24.274
+client_4,0,BENIGN,49260,98.52
+client_4,2,DoS GoldenEye,740,1.48
+client_5,0,BENIGN,49446,98.892
+client_5,4,FTP-Patator,554,1.1079999999999999
+validation,0,BENIGN,39011,78.022
+validation,1,DDoS,2386,4.772
+validation,2,DoS GoldenEye,285,0.5700000000000001
+validation,3,DoS Hulk,4547,9.094
+validation,4,FTP-Patator,250,0.5
+validation,5,PortScan,3521,7.042

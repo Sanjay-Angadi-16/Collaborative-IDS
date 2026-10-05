@@ -1,0 +1,6 @@
+assigned_client,total_sequences,missed_to_benign,miss_rate,correct,accuracy
+1,200,36,0.18,151,0.755
+2,200,56,0.28,135,0.675
+3,200,34,0.17,158,0.79
+4,200,55,0.275,143,0.715
+5,200,40,0.2,155,0.775

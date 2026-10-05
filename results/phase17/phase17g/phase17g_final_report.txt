@@ -1,0 +1,114 @@
+PHASE 17G COMPLETE — FINAL STATISTICAL CONFIRMATION
+========================================================================
+
+Seeds evaluated      : 10
+Total matched runs   : 150
+Aggregators          : FedAvg, Coordinate Median, Trimmed Mean
+Evaluation data      : Clean validation only
+Locked test used     : NO
+Validation poisoned  : NO
+
+MACRO-F1 STATISTICAL SUMMARY
+------------------------------------------------------------------------
+
+E0_CLEAN
+  FedAvg               0.703487 ± 0.063485 95% CI [0.658073, 0.748901]
+  Coordinate Median    0.704518 ± 0.053819 95% CI [0.666019, 0.743018]
+  Trimmed Mean         0.748379 ± 0.019369 95% CI [0.734524, 0.762234]
+
+E_RANDOM_C1
+  FedAvg               0.488821 ± 0.048123 95% CI [0.454396, 0.523246]
+  Coordinate Median    0.611745 ± 0.036804 95% CI [0.585417, 0.638073]
+  Trimmed Mean         0.650625 ± 0.013919 95% CI [0.640667, 0.660582]
+
+E_RANDOM_C1_C2
+  FedAvg               0.311761 ± 0.058064 95% CI [0.270225, 0.353298]
+  Coordinate Median    0.435153 ± 0.007837 95% CI [0.429546, 0.440759]
+  Trimmed Mean         0.439549 ± 0.006168 95% CI [0.435137, 0.443962]
+
+E_SCALE_C1
+  FedAvg               0.454963 ± 0.074732 95% CI [0.401503, 0.508423]
+  Coordinate Median    0.680013 ± 0.060785 95% CI [0.636530, 0.723496]
+  Trimmed Mean         0.721160 ± 0.040940 95% CI [0.691874, 0.750447]
+
+E_SCALE_C1_C2
+  FedAvg               0.451006 ± 0.108833 95% CI [0.373151, 0.528860]
+  Coordinate Median    0.722727 ± 0.056547 95% CI [0.682275, 0.763178]
+  Trimmed Mean         0.754146 ± 0.026859 95% CI [0.734932, 0.773359]
+
+HIGHEST MACRO-F1 COUNTS
+------------------------------------------------------------------------
+
+E0_CLEAN
+  Coordinate Median    1
+  FedAvg               3
+  Trimmed Mean         6
+
+E_RANDOM_C1
+  Trimmed Mean         10
+
+E_RANDOM_C1_C2
+  Coordinate Median    1
+  Trimmed Mean         9
+
+E_SCALE_C1
+  Coordinate Median    3
+  Trimmed Mean         7
+
+E_SCALE_C1_C2
+  Coordinate Median    4
+  Trimmed Mean         6
+
+DEFENSE RECOVERY SUMMARY
+------------------------------------------------------------------------
+
+E_RANDOM_C1
+  Coordinate Median    ΔF1 vs FedAvg=+0.122924 | Damage recovery=58.50%
+  FedAvg               ΔF1 vs FedAvg=+0.000000 | Damage recovery=0.00%
+  Trimmed Mean         ΔF1 vs FedAvg=+0.161804 | Damage recovery=78.17%
+
+E_RANDOM_C1_C2
+  Coordinate Median    ΔF1 vs FedAvg=+0.123391 | Damage recovery=30.91%
+  FedAvg               ΔF1 vs FedAvg=+0.000000 | Damage recovery=0.00%
+  Trimmed Mean         ΔF1 vs FedAvg=+0.127788 | Damage recovery=32.04%
+
+E_SCALE_C1
+  Coordinate Median    ΔF1 vs FedAvg=+0.225050 | Damage recovery=93.88%
+  FedAvg               ΔF1 vs FedAvg=+0.000000 | Damage recovery=0.00%
+  Trimmed Mean         ΔF1 vs FedAvg=+0.266197 | Damage recovery=111.57%
+
+E_SCALE_C1_C2
+  Coordinate Median    ΔF1 vs FedAvg=+0.271721 | Damage recovery=110.86%
+  FedAvg               ΔF1 vs FedAvg=+0.000000 | Damage recovery=0.00%
+  Trimmed Mean         ΔF1 vs FedAvg=+0.303140 | Damage recovery=131.45%
+
+STATISTICAL TESTS
+------------------------------------------------------------------------
+E0_CLEAN | Friedman | FedAvg vs Coordinate Median vs Trimmed Mean | p=0.0608101
+E0_CLEAN | Wilcoxon signed-rank | FedAvg vs Coordinate Median | p=1
+E0_CLEAN | Wilcoxon signed-rank | FedAvg vs Trimmed Mean | p=0.0488281
+E0_CLEAN | Wilcoxon signed-rank | Coordinate Median vs Trimmed Mean | p=0.00976562
+E_RANDOM_C1 | Friedman | FedAvg vs Coordinate Median vs Trimmed Mean | p=0.000111666
+E_RANDOM_C1 | Wilcoxon signed-rank | FedAvg vs Coordinate Median | p=0.00390625
+E_RANDOM_C1 | Wilcoxon signed-rank | FedAvg vs Trimmed Mean | p=0.00195312
+E_RANDOM_C1 | Wilcoxon signed-rank | Coordinate Median vs Trimmed Mean | p=0.00195312
+E_RANDOM_C1_C2 | Friedman | FedAvg vs Coordinate Median vs Trimmed Mean | p=0.000111666
+E_RANDOM_C1_C2 | Wilcoxon signed-rank | FedAvg vs Coordinate Median | p=0.00195312
+E_RANDOM_C1_C2 | Wilcoxon signed-rank | FedAvg vs Trimmed Mean | p=0.00195312
+E_RANDOM_C1_C2 | Wilcoxon signed-rank | Coordinate Median vs Trimmed Mean | p=0.0644531
+E_SCALE_C1 | Friedman | FedAvg vs Coordinate Median vs Trimmed Mean | p=0.000370744
+E_SCALE_C1 | Wilcoxon signed-rank | FedAvg vs Coordinate Median | p=0.00195312
+E_SCALE_C1 | Wilcoxon signed-rank | FedAvg vs Trimmed Mean | p=0.00195312
+E_SCALE_C1 | Wilcoxon signed-rank | Coordinate Median vs Trimmed Mean | p=0.0273438
+E_SCALE_C1_C2 | Friedman | FedAvg vs Coordinate Median vs Trimmed Mean | p=0.000500451
+E_SCALE_C1_C2 | Wilcoxon signed-rank | FedAvg vs Coordinate Median | p=0.00195312
+E_SCALE_C1_C2 | Wilcoxon signed-rank | FedAvg vs Trimmed Mean | p=0.00195312
+E_SCALE_C1_C2 | Wilcoxon signed-rank | Coordinate Median vs Trimmed Mean | p=0.193359
+
+INTERPRETATION
+------------------------------------------------------------------------
+Phase 17G evaluates whether the Phase 17F defense comparison is stable across repeated random seeds.
+Higher Macro-F1 under attack indicates better preservation of global IDS classification performance.
+The results should be interpreted together with clean performance, worst attack recall, per-class recall, confidence intervals, and paired statistical tests.
+A robust aggregation method mitigates Byzantine poisoning when it consistently preserves performance better than FedAvg across repeated seeds.
+This constitutes experimental mitigation under the frozen Phase 17 threat model; it is not a claim of universal Byzantine immunity.

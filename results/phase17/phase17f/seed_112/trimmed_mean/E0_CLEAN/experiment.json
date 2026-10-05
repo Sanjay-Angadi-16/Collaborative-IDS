@@ -1,0 +1,15 @@
+{
+  "aggregator": "trimmed_mean",
+  "aggregator_display": "Trimmed Mean",
+  "attack_type": "NONE",
+  "experiment_id": "E0_CLEAN",
+  "final_state_sha256": "a8219902c238b77596c3f3ad2900fd718b300688b566bd21c65921ff8a0acd9e",
+  "magnitude": 1.0,
+  "malicious_clients": [],
+  "malicious_ratio": 0.0,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 112,
+  "specialized_attacks": [],
+  "trim_count": 1
+}

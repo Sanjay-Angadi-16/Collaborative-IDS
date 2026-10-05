@@ -1,0 +1,6 @@
+{
+  "attack_type": "NONE",
+  "formula": "identity",
+  "malicious_client": null,
+  "sign_flip_scale": null
+}

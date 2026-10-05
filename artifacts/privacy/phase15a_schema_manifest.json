@@ -1,0 +1,28 @@
+{
+    "phase": "15A",
+    "schema_version": "phase15a_v1",
+    "privacy_version": "phase15_v1",
+    "policy_version": "phase14g2_v1",
+    "schema_policy": "allowlist_only",
+    "fast_path_contract": {
+        "processing_path": "FAST_ATTACK_PATH",
+        "risk_mode": "FAST_PATH_RF_CONFIDENCE",
+        "risk_score": null,
+        "evidence_score": "must equal RF confidence",
+        "severity": "HIGH",
+        "decision_source": "Random Forest"
+    },
+    "deep_path_contract": {
+        "processing_path": "DEEP_ANALYSIS",
+        "risk_mode": "FULL_FOUR_MODEL_FUSION",
+        "risk_score": "required 0..1",
+        "evidence_score": "must equal risk_score",
+        "severity": "derived from frozen Phase14G2 risk bands"
+    },
+    "raw_identifiers_allowed": false,
+    "raw_packets_allowed": false,
+    "raw_payload_allowed": false,
+    "raw_features_allowed": false,
+    "cnn_sequence_allowed": false,
+    "locked_test_used": false
+}

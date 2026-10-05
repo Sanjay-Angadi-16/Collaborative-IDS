@@ -1,0 +1,16 @@
+import hashlib
+
+with open(
+    "results/phase13/feature_search/phase13_selected_mask.npy",
+    "rb",
+) as f:
+    mask_hash = hashlib.sha256(
+        f.read()
+    ).hexdigest()
+
+print(
+    "Frozen Phase13A mask SHA256:",
+    mask_hash,
+)
+#(.venv) A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids>python scripts/phase13b_before
+#Frozen Phase13A mask SHA256: 6addc3f291c1b95658afee825b8d402d8ea43cfcc97661baec4d763489956f8c

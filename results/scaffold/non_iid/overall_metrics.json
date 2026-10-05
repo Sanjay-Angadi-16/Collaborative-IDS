@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.8370574776324937,
+    "balanced_accuracy": 0.16666666666666666,
+    "macro_precision": 0.13950957960541563,
+    "macro_recall": 0.16666666666666666,
+    "macro_f1": 0.1518837394083156,
+    "weighted_f1": 0.7628125188150939,
+    "test_samples": 375433,
+    "training_time_seconds": 250.8064139999915,
+    "inference_time_seconds": 3.1610321999760345,
+    "selected_feature_count": 37,
+    "feature_reduction_ratio": 0.4714285714285714,
+    "final_server_control_norm": 71.88868693372541,
+    "implementation_variant": "SCAFFOLD-style control-variate correction with AdamW"
+}

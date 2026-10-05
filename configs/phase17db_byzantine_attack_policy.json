@@ -1,0 +1,111 @@
+{
+  "phase": "17D-B",
+  "version": "phase17db_v1",
+  "purpose": "Characterize positive model-update scaling and deterministic random Byzantine updates under the frozen FedProx70 baseline before defense tuning.",
+  "baseline": {
+    "algorithm": "FedProx70",
+    "scenario": "non_iid",
+    "features": 70,
+    "clients": 5,
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch_size": 2048,
+    "chunk_size": 100000,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "fedprox_mu": 0.01,
+    "aggregation": "sample-weighted parameter averaging",
+    "seed": 42
+  },
+  "data_policy": {
+    "training": "data/federated/non_iid/client_1.csv ... client_5.csv",
+    "development_evaluation": "data/processed/validation.csv",
+    "locked_test": "data/processed/test_locked.csv",
+    "locked_test_allowed": false,
+    "validation_filter_policy": "Evaluate only labels in the frozen six-class label_mapping; unsupported CICIDS2017 validation labels are excluded and audited, never relabeled."
+  },
+  "threat_model": {
+    "malicious_clients": [
+      1
+    ],
+    "malicious_ratio": "1/5 = 20%",
+    "client_1_specialized_attack": "DoS Hulk",
+    "server": "honest coordinator",
+    "attacker_controls_own_update": true,
+    "attacker_cannot_modify_other_clients": true,
+    "attacker_cannot_modify_server": true,
+    "attacker_cannot_modify_validation_or_test": true
+  },
+  "experiments": [
+    {
+      "id": "DB0_CLEAN",
+      "attack_type": "NONE",
+      "malicious_clients": [],
+      "magnitude": 1.0
+    },
+    {
+      "id": "DB_SCALE_X2",
+      "attack_type": "SCALE",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 2.0
+    },
+    {
+      "id": "DB_SCALE_X5",
+      "attack_type": "SCALE",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 5.0
+    },
+    {
+      "id": "DB_SCALE_X10",
+      "attack_type": "SCALE",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 10.0
+    },
+    {
+      "id": "DB_RANDOM_X1",
+      "attack_type": "RANDOM",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 1.0
+    },
+    {
+      "id": "DB_RANDOM_X2",
+      "attack_type": "RANDOM",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 2.0
+    },
+    {
+      "id": "DB_RANDOM_X5",
+      "attack_type": "RANDOM",
+      "malicious_clients": [
+        1
+      ],
+      "magnitude": 5.0
+    }
+  ],
+  "attack_audit": {
+    "scale_norm_ratio_abs_tolerance": 1e-05,
+    "scale_cosine_minimum": 0.99999,
+    "random_norm_ratio_abs_tolerance": 0.0001,
+    "random_attack_is_seed_deterministic": true
+  },
+  "frozen_source_hashes": {
+    "scripts/phase10_fedprox70.py": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+    "scripts/phase9_fedavg70.py": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5"
+  },
+  "scientific_rules": {
+    "defense_tuning_in_this_phase": false,
+    "trimmed_mean_or_median_used": false,
+    "locked_test_used": false,
+    "phase_pass_means": "Attack transformations executed and passed implementation/audit checks. PASS does not mean the attack is effective or that the model is robust."
+  }
+}

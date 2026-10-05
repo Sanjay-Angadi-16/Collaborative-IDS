@@ -1,0 +1,49 @@
+class,metric,baseline,method,mean_delta,wilcoxon_statistic,p_value,significant_at_0_05,wins,losses,ties
+BENIGN,recall,FedAvg70,Hybrid FedAvg,-1.0182683709869523e-05,3.0,0.3125,False,2,3,0
+BENIGN,f1,FedAvg70,Hybrid FedAvg,-0.002802041432466806,1.0,0.125,False,1,4,0
+BENIGN,recall,FedAvg70,FedProx,-0.0003137539418123225,0.0,0.0625,False,0,5,0
+BENIGN,f1,FedAvg70,FedProx,0.005805166479112356,0.0,0.0625,False,5,0,0
+BENIGN,recall,FedAvg70,Median,-0.00019474382595250362,0.0,0.0625,False,0,5,0
+BENIGN,f1,FedAvg70,Median,0.00028635480399736847,7.0,1.0,False,3,2,0
+BENIGN,recall,FedAvg70,Trimmed Mean,-0.000563229692705769,0.0,0.0625,False,0,5,0
+BENIGN,f1,FedAvg70,Trimmed Mean,-0.00035611549225078587,7.0,1.0,False,2,3,0
+DDoS,recall,FedAvg70,Hybrid FedAvg,-0.16712070410729254,1.0,0.125,False,1,4,0
+DDoS,f1,FedAvg70,Hybrid FedAvg,-0.1667920221639752,0.0,0.0625,False,0,5,0
+DDoS,recall,FedAvg70,FedProx,0.16357921207041076,0.0,0.0625,False,5,0,0
+DDoS,f1,FedAvg70,FedProx,0.08906628838959137,0.0,0.0625,False,5,0,0
+DDoS,recall,FedAvg70,Median,-0.20597233864207878,0.0,0.0625,False,0,5,0
+DDoS,f1,FedAvg70,Median,-0.23924791532205694,0.0,0.0625,False,0,5,0
+DDoS,recall,FedAvg70,Trimmed Mean,-0.1502829002514669,1.0,0.125,False,1,4,0
+DDoS,f1,FedAvg70,Trimmed Mean,-0.16247606904413084,0.0,0.0625,False,0,5,0
+DoS GoldenEye,recall,FedAvg70,Hybrid FedAvg,0.02480519480519481,6.0,0.8125,False,3,2,0
+DoS GoldenEye,f1,FedAvg70,Hybrid FedAvg,-0.04010897148445162,6.0,0.8125,False,3,2,0
+DoS GoldenEye,recall,FedAvg70,FedProx,0.25922077922077924,0.0,0.0625,False,5,0,0
+DoS GoldenEye,f1,FedAvg70,FedProx,0.2121574225652937,0.0,0.0625,False,5,0,0
+DoS GoldenEye,recall,FedAvg70,Median,0.14857142857142863,3.0,0.3125,False,4,1,0
+DoS GoldenEye,f1,FedAvg70,Median,-0.09185895525413686,3.0,0.3125,False,2,3,0
+DoS GoldenEye,recall,FedAvg70,Trimmed Mean,0.192987012987013,1.0,0.125,False,4,1,0
+DoS GoldenEye,f1,FedAvg70,Trimmed Mean,0.0008542096994577641,7.0,1.0,False,2,3,0
+DoS Hulk,recall,FedAvg70,Hybrid FedAvg,-0.05233142725563187,2.0,0.1875,False,1,4,0
+DoS Hulk,f1,FedAvg70,Hybrid FedAvg,-0.07617661227058051,0.0,0.0625,False,0,5,0
+DoS Hulk,recall,FedAvg70,FedProx,-0.015412365199370592,5.0,0.625,False,2,3,0
+DoS Hulk,f1,FedAvg70,FedProx,-0.013304610529321947,4.0,0.4375,False,1,4,0
+DoS Hulk,recall,FedAvg70,Median,-0.02856046359903288,4.0,0.4375,False,1,4,0
+DoS Hulk,f1,FedAvg70,Median,-0.06549445362925783,0.0,0.0625,False,0,5,0
+DoS Hulk,recall,FedAvg70,Trimmed Mean,-0.019741336301185863,4.0,0.4375,False,1,4,0
+DoS Hulk,f1,FedAvg70,Trimmed Mean,-0.042138209530958995,1.0,0.125,False,1,4,0
+FTP-Patator,recall,FedAvg70,Hybrid FedAvg,0.0,0.0,1.0,False,0,0,5
+FTP-Patator,f1,FedAvg70,Hybrid FedAvg,0.0,0.0,1.0,False,0,0,5
+FTP-Patator,recall,FedAvg70,FedProx,0.00204081632653056,0.0,0.25,False,3,0,2
+FTP-Patator,f1,FedAvg70,FedProx,0.0036874741628772,0.0,0.25,False,3,0,2
+FTP-Patator,recall,FedAvg70,Median,0.4238095238095238,0.0,0.0625,False,5,0,0
+FTP-Patator,f1,FedAvg70,Median,0.5213207697701343,0.0,0.0625,False,5,0,0
+FTP-Patator,recall,FedAvg70,Trimmed Mean,0.09886621315192735,0.0,0.0625,False,5,0,0
+FTP-Patator,f1,FedAvg70,Trimmed Mean,0.11522532478590415,0.0,0.0625,False,5,0,0
+PortScan,recall,FedAvg70,Hybrid FedAvg,-0.055897699713382806,0.0,0.25,False,0,3,2
+PortScan,f1,FedAvg70,Hybrid FedAvg,-0.09805606754998245,0.0,0.25,False,0,3,2
+PortScan,recall,FedAvg70,FedProx,-0.054398471375027554,0.0,0.25,False,0,3,2
+PortScan,f1,FedAvg70,FedProx,-0.09508360652710615,0.0,0.25,False,0,3,2
+PortScan,recall,FedAvg70,Median,-0.055897699713382806,0.0,0.25,False,0,3,2
+PortScan,f1,FedAvg70,Median,-0.09805606754998245,0.0,0.25,False,0,3,2
+PortScan,recall,FedAvg70,Trimmed Mean,-0.055897699713382806,0.0,0.25,False,0,3,2
+PortScan,f1,FedAvg70,Trimmed Mean,-0.09805606754998245,0.0,0.25,False,0,3,2

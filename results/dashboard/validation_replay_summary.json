@@ -1,0 +1,43 @@
+{
+  "phase": "17H",
+  "purpose": "Validation-only dashboard integration replay using the existing frozen Phase14 models/policy.",
+  "sample_count": 1000,
+  "anomalous_predictions": 12,
+  "anomalous_rate": 0.012,
+  "validation_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\sequences\\validation_sequences.npz",
+  "seed": 42,
+  "assignment_policy": "deterministic round-robin across 5 clients; true label not used",
+  "class_distribution": {
+    "BENIGN": 169,
+    "DDoS": 166,
+    "DoS GoldenEye": 166,
+    "DoS Hulk": 167,
+    "FTP-Patator": 166,
+    "PortScan": 166
+  },
+  "prediction_distribution": {
+    "BENIGN": 342,
+    "DDoS": 166,
+    "DoS GoldenEye": 112,
+    "DoS Hulk": 144,
+    "FTP-Patator": 117,
+    "PortScan": 107,
+    "ANOMALOUS_TRAFFIC": 12
+  },
+  "metrics": {
+    "accuracy": 0.792,
+    "balanced_accuracy": 0.7914410005112752,
+    "macro_precision": 0.8900484980859109,
+    "macro_recall": 0.7914410005112752,
+    "macro_f1": 0.8099011682964209,
+    "weighted_f1": 0.8094315940156945
+  },
+  "fast_path_count": 165,
+  "deep_path_count": 835,
+  "global_inference_seconds": 0.034153299988247454,
+  "local_inference_seconds_total": 0.20702260005054995,
+  "raw_ip_available": false,
+  "locked_test_used": false,
+  "alerts_json": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\dashboard\\validation_replay_alerts.json",
+  "alerts_csv": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\dashboard\\validation_replay_alerts.csv"
+}

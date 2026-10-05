@@ -1,0 +1,19 @@
+{
+  "aggregator": "coordinate_median",
+  "aggregator_display": "Coordinate Median",
+  "attack_type": "RANDOM",
+  "experiment_id": "E_RANDOM_C1",
+  "final_state_sha256": "1e92ba9a0640a4b14b638fe73052cbd21e3db5dfdf2f6bfdc588f9c7b53cd69c",
+  "magnitude": 5.0,
+  "malicious_clients": [
+    1
+  ],
+  "malicious_ratio": 0.2,
+  "max_aggregation_audit_error": 0.0,
+  "scenario": "non_iid",
+  "seed": 42,
+  "specialized_attacks": [
+    "DoS Hulk"
+  ],
+  "trim_count": null
+}

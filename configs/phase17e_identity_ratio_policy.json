@@ -1,0 +1,190 @@
+{
+  "phase": "17E",
+  "version": "phase17e_v1",
+  "purpose": "Measure how Byzantine attack impact changes with malicious-client identity and with malicious participation increasing from 0% to 20% to 40%.",
+  "baseline": {
+    "algorithm": "FedProx70",
+    "scenario": "non_iid",
+    "features": 70,
+    "clients": 5,
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch_size": 2048,
+    "chunk_size": 100000,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "fedprox_mu": 0.01,
+    "aggregation": "sample-weighted parameter averaging",
+    "seed": 42
+  },
+  "client_specialization": {
+    "1": "DoS Hulk",
+    "2": "DDoS",
+    "3": "PortScan",
+    "4": "DoS GoldenEye",
+    "5": "FTP-Patator"
+  },
+  "selected_attacks": {
+    "scaling": {
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "reason": "Phase17D-B showed material degradation without the near-total class collapse seen at SCALE x10."
+    },
+    "random": {
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "reason": "Phase17D-B showed strong degradation and loss of client-1 class knowledge while retaining enough model utility for ratio analysis."
+    }
+  },
+  "identity_experiments": [
+    {
+      "id": "E_SCALE_C1",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "id": "E_SCALE_C2",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        2
+      ]
+    },
+    {
+      "id": "E_SCALE_C3",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        3
+      ]
+    },
+    {
+      "id": "E_SCALE_C4",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        4
+      ]
+    },
+    {
+      "id": "E_SCALE_C5",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        5
+      ]
+    },
+    {
+      "id": "E_RANDOM_C1",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "id": "E_RANDOM_C2",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        2
+      ]
+    },
+    {
+      "id": "E_RANDOM_C3",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        3
+      ]
+    },
+    {
+      "id": "E_RANDOM_C4",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        4
+      ]
+    },
+    {
+      "id": "E_RANDOM_C5",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        5
+      ]
+    }
+  ],
+  "ratio_experiments": [
+    {
+      "id": "E0_CLEAN",
+      "attack_type": "NONE",
+      "magnitude": 1.0,
+      "malicious_clients": []
+    },
+    {
+      "id": "E_SCALE_C1",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "id": "E_SCALE_C1_C2",
+      "attack_type": "SCALE",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "E_RANDOM_C1",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "id": "E_RANDOM_C1_C2",
+      "attack_type": "RANDOM",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1,
+        2
+      ]
+    }
+  ],
+  "data_policy": {
+    "training": "data/federated/non_iid/client_1.csv ... client_5.csv",
+    "development_evaluation": "data/processed/validation.csv",
+    "locked_test": "data/processed/test_locked.csv",
+    "locked_test_allowed": false,
+    "validation_filter_policy": "Evaluate only labels in the frozen six-class label_mapping; unsupported validation labels are excluded and audited, never relabeled."
+  },
+  "attack_audit": {
+    "scale_norm_ratio_abs_tolerance": 1e-05,
+    "scale_cosine_minimum": 0.99999,
+    "random_norm_ratio_abs_tolerance": 0.0001
+  },
+  "frozen_source_hashes": {
+    "scripts/phase10_fedprox70.py": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+    "scripts/phase9_fedavg70.py": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5"
+  },
+  "scientific_rules": {
+    "same_attack_strength_for_20_and_40_percent": true,
+    "malicious_pair_for_40_percent": [
+      1,
+      2
+    ],
+    "identity_rotation_uses_one_malicious_client_at_a_time": true,
+    "robust_defense_used": false,
+    "locked_test_used": false,
+    "phase_pass_means": "All requested identity/ratio experiments completed and attack transformations passed implementation audits. PASS does not mean robustness."
+  }
+}

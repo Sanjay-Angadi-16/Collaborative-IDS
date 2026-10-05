@@ -1,0 +1,11 @@
+{
+    "accuracy_delta": -0.0028979871242005295,
+    "balanced_accuracy_delta": -0.027945456956040893,
+    "macro_precision_delta": -0.016277373346288204,
+    "macro_recall_delta": -0.027945456956040893,
+    "macro_f1_delta": -0.03771577997560188,
+    "weighted_f1_delta": -0.0036544722355702497,
+    "feature_reduction_ratio": 0.48571428571428577,
+    "parameter_reduction_ratio": 0.14359718876827132,
+    "communication_reduction_ratio": 0.14359718876827132
+}

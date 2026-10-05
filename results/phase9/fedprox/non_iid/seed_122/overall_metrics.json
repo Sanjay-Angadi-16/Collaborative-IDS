@@ -1,0 +1,18 @@
+{
+    "accuracy": 0.9331651719481239,
+    "balanced_accuracy": 0.5134344860762224,
+    "macro_precision": 0.788514076198406,
+    "macro_recall": 0.5134344860762224,
+    "macro_f1": 0.5553671940062416,
+    "weighted_f1": 0.9132182530595752,
+    "test_samples": 375433,
+    "training_time_seconds": 256.8766816998832,
+    "inference_time_seconds": 3.024465800030157,
+    "selected_feature_count": 37,
+    "feature_reduction_ratio": 0.4714285714285714,
+    "phase": 9,
+    "method": "Hybrid37_FedProx",
+    "scenario": "non_iid",
+    "seed": 122,
+    "fedprox_mu": 0.01
+}

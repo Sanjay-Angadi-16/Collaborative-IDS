@@ -1,0 +1,112 @@
+{
+    "phase": "17A",
+    "version": "phase17a_v1_2",
+    "status": "FROZEN",
+    "threat_model": {
+        "total_clients": 5,
+        "fixed_malicious_client_sets": {
+            "clean": [],
+            "one_malicious": [
+                1
+            ],
+            "two_malicious": [
+                1,
+                2
+            ]
+        },
+        "attacker_capabilities": {
+            "control_own_local_training": true,
+            "modify_own_labels_in_future_phases": true,
+            "modify_own_model_update_in_future_phases": true,
+            "read_other_clients_raw_data": false,
+            "modify_server_aggregation_code": false,
+            "modify_validation_or_test_data": false,
+            "modify_other_clients_updates": false
+        },
+        "server_assumption": "honest coordinator for Phase17A",
+        "collusion": "two malicious clients may both be adversarial in the 40 percent condition, but coordinated attack logic is not introduced in Phase17A"
+    },
+    "baseline": {
+        "algorithm": "FedProx70",
+        "scenario": "non_iid",
+        "features": 70,
+        "clients": 5,
+        "rounds": 10,
+        "local_epochs": 1,
+        "batch_size": 2048,
+        "chunk_size": 100000,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "fedprox_mu": 0.01,
+        "seed": 42,
+        "aggregation": "sample-weighted parameter averaging"
+    },
+    "data_policy": {
+        "training": "data/federated/non_iid/client_1.csv ... client_5.csv",
+        "development_evaluation": "data/processed/validation.csv",
+        "locked_test": "data/processed/test_locked.csv",
+        "locked_test_allowed": false,
+        "reason": "Phase17 attack and defense development must remain off the previously inspected locked test.",
+        "validation_filter_policy": "Evaluate only rows whose labels are present in the frozen six-class label_mapping. Other CICIDS2017 labels in validation.csv are excluded and audited; they are never relabeled."
+    },
+    "experiment_matrix": [
+        {
+            "id": "A1_CLEAN",
+            "attack_spec": {
+                "attack_type": "NONE",
+                "malicious_clients": [],
+                "update_scale": 1.0
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "A2_ONE_MALICIOUS_NOOP",
+            "attack_spec": {
+                "attack_type": "NOOP",
+                "malicious_clients": [
+                    1
+                ],
+                "update_scale": 1.0
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "A3_TWO_MALICIOUS_NOOP",
+            "attack_spec": {
+                "attack_type": "NOOP",
+                "malicious_clients": [
+                    1,
+                    2
+                ],
+                "update_scale": 1.0
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "A4_ONE_MALICIOUS_SCALE1",
+            "attack_spec": {
+                "attack_type": "UPDATE_SCALE",
+                "malicious_clients": [
+                    1
+                ],
+                "update_scale": 1.0
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "A5_TWO_MALICIOUS_SCALE1",
+            "attack_spec": {
+                "attack_type": "UPDATE_SCALE",
+                "malicious_clients": [
+                    1,
+                    2
+                ],
+                "update_scale": 1.0
+            },
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        }
+    ],
+    "scientific_interpretation": "Phase17A validates the malicious-client routing/evaluation harness only. It does not measure poisoning vulnerability because NOOP and scale=1.0 are intentionally non-damaging identity controls.",
+    "locked_test_used": false,
+    "ready_for_phase17b": true
+}

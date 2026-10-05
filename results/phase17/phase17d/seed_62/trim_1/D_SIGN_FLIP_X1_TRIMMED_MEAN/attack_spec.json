@@ -1,0 +1,6 @@
+{
+  "attack_type": "SIGN_FLIP",
+  "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+  "malicious_client": 1,
+  "sign_flip_scale": 1.0
+}

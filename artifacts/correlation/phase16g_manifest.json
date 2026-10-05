@@ -1,0 +1,56 @@
+{
+    "phase": "16G",
+    "version": "phase16g_v1",
+    "status": "PASS",
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "research_architecture_decision": {
+        "dual_correlation_evidence_supported": true,
+        "recommended_phase16_research_architecture": "FROZEN_RULES_PLUS_GNN_RULE_GAP_BRANCH",
+        "rule_macro_f1_mean": 0.636617749825297,
+        "gnn_macro_f1_mean": 0.9949999124980469,
+        "macro_f1_gain": 0.3583821626727499,
+        "rule_gap_recall_mean_rule": 0.0,
+        "rule_gap_recall_mean_gnn": 1.0,
+        "rule_gap_recall_gain": 1.0,
+        "gnn_precision_mean": 0.9925644056943007,
+        "macro_f1_p_value": 0.001953125,
+        "rule_gap_recall_p_value": 0.001953125,
+        "criteria": {
+            "minimum_macro_f1_gain": 0.05,
+            "minimum_rule_gap_recall_gain": 0.2,
+            "minimum_gnn_precision": 0.99,
+            "significance_alpha": 0.05
+        },
+        "scope": "Controlled synthetic privacy-safe rule-gap benchmark only. No production or real-world superiority claim."
+    },
+    "hybrid_threshold_policy": {
+        "candidates": [
+            0.5,
+            0.7,
+            0.8,
+            0.9,
+            0.95
+        ],
+        "minimum_validation_precision": 0.99,
+        "selection_data": "VALIDATION_ONLY",
+        "test_data_used_for_selection": false
+    },
+    "important_limitations": [
+        "The benchmark remains synthetic.",
+        "Rule-gap campaigns are engineered multi-stage grammars, not production incident labels.",
+        "The result supports modeled correlation capacity only within this benchmark family.",
+        "The frozen Phase16C deterministic rule contract is unchanged.",
+        "Hybrid thresholds are chosen using validation data only per seed.",
+        "No locked CICIDS IDS test data are used.",
+        "No real-world superiority claim is permitted from Phase16G alone."
+    ],
+    "recommended_next_step": "If dual-correlation evidence is supported, close Phase16 with the frozen rule branch plus a GNN rule-gap research branch, then move to the next exceptional-condition track: federated poisoning / malicious-client robustness.",
+    "locked_test_used": false
+}

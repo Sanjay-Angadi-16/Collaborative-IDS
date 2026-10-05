@@ -1,0 +1,227 @@
+{
+    "rule": {
+        "accuracy": {
+            "mean": 0.675,
+            "std": 0.0,
+            "min": 0.675,
+            "max": 0.675
+        },
+        "balanced_accuracy": {
+            "mean": 0.675,
+            "std": 0.0,
+            "min": 0.675,
+            "max": 0.675
+        },
+        "precision": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 0.35,
+            "std": 0.0,
+            "min": 0.35,
+            "max": 0.35
+        },
+        "f1": {
+            "mean": 0.5185185185185184,
+            "std": 1.1702778228589004e-16,
+            "min": 0.5185185185185185,
+            "max": 0.5185185185185185
+        },
+        "macro_f1": {
+            "mean": 0.636617749825297,
+            "std": 0.0,
+            "min": 0.636617749825297,
+            "max": 0.636617749825297
+        },
+        "false_positive_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "false_negative_rate": {
+            "mean": 0.6500000000000001,
+            "std": 1.1702778228589004e-16,
+            "min": 0.65,
+            "max": 0.65
+        },
+        "rule_gap_recall": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    },
+    "gnn": {
+        "accuracy": {
+            "mean": 0.9949999999999999,
+            "std": 0.002886751345948131,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "balanced_accuracy": {
+            "mean": 0.9949999999999999,
+            "std": 0.002886751345948153,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "precision": {
+            "mean": 0.9925644056943007,
+            "std": 0.0053522508734501345,
+            "min": 0.9851485148514851,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 0.9974999999999999,
+            "std": 0.0026352313834736517,
+            "min": 0.995,
+            "max": 1.0
+        },
+        "f1": {
+            "mean": 0.9950174128886813,
+            "std": 0.0028723876039674513,
+            "min": 0.9900497512437811,
+            "max": 1.0
+        },
+        "macro_f1": {
+            "mean": 0.9949999124980469,
+            "std": 0.002886805474295013,
+            "min": 0.9899997499937498,
+            "max": 1.0
+        },
+        "false_positive_rate": {
+            "mean": 0.0075,
+            "std": 0.005400617248673217,
+            "min": 0.0,
+            "max": 0.015
+        },
+        "false_negative_rate": {
+            "mean": 0.0025,
+            "std": 0.0026352313834736496,
+            "min": 0.0,
+            "max": 0.005
+        },
+        "rule_gap_recall": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        }
+    },
+    "hybrid": {
+        "accuracy": {
+            "mean": 0.998,
+            "std": 0.003291402943021917,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "balanced_accuracy": {
+            "mean": 0.998,
+            "std": 0.003291402943021917,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "precision": {
+            "mean": 0.997512388552288,
+            "std": 0.004228203721183587,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 0.9984999999999999,
+            "std": 0.003374742788552768,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "f1": {
+            "mean": 0.9980024844371694,
+            "std": 0.003288893983589162,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "macro_f1": {
+            "mean": 0.9979999843746679,
+            "std": 0.0032914161302565726,
+            "min": 0.99,
+            "max": 1.0
+        },
+        "false_positive_rate": {
+            "mean": 0.0025,
+            "std": 0.004249182927993987,
+            "min": 0.0,
+            "max": 0.01
+        },
+        "false_negative_rate": {
+            "mean": 0.0015,
+            "std": 0.0033747427885527648,
+            "min": 0.0,
+            "max": 0.01
+        },
+        "rule_gap_recall": {
+            "mean": 0.9976923076923077,
+            "std": 0.0051919119823888495,
+            "min": 0.9846153846153847,
+            "max": 1.0
+        }
+    },
+    "hybrid_thresholds": {
+        "values": [
+            0.8,
+            0.95,
+            0.95,
+            0.5,
+            0.8,
+            0.9,
+            0.95,
+            0.7,
+            0.95,
+            0.9
+        ],
+        "mean_std": {
+            "mean": 0.8400000000000001,
+            "std": 0.14681810363696826,
+            "min": 0.5,
+            "max": 0.95
+        }
+    },
+    "paired_tests": {
+        "gnn_vs_rule_macro_f1": {
+            "wins": 10,
+            "losses": 0,
+            "ties": 0,
+            "non_tied_pairs": 10,
+            "two_sided_exact_p": 0.001953125
+        },
+        "hybrid_vs_rule_macro_f1": {
+            "wins": 10,
+            "losses": 0,
+            "ties": 0,
+            "non_tied_pairs": 10,
+            "two_sided_exact_p": 0.001953125
+        },
+        "gnn_vs_rule_rule_gap_recall": {
+            "wins": 10,
+            "losses": 0,
+            "ties": 0,
+            "non_tied_pairs": 10,
+            "two_sided_exact_p": 0.001953125
+        },
+        "hybrid_vs_rule_rule_gap_recall": {
+            "wins": 10,
+            "losses": 0,
+            "ties": 0,
+            "non_tied_pairs": 10,
+            "two_sided_exact_p": 0.001953125
+        },
+        "hybrid_vs_gnn_macro_f1": {
+            "wins": 7,
+            "losses": 0,
+            "ties": 3,
+            "non_tied_pairs": 7,
+            "two_sided_exact_p": 0.015625
+        }
+    }
+}

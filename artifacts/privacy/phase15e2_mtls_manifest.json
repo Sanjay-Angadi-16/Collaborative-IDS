@@ -1,0 +1,14 @@
+{
+    "phase": "15E2",
+    "transport": "HTTPS/TLS",
+    "authentication": "mutual TLS",
+    "server_authentication": "server certificate verified against trusted CA",
+    "client_authentication": "collector requires client certificate signed by trusted CA",
+    "tls_minimum_version": "TLSv1.2",
+    "test_certificate_lifecycle": "generated in temporary directory and deleted after smoke test",
+    "private_keys_written_to_results_or_artifacts": false,
+    "message_sha256_authentication": false,
+    "message_sha256_purpose": "additional payload integrity check only",
+    "production_note": "Replace ephemeral local CA/certs with organization-managed PKI, certificate rotation, and protected private keys.",
+    "locked_test_used": false
+}

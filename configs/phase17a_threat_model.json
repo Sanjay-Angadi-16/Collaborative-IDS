@@ -1,0 +1,114 @@
+{
+  "phase": "17A",
+  "version": "phase17a_v1_2",
+  "purpose": "Freeze malicious-client threat model and validate a clean-vs-malicious FedProx70 evaluation harness before injecting damaging poisoning.",
+  "baseline": {
+    "algorithm": "FedProx70",
+    "scenario": "non_iid",
+    "features": 70,
+    "clients": 5,
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch_size": 2048,
+    "chunk_size": 100000,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "fedprox_mu": 0.01,
+    "seed": 42,
+    "aggregation": "sample-weighted parameter averaging"
+  },
+  "data_policy": {
+    "training": "data/federated/non_iid/client_1.csv ... client_5.csv",
+    "development_evaluation": "data/processed/validation.csv",
+    "locked_test": "data/processed/test_locked.csv",
+    "locked_test_allowed": false,
+    "reason": "Phase17 attack and defense development must remain off the previously inspected locked test.",
+    "validation_filter_policy": "Evaluate only rows whose labels are present in the frozen six-class label_mapping. Other CICIDS2017 labels in validation.csv are excluded and audited; they are never relabeled."
+  },
+  "threat_model": {
+    "total_clients": 5,
+    "fixed_malicious_client_sets": {
+      "clean": [],
+      "one_malicious": [
+        1
+      ],
+      "two_malicious": [
+        1,
+        2
+      ]
+    },
+    "attacker_capabilities": {
+      "control_own_local_training": true,
+      "modify_own_labels_in_future_phases": true,
+      "modify_own_model_update_in_future_phases": true,
+      "read_other_clients_raw_data": false,
+      "modify_server_aggregation_code": false,
+      "modify_validation_or_test_data": false,
+      "modify_other_clients_updates": false
+    },
+    "server_assumption": "honest coordinator for Phase17A",
+    "collusion": "two malicious clients may both be adversarial in the 40 percent condition, but coordinated attack logic is not introduced in Phase17A"
+  },
+  "phase17a_experiments": [
+    {
+      "id": "A1_CLEAN",
+      "malicious_clients": [],
+      "attack_type": "NONE",
+      "update_scale": 1.0
+    },
+    {
+      "id": "A2_ONE_MALICIOUS_NOOP",
+      "malicious_clients": [
+        1
+      ],
+      "attack_type": "NOOP",
+      "update_scale": 1.0
+    },
+    {
+      "id": "A3_TWO_MALICIOUS_NOOP",
+      "malicious_clients": [
+        1,
+        2
+      ],
+      "attack_type": "NOOP",
+      "update_scale": 1.0
+    },
+    {
+      "id": "A4_ONE_MALICIOUS_SCALE1",
+      "malicious_clients": [
+        1
+      ],
+      "attack_type": "UPDATE_SCALE",
+      "update_scale": 1.0
+    },
+    {
+      "id": "A5_TWO_MALICIOUS_SCALE1",
+      "malicious_clients": [
+        1,
+        2
+      ],
+      "attack_type": "UPDATE_SCALE",
+      "update_scale": 1.0
+    }
+  ],
+  "identity_acceptance": {
+    "no_op_requires_exact_state_hash_match": true,
+    "scale1_max_state_abs_diff": 0.0,
+    "overall_metric_abs_tolerance": 1e-06,
+    "per_class_recall_abs_tolerance": 1e-06,
+    "attack_event_identity_error_tolerance": 0.0,
+    "scale1_requires_exact_state_hash_match": true
+  },
+  "frozen_source_hashes": {
+    "scripts/phase10_fedprox70.py": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+    "scripts/phase9_fedavg70.py": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5"
+  },
+  "next_phases": {
+    "17B": "label-flipping poisoning",
+    "17C": "sign-flip / model-update poisoning",
+    "17D": "model-update scaling and random Byzantine updates",
+    "17E": "20 percent vs 40 percent malicious-client severity",
+    "17F": "FedProx vs robust aggregators such as Median and Trimmed Mean",
+    "17G": "repeated-seed statistical confirmation"
+  }
+}

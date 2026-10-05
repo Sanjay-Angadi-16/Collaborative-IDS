@@ -1,0 +1,84 @@
+{
+    "accuracy": 0.676,
+    "balanced_accuracy": 0.6759999999999999,
+    "precision": 1.0,
+    "recall": 0.352,
+    "f1": 0.5207100591715976,
+    "macro_f1": 0.6379985341175209,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.648,
+    "confusion_matrix": [
+        [
+            250,
+            0
+        ],
+        [
+            162,
+            88
+        ]
+    ],
+    "roc_auc": 0.6759999999999999,
+    "rule_gap_positive_recall": 0.0,
+    "per_subtype": {
+        "HARD_NEGATIVE_RANDOM_BURST": {
+            "count": 62,
+            "positive_count": 0,
+            "recall": null,
+            "accuracy": 1.0
+        },
+        "HARD_NEGATIVE_SHUFFLED_A": {
+            "count": 63,
+            "positive_count": 0,
+            "recall": null,
+            "accuracy": 1.0
+        },
+        "HARD_NEGATIVE_TOO_SLOW": {
+            "count": 62,
+            "positive_count": 0,
+            "recall": null,
+            "accuracy": 1.0
+        },
+        "HARD_NEGATIVE_WRONG_CLIENT_ORDER": {
+            "count": 63,
+            "positive_count": 0,
+            "recall": null,
+            "accuracy": 1.0
+        },
+        "RULE_GAP_CHAIN_A": {
+            "count": 54,
+            "positive_count": 54,
+            "recall": 0.0,
+            "accuracy": 0.0
+        },
+        "RULE_GAP_CHAIN_B": {
+            "count": 54,
+            "positive_count": 54,
+            "recall": 0.0,
+            "accuracy": 0.0
+        },
+        "RULE_GAP_CHAIN_C": {
+            "count": 54,
+            "positive_count": 54,
+            "recall": 0.0,
+            "accuracy": 0.0
+        },
+        "RULE_POSITIVE_MIXED_WITH_DECOYS": {
+            "count": 25,
+            "positive_count": 25,
+            "recall": 1.0,
+            "accuracy": 1.0
+        },
+        "RULE_POSITIVE_SHARED_DESTINATION": {
+            "count": 31,
+            "positive_count": 31,
+            "recall": 1.0,
+            "accuracy": 1.0
+        },
+        "RULE_POSITIVE_SHARED_SOURCE": {
+            "count": 32,
+            "positive_count": 32,
+            "recall": 1.0,
+            "accuracy": 1.0
+        }
+    }
+}

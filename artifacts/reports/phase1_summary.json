@@ -1,0 +1,25 @@
+{
+  "rows": 2520798,
+  "splits": {
+    "train": 1764558,
+    "validation": 378120,
+    "test_locked": 378120
+  },
+  "partition_sizes": {
+    "iid": {
+      "client_1": 588186,
+      "client_2": 588186,
+      "client_3": 588186
+    },
+    "mild_non_iid": {
+      "client_1": 535555,
+      "client_2": 569653,
+      "client_3": 659350
+    },
+    "extreme_non_iid": {
+      "client_1": 492490,
+      "client_2": 554492,
+      "client_3": 717576
+    }
+  }
+}

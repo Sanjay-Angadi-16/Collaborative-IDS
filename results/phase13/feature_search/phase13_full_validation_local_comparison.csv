@@ -1,0 +1,6 @@
+client_id,seen_attack,baseline_70_full_validation_recall,selected_full_validation_recall,absolute_delta,retention_ratio,search_required_retention_ratio,reporting_only,used_for_further_tuning,locked_test_used
+1,DoS Hulk,0.945547428306049,0.9462440496923256,0.0006966213862765747,1.00073673870334,0.8,True,False,False
+2,DDoS,0.9989149529812958,0.9993283042265165,0.00041335124522068334,1.0004138002379352,0.8,True,False,False
+3,PortScan,0.9856670341786108,0.9815509004042632,-0.004116133774347608,0.9958240119313946,0.8,True,False,False
+4,DoS GoldenEye,0.9913563829787234,0.9913563829787234,0.0,1.0,0.8,True,False,False
+5,FTP-Patator,0.9954597048808173,0.9977298524404086,0.002270147559591318,1.0022805017103762,0.8,True,False,False

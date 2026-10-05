@@ -1,0 +1,40 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Secrets
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Large datasets - keep outside normal Git
+data/
+
+# Duplicate archive files
+resultsZ.zip
+scriptsZ.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large datasets
+data/
+
+# Generated poisoned datasets
+/artifacts/poisoning/**/poisoned_data/
+
+# Logs
+logs/
+
+# Duplicate archives
+resultsZ.zip
+scriptsZ.zip

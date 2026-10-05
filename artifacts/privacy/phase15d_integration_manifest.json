@@ -1,0 +1,23 @@
+{
+    "phase": "15D",
+    "input": "frozen Phase14G2 local IDS alert",
+    "pipeline": [
+        "load Phase14G2 alert",
+        "obtain local network context",
+        "HMAC-SHA256 pseudonymization",
+        "explicit allowlist privacy filter",
+        "Phase15A schema validation",
+        "privacy leakage audit",
+        "canonical JSON serialization",
+        "deserialize + schema round-trip validation",
+        "emit privacy-safe JSONL"
+    ],
+    "raw_identifiers_persisted": false,
+    "source_destination_tokens_required": true,
+    "stable_key_required_for_operational_correlation": true,
+    "demo_context_is_not_dataset_derived": true,
+    "serialized_message_sha256_is_local_audit_metadata": true,
+    "transport_security": "NOT IMPLEMENTED IN 15D; belongs to Phase15E",
+    "central_collector": "NOT IMPLEMENTED IN 15D; belongs to Phase15E",
+    "locked_test_used": false
+}

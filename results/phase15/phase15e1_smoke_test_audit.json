@@ -1,0 +1,28 @@
+{
+    "phase": "15E1",
+    "phase_name": "Local Central Alert Collector + Sender Smoke Test",
+    "collector_url": "http://127.0.0.1:8765/api/alerts",
+    "transport": "LOCALHOST_HTTP_SMOKE_TEST_ONLY",
+    "tls_enabled": false,
+    "input": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15d_shared_alert_pretty.json",
+    "accepted_unique_alerts": 5,
+    "duplicate_rejection": true,
+    "digest_mismatch_rejection": true,
+    "privacy_leakage_rejection": true,
+    "malformed_json_rejection": true,
+    "sender_plain_http_non_localhost_guard": true,
+    "stored_unique_alert_count": 5,
+    "mean_sender_round_trip_ms": 139.8567800060846,
+    "median_sender_round_trip_ms": 132.84910001675598,
+    "collector_health_final": {
+        "status": "ok",
+        "collector_version": "phase15e1_v1",
+        "accepted_count": 5,
+        "duplicate_count": 1,
+        "rejected_count": 3,
+        "stored_unique_alert_ids": 5,
+        "transport_note": "Phase15E1 localhost HTTP smoke test only; TLS belongs to Phase15E2."
+    },
+    "all_tests_passed": true,
+    "locked_test_used": false
+}

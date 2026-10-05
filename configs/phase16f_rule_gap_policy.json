@@ -1,0 +1,38 @@
+{
+  "phase_version": "phase16f_v1",
+  "dataset": {
+    "train_graphs": 1600,
+    "validation_graphs": 400,
+    "test_graphs": 500,
+    "train_seed": 161001,
+    "validation_seed": 161002,
+    "test_seed": 161003,
+    "rule_positive_fraction_of_positives": 0.35,
+    "locked_test": false,
+    "raw_identifiers": false
+  },
+  "gnn": {
+    "hidden_dim": 64,
+    "dropout": 0.2,
+    "epochs": 35,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 8,
+    "training_seed": 42
+  },
+  "hybrid": {
+    "policy": "FROZEN_RULE_POSITIVE_OR_GNN_RESCUE",
+    "gnn_rescue_threshold": 0.9,
+    "threshold_is_predeclared": true
+  },
+  "scientific_policy": {
+    "positive_rule_gap_labels_are_defined_by_campaign_grammar_not_r1_r2_r3": true,
+    "frozen_phase16c_rules_are_not_modified": true,
+    "phase16d_gnn_architecture_is_reused": true,
+    "benchmark_is_synthetic": true,
+    "do_not_claim_real_world_superiority": true,
+    "no_locked_ids_test": true,
+    "this_phase_is_single_seed_baseline": true
+  }
+}

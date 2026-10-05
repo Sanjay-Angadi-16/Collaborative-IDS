@@ -1,0 +1,17 @@
+{
+    "accuracy": 0.894607027086058,
+    "balanced_accuracy": 0.5063826484426135,
+    "macro_precision": 0.6342909388220611,
+    "macro_recall": 0.5063826484426135,
+    "macro_f1": 0.4987803618612073,
+    "weighted_f1": 0.8698714933680277,
+    "test_samples": 375433,
+    "training_time_seconds": 256.38685419992544,
+    "inference_time_seconds": 3.3179771001450717,
+    "selected_feature_count": 37,
+    "feature_reduction_ratio": 0.4714285714285714,
+    "aggregation": "coordinate-wise median",
+    "seed": 112,
+    "method": "median",
+    "phase": 9
+}

@@ -1,0 +1,67 @@
+{
+    "phase": "3B",
+    "experiment": "Centralized MLP IDS Baseline",
+    "purpose": "Centralized upper-bound reference",
+    "training_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\train.csv",
+    "locked_test_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\test_locked.csv",
+    "features_before_constant_removal": 80,
+    "active_features": 70,
+    "constant_features_removed": [
+        "Bwd PSH Flags",
+        "Bwd URG Flags",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate",
+        "fine_label",
+        "family_label"
+    ],
+    "classes": 6,
+    "epochs": 5,
+    "batch_size": 2048,
+    "chunk_size": 100000,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "loss": "Weighted CrossEntropyLoss",
+    "class_weight_method": "sqrt(max_class_count/class_count), cap=20, mean-normalized",
+    "gradient_clipping": 5.0,
+    "architecture": [
+        70,
+        256,
+        128,
+        64,
+        6
+    ],
+    "hidden_normalization": "LayerNorm",
+    "seed": 42,
+    "test_used_during_training": false,
+    "locked_test_used_for": "final evaluation only",
+    "class_counts": {
+        "BENIGN": 1466539,
+        "DDoS": 89572,
+        "DoS GoldenEye": 7242,
+        "DoS Hulk": 120950,
+        "FTP-Patator": 4168,
+        "PortScan": 63482
+    },
+    "class_weights": {
+        "BENIGN": 0.12952494621276855,
+        "DDoS": 0.5240999460220337,
+        "DoS GoldenEye": 1.8431936502456665,
+        "DoS Hulk": 0.45102155208587646,
+        "FTP-Patator": 2.4296088218688965,
+        "PortScan": 0.6225509643554688
+    },
+    "final_metrics": {
+        "accuracy": 0.9821432852199993,
+        "balanced_accuracy": 0.9926637608890022,
+        "macro_precision": 0.9299896288372818,
+        "macro_recall": 0.9926637608890022,
+        "macro_f1": 0.9578834229458971,
+        "weighted_f1": 0.9830477614169594,
+        "test_samples": 375433
+    }
+}

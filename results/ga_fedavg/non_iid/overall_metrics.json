@@ -1,0 +1,14 @@
+{
+    "accuracy": 0.8940023919048139,
+    "balanced_accuracy": 0.3940960602360814,
+    "macro_precision": 0.5490641847133143,
+    "macro_recall": 0.3940960602360814,
+    "macro_f1": 0.4423222143442566,
+    "weighted_f1": 0.8670437038418335,
+    "test_samples": 375433,
+    "training_time_seconds": 239.93105989997275,
+    "inference_time_seconds": 3.128861000062898,
+    "original_feature_count": 70,
+    "selected_feature_count": 34,
+    "feature_reduction_ratio": 0.5142857142857142
+}

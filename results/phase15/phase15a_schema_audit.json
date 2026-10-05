@@ -1,0 +1,136 @@
+{
+    "phase": "15A",
+    "phase_name": "PHASE 15A \u2014 PRIVACY-AWARE ALERT SCHEMA",
+    "schema_version": "phase15a_v1",
+    "privacy_version": "phase15_v1",
+    "phase14_policy_version": "phase14g2_v1",
+    "allowlist_only": true,
+    "allowed_fields": [
+        "alert_id",
+        "classification",
+        "client_id",
+        "confidence",
+        "decision_source",
+        "destination_port",
+        "destination_token",
+        "event_time",
+        "evidence_score",
+        "model_version",
+        "policy_version",
+        "privacy_version",
+        "processing_path",
+        "protocol",
+        "risk_mode",
+        "risk_score",
+        "schema_version",
+        "severity",
+        "source_token"
+    ],
+    "prohibited_field_examples": [
+        "cnn_sequence",
+        "destination_ip",
+        "destination_mac",
+        "dst_ip",
+        "dst_mac",
+        "embedding",
+        "embeddings",
+        "feature_vector",
+        "features",
+        "flow_features",
+        "hostname",
+        "model_state_dict",
+        "model_weights",
+        "packet_bytes",
+        "packet_payload",
+        "payload",
+        "raw_flow_features",
+        "raw_packet",
+        "raw_packets",
+        "raw_sequence",
+        "reconstruction_vector",
+        "sequence",
+        "source_ip",
+        "source_mac",
+        "src_ip",
+        "src_mac",
+        "user_id",
+        "username"
+    ],
+    "tests_total": 10,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "all_tests_passed": true,
+    "tests": [
+        {
+            "test": "valid_fast_path_alert",
+            "expected": "VALID",
+            "actual": "VALID",
+            "passed": true,
+            "error": null
+        },
+        {
+            "test": "valid_deep_fusion_alert",
+            "expected": "VALID",
+            "actual": "VALID",
+            "passed": true,
+            "error": null
+        },
+        {
+            "test": "reject_raw_source_ip",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "Privacy violation: prohibited raw/sensitive field(s): source_ip"
+        },
+        {
+            "test": "reject_raw_payload",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "Privacy violation: prohibited raw/sensitive field(s): payload"
+        },
+        {
+            "test": "reject_unknown_non_allowlisted_field",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "Schema is allowlist-only. Unknown field(s) rejected: new_internal_debug_field"
+        },
+        {
+            "test": "reject_fast_path_ensemble_risk",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "FAST_ATTACK_PATH requires risk_score=None. RF confidence is evidence, not ensemble risk."
+        },
+        {
+            "test": "reject_fast_path_critical",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "FAST_ATTACK_PATH severity is frozen to HIGH."
+        },
+        {
+            "test": "reject_deep_path_null_risk",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "DEEP_ANALYSIS requires a four-model fused risk_score."
+        },
+        {
+            "test": "reject_deep_severity_risk_mismatch",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "DEEP_ANALYSIS severity does not match the frozen risk bands. risk_score=0.870000 requires severity=CRITICAL."
+        },
+        {
+            "test": "reject_deep_evidence_risk_mismatch",
+            "expected": "REJECTED",
+            "actual": "REJECTED",
+            "passed": true,
+            "error": "DEEP_ANALYSIS requires evidence_score == risk_score."
+        }
+    ],
+    "locked_test_used": false
+}

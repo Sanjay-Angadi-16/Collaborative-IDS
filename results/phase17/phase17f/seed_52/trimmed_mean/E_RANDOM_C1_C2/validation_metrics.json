@@ -1,0 +1,127 @@
+{
+  "class_names": [
+    "BENIGN",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "FTP-Patator",
+    "PortScan"
+  ],
+  "confusion_matrix": [
+    [
+      314144,
+      0,
+      20,
+      0,
+      0,
+      95
+    ],
+    [
+      13801,
+      0,
+      5553,
+      0,
+      0,
+      0
+    ],
+    [
+      333,
+      0,
+      1171,
+      0,
+      0,
+      0
+    ],
+    [
+      25156,
+      0,
+      683,
+      0,
+      0,
+      0
+    ],
+    [
+      277,
+      0,
+      0,
+      0,
+      604,
+      0
+    ],
+    [
+      7145,
+      0,
+      5,
+      0,
+      0,
+      6455
+    ]
+  ],
+  "evaluated_project_class_rows": 375442,
+  "evaluation_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+  "ignored_non_project_labels": {
+    "Bot": 292,
+    "DoS Slowhttptest": 753,
+    "DoS slowloris": 814,
+    "Heartbleed": 2,
+    "Infiltration": 4,
+    "SSH-Patator": 492,
+    "Web Attack \ufffd Brute Force": 219,
+    "Web Attack \ufffd XSS": 102
+  },
+  "ignored_non_project_rows": 2678,
+  "inference_time_seconds": 4.083961499971338,
+  "locked_test_used": false,
+  "overall": {
+    "accuracy": 0.8586519355852569,
+    "balanced_accuracy": 0.48971116136918,
+    "benign_false_positive_rate": 0.0003659401958257361,
+    "macro_f1": 0.44112138149339747,
+    "macro_precision": 0.5022683866936788,
+    "macro_recall": 0.48971116136918,
+    "training_time_seconds": 813.0865936000482,
+    "validation_samples": 375442,
+    "weighted_f1": 0.805149269570772,
+    "worst_attack_recall": 0.0,
+    "worst_class_recall": 0.0
+  },
+  "per_class": {
+    "BENIGN": {
+      "f1": 0.9306384838138687,
+      "precision": 0.8705522424457401,
+      "recall": 0.9996340598041743,
+      "support": 314259
+    },
+    "DDoS": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 19354
+    },
+    "DoS GoldenEye": {
+      "f1": 0.2620859444941808,
+      "precision": 0.15756189451022604,
+      "recall": 0.7785904255319149,
+      "support": 1504
+    },
+    "DoS Hulk": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 25839
+    },
+    "FTP-Patator": {
+      "f1": 0.8134680134680135,
+      "precision": 1.0,
+      "recall": 0.6855845629965948,
+      "support": 881
+    },
+    "PortScan": {
+      "f1": 0.6405358471843215,
+      "precision": 0.9854961832061069,
+      "recall": 0.47445791988239616,
+      "support": 13605
+    }
+  },
+  "total_validation_rows": 378120
+}

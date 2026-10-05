@@ -1,0 +1,44 @@
+{
+    "phase": "16C",
+    "version": "phase16c_v1",
+    "status": "FROZEN",
+    "frozen_rule_correlator_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "selection_policy": {
+        "material_f1_improvement": 0.01,
+        "material_false_correlation_improvement": 0.01,
+        "minimum_recall": 1.0,
+        "tie_policy": "retain_existing_baseline"
+    },
+    "frozen_semantics": {
+        "correlation_uses_event_time": true,
+        "arrival_order_does_not_define_event_time": true,
+        "correlation_priority_is_rule_priority_only": true,
+        "correlation_priority_is_not_phase14_risk": true,
+        "correlation_priority_is_not_probability": true,
+        "exact_alert_id_replay_is_deduplicated": true
+    },
+    "known_limitations": [
+        "Fresh alert_id semantic replay is not removed by exact-ID deduplication.",
+        "Synthetic privacy-safe validation scenarios do not prove production correlation accuracy.",
+        "Clock synchronization itself is not implemented; only controlled skew behavior is characterized.",
+        "The current deterministic window is boundary-sensitive by construction."
+    ],
+    "do_not_change_without_new_version": [
+        "window_seconds",
+        "R1 minimum client threshold",
+        "R2 minimum client threshold",
+        "R2 minimum classification threshold",
+        "R3 minimum client threshold",
+        "R3 minimum source threshold",
+        "correlation-priority semantics"
+    ],
+    "locked_test_used": false,
+    "ready_for_phase16d_gnn": true
+}

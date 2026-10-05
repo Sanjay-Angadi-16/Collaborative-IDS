@@ -1,0 +1,24 @@
+{
+    "phase": "14B.1",
+    "phase_name": "PHASE 14B.1 \u2014 AUTOENCODER ERROR DISTRIBUTION & THRESHOLD STUDY",
+    "scenario": "non_iid",
+    "seed": 42,
+    "clients": 5,
+    "features": 70,
+    "percentile_thresholds": [
+        95.0,
+        97.0,
+        98.0,
+        99.0
+    ],
+    "mad_k": 3.5,
+    "oracle_thresholds_included": true,
+    "oracle_thresholds_are_diagnostic_only": true,
+    "locked_test_used": false,
+    "model_retraining": false,
+    "threshold_comparison_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14b1\\phase14b1_threshold_comparison.csv",
+    "client_summary_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14b1\\phase14b1_client_summary.csv",
+    "error_summary_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14b1\\phase14b1_error_distribution_summary.csv",
+    "graph_directory": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14b1\\graphs",
+    "raw_error_directory": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14b1\\errors"
+}

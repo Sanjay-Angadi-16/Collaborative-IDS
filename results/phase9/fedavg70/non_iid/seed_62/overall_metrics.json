@@ -1,0 +1,14 @@
+{
+    "accuracy": 0.925211688903213,
+    "balanced_accuracy": 0.45041899616422304,
+    "macro_precision": 0.6414595581996616,
+    "macro_recall": 0.45041899616422304,
+    "macro_f1": 0.5048225062625554,
+    "weighted_f1": 0.9032935587078443,
+    "test_samples": 375433,
+    "training_time_seconds": 252.00245390005875,
+    "inference_time_seconds": 3.086884899996221,
+    "seed": 62,
+    "method": "FedAvg70",
+    "scenario": "non_iid"
+}

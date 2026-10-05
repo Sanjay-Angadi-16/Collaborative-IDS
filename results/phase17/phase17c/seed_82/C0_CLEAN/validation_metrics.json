@@ -1,0 +1,128 @@
+{
+  "class_names": [
+    "BENIGN",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "FTP-Patator",
+    "PortScan"
+  ],
+  "confusion_matrix": [
+    [
+      313948,
+      32,
+      2,
+      0,
+      129,
+      148
+    ],
+    [
+      2964,
+      15785,
+      0,
+      605,
+      0,
+      0
+    ],
+    [
+      771,
+      0,
+      733,
+      0,
+      0,
+      0
+    ],
+    [
+      2950,
+      1881,
+      12,
+      20996,
+      0,
+      0
+    ],
+    [
+      881,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      7639,
+      7,
+      2,
+      0,
+      0,
+      5957
+    ]
+  ],
+  "evaluated_project_class_rows": 375442,
+  "evaluation_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+  "ignored_non_project_labels": {
+    "Bot": 292,
+    "DoS Slowhttptest": 753,
+    "DoS slowloris": 814,
+    "Heartbleed": 2,
+    "Infiltration": 4,
+    "SSH-Patator": 492,
+    "Web Attack \ufffd Brute Force": 219,
+    "Web Attack \ufffd XSS": 102
+  },
+  "ignored_non_project_rows": 2678,
+  "locked_test_used": false,
+  "overall": {
+    "accuracy": 0.9519952482673755,
+    "balanced_accuracy": 0.5920658239298661,
+    "benign_false_positive_rate": 0.0009896295730591645,
+    "inference_time_seconds": 4.062441899994155,
+    "macro_f1": 0.6613470931741635,
+    "macro_precision": 0.7952915886691589,
+    "macro_recall": 0.5920658239298661,
+    "training_time_seconds": 328.4292189000116,
+    "validation_samples": 375442,
+    "weighted_f1": 0.946196740860061,
+    "worst_attack_recall": 0.0,
+    "worst_class_recall": 0.0
+  },
+  "per_class": {
+    "BENIGN": {
+      "f1": 0.9758848140849098,
+      "precision": 0.9538056769951968,
+      "recall": 0.9990103704269409,
+      "support": 314259
+    },
+    "DDoS": {
+      "f1": 0.8518848322944494,
+      "precision": 0.8915560576108444,
+      "recall": 0.8155936757259481,
+      "support": 19354
+    },
+    "DoS GoldenEye": {
+      "f1": 0.650687971593431,
+      "precision": 0.9786381842456608,
+      "recall": 0.48736702127659576,
+      "support": 1504
+    },
+    "DoS Hulk": {
+      "f1": 0.8851602023608769,
+      "precision": 0.9719920374056756,
+      "recall": 0.8125701459034792,
+      "support": 25839
+    },
+    "FTP-Patator": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 881
+    },
+    "PortScan": {
+      "f1": 0.604464738711314,
+      "precision": 0.9757575757575757,
+      "recall": 0.437853730246233,
+      "support": 13605
+    }
+  },
+  "total_validation_rows": 378120,
+  "validation_filter_policy": "Only labels present in the frozen six-class label_mapping are evaluated. Unsupported CICIDS2017 validation labels are excluded, never relabeled."
+}

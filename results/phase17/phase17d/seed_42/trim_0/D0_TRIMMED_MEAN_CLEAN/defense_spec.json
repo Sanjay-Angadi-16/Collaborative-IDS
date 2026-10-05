@@ -1,0 +1,10 @@
+{
+  "aggregation": "phase17c_sample_weighted_fedavg_control",
+  "defense_active": false,
+  "non_float_policy": "preserve_current_global_state",
+  "num_clients": 5,
+  "trim_count": 0,
+  "values_retained": 5,
+  "weighted": true,
+  "weighting_note": "Phase17C sample-count weights"
+}

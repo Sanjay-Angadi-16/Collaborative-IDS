@@ -1,0 +1,20 @@
+{
+  "phase_version": "phase16a_v1",
+  "window_seconds": 60,
+  "min_cross_client_clients": 2,
+  "min_multi_class_clients": 2,
+  "min_multi_class_classes": 2,
+  "min_destination_clients": 2,
+  "min_destination_sources": 3,
+  "priority_policy": {
+    "2_clients": "MEDIUM",
+    "3_to_4_clients": "HIGH",
+    "5_or_more_clients": "CRITICAL"
+  },
+  "important_semantics": {
+    "correlation_priority": "Rule-engine priority only; not Phase14 confidence and not fused risk.",
+    "risk_score_recalculation": false,
+    "raw_identifiers_required": false,
+    "locked_test_required": false
+  }
+}

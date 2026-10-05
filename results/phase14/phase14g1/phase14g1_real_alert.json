@@ -1,0 +1,23 @@
+{
+    "true_class": "PortScan",
+    "alert": {
+        "timestamp_utc": "2026-09-14T07:57:14.832605+00:00",
+        "client_id": 3,
+        "classification": "PortScan",
+        "severity": "CRITICAL",
+        "risk_score": 0.9998209468981613,
+        "confidence": 0.9998209468981613,
+        "decision_source": "Random Forest",
+        "processing_path": "FAST_ATTACK_PATH",
+        "rf": {
+            "model": "Random Forest",
+            "predicted_class": "PortScan",
+            "class_id": 5,
+            "confidence": 0.9998209468981613
+        },
+        "autoencoder": null,
+        "fedprox70": null,
+        "cnn_bilstm": null
+    },
+    "locked_test_used": false
+}

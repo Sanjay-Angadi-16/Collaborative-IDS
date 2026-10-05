@@ -1,0 +1,28 @@
+{
+    "phase": "15G",
+    "privacy_audit": "explicit raw/sensitive literal scan over persisted canonical JSON",
+    "retention_policy": {
+        "basis": "event_time",
+        "retention_days": 30,
+        "dry_run_before_delete": true,
+        "test_database_only": true
+    },
+    "performance_evaluation": {
+        "backend": "SQLite",
+        "mode": "single-process sequential insertion",
+        "query_repeats": 100,
+        "indexed_queries": [
+            "client_id",
+            "source_token",
+            "recent event_time",
+            "classification + severity"
+        ]
+    },
+    "important_limitations": [
+        "No network transport is included in throughput.",
+        "No concurrent multi-writer benchmark is claimed.",
+        "Results are hardware and implementation specific.",
+        "Synthetic privacy-safe messages are not detection evidence."
+    ],
+    "locked_test_used": false
+}

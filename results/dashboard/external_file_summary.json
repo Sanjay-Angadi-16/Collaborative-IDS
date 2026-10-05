@@ -1,0 +1,247 @@
+{
+  "source": "external",
+  "input_type": "npz_sequence",
+  "phase": "17H.3",
+  "source_file": "ids_5_attacks_1000_sequences.npz",
+  "sample_count": 1000,
+  "total_flows": 1000,
+  "sequence_shape": [
+    1000,
+    20,
+    70
+  ],
+  "normal_traffic": 221,
+  "attack_alerts": 779,
+  "attack_rate": 0.779,
+  "anomalous_predictions": 11,
+  "anomalous_rate": 0.011,
+  "fast_path_count": 190,
+  "deep_path_count": 810,
+  "prediction_distribution": {
+    "BENIGN": 221,
+    "DDoS": 201,
+    "DoS GoldenEye": 139,
+    "DoS Hulk": 158,
+    "FTP-Patator": 137,
+    "PortScan": 133,
+    "ANOMALOUS_TRAFFIC": 11
+  },
+  "true_distribution": {
+    "DDoS": 200,
+    "DoS GoldenEye": 200,
+    "DoS Hulk": 200,
+    "FTP-Patator": 200,
+    "PortScan": 200
+  },
+  "metrics": {
+    "accuracy": 0.742,
+    "balanced_accuracy": 0.742,
+    "macro_precision": 0.9681717992316898,
+    "macro_recall": 0.742,
+    "macro_f1": 0.8348468705763018,
+    "weighted_f1": 0.8348468705763018,
+    "evaluated_class_ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "evaluated_class_names": [
+      "DDoS",
+      "DoS GoldenEye",
+      "DoS Hulk",
+      "FTP-Patator",
+      "PortScan"
+    ]
+  },
+  "model_metrics": {
+    "random_forest": {
+      "accuracy": 0.2,
+      "balanced_accuracy": 0.2,
+      "macro_precision": 0.8450610432852386,
+      "macro_recall": 0.2,
+      "macro_f1": 0.31938145759656056,
+      "evaluated_class_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "autoencoder": {
+      "anomaly_count": 223,
+      "anomaly_rate": 0.223,
+      "mean_anomaly_score": 0.30872926115989685
+    },
+    "fedprox70": {
+      "accuracy": 0.57,
+      "balanced_accuracy": 0.5700000000000001,
+      "macro_precision": 0.9838853574216572,
+      "macro_recall": 0.5700000000000001,
+      "macro_f1": 0.7180983966098088,
+      "evaluated_class_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "cnn_bilstm": {
+      "accuracy": 0.634,
+      "balanced_accuracy": 0.634,
+      "macro_precision": 0.9356857017671973,
+      "macro_recall": 0.634,
+      "macro_f1": 0.7394384707891909,
+      "evaluated_class_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "per_class_metrics": [
+    {
+      "class_id": 1,
+      "class_name": "DDoS",
+      "precision": 0.9800995024875622,
+      "recall": 0.985,
+      "f1": 0.9825436408977556,
+      "support": 200
+    },
+    {
+      "class_id": 2,
+      "class_name": "DoS GoldenEye",
+      "precision": 1.0,
+      "recall": 0.695,
+      "f1": 0.8200589970501475,
+      "support": 200
+    },
+    {
+      "class_id": 3,
+      "class_name": "DoS Hulk",
+      "precision": 0.8607594936708861,
+      "recall": 0.68,
+      "f1": 0.7597765363128491,
+      "support": 200
+    },
+    {
+      "class_id": 4,
+      "class_name": "FTP-Patator",
+      "precision": 1.0,
+      "recall": 0.685,
+      "f1": 0.8130563798219584,
+      "support": 200
+    },
+    {
+      "class_id": 5,
+      "class_name": "PortScan",
+      "precision": 1.0,
+      "recall": 0.665,
+      "f1": 0.7987987987987988,
+      "support": 200
+    }
+  ],
+  "confusion_matrix": {
+    "class_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "class_names": [
+      "BENIGN",
+      "DDoS",
+      "DoS GoldenEye",
+      "DoS Hulk",
+      "FTP-Patator",
+      "PortScan",
+      "ANOMALOUS_TRAFFIC"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        197,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        30,
+        0,
+        139,
+        20,
+        0,
+        0,
+        11
+      ],
+      [
+        60,
+        4,
+        0,
+        136,
+        0,
+        0,
+        0
+      ],
+      [
+        63,
+        0,
+        0,
+        0,
+        137,
+        0,
+        0
+      ],
+      [
+        67,
+        0,
+        0,
+        0,
+        0,
+        133,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "missed_attack_count": 221,
+  "wrong_attack_family_count": 26,
+  "client_assignment_policy": "deterministic round-robin; true label not used; specialist_client_id intentionally ignored",
+  "specialist_client_id_present": true,
+  "specialist_client_id_used_for_routing": false,
+  "sequence_policy": "Original pre-built 20x70 sequences consumed directly. No row-window reconstruction and no sequence-internal shuffle.",
+  "model_input_policy": "RF/AE/FedProx70 use X[:,-1,:]; CNN-BiLSTM uses full X[:,:, :].",
+  "models_retrained": false,
+  "locked_test_used": false,
+  "global_inference_seconds": 0.11853390000760555,
+  "local_inference_seconds_total": 0.2317346999188885,
+  "total_inference_seconds": 1.0578650000388734,
+  "created_utc": "2026-09-29T07:33:40.450204+00:00"
+}

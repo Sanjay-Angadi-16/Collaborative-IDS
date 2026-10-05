@@ -1,0 +1,32 @@
+{
+    "timestamp_utc": "2026-09-14T07:39:50.885661+00:00",
+    "client_id": 3,
+    "classification": "PortScan",
+    "severity": "MEDIUM",
+    "risk_score": 0.5310015437602997,
+    "confidence": 0.88,
+    "decision_source": "FedProx70 MLP",
+    "processing_path": "DEEP_ANALYSIS",
+    "rf": {
+        "model": "Random Forest",
+        "predicted_class": "PortScan",
+        "class_id": 5,
+        "confidence": 0.72
+    },
+    "autoencoder": {
+        "anomaly_score": 0.82,
+        "is_anomaly": true
+    },
+    "fedprox70": {
+        "model": "FedProx70 MLP",
+        "predicted_class": "PortScan",
+        "class_id": 5,
+        "confidence": 0.88
+    },
+    "cnn_bilstm": {
+        "model": "CNN-BiLSTM",
+        "predicted_class": "BENIGN",
+        "class_id": 0,
+        "confidence": 0.9999955892562866
+    }
+}

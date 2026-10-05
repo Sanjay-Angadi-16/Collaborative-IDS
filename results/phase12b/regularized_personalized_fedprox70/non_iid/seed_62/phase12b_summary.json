@@ -1,0 +1,35 @@
+{
+    "phase": "12B",
+    "experiment": "Knowledge-Preserving Regularized Personalized FedProx70",
+    "scenario": "non_iid",
+    "seed": 62,
+    "global_model": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\phase10\\fedprox70\\non_iid\\seed_62\\fedprox70_model.pt",
+    "validation_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+    "features": 70,
+    "candidate_lambdas": [
+        0.1,
+        0.5,
+        1.0,
+        2.0,
+        5.0,
+        10.0
+    ],
+    "candidate_epochs": [
+        1,
+        2,
+        3,
+        5
+    ],
+    "personalization_learning_rate": 0.0001,
+    "minimum_validation_knowledge_preservation": 0.75,
+    "selection_score": "0.50 * harmonic(seen, unseen) + 0.25 * macro_f1 + 0.25 * balanced_accuracy",
+    "mean_personalization_gain": 0.46699976095670126,
+    "mean_global_knowledge_loss": -0.033391698639276046,
+    "mean_global_knowledge_preservation_ratio": 1.0480173328524554,
+    "mean_local_recovery_ratio": 0.9849614658296441,
+    "mean_global_utility": 0.5164722953419,
+    "mean_personalized_utility": 0.7666680251398887,
+    "feasible_clients": 4,
+    "locked_test_used_for_selection": false,
+    "locked_test_usage": "final evaluation only"
+}

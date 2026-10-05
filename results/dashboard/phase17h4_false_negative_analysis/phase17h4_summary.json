@@ -1,0 +1,161 @@
+{
+  "phase": "17H.4",
+  "purpose": "Analyze attack-to-BENIGN false negatives in the Phase 17H.2 five-attack sequence-preserving stress test.",
+  "input_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\dashboard_samples\\ids_5_attacks_1000_sequences.npz",
+  "sequence_count": 1000,
+  "sequence_shape": [
+    1000,
+    20,
+    70
+  ],
+  "accuracy": 0.742,
+  "balanced_accuracy": 0.742,
+  "macro_f1": 0.8348468705763018,
+  "total_errors": 258,
+  "missed_attacks_to_benign": 221,
+  "wrong_known_attack_family": 26,
+  "predicted_anomalous": 11,
+  "error_decomposition_check": {
+    "total_errors": 258,
+    "missed_to_benign_plus_wrong_family_plus_anomalous": 258
+  },
+  "missed_by_class": [
+    {
+      "true_class_id": 1,
+      "true_class": "DDoS",
+      "total_sequences": 200,
+      "correct": 197,
+      "missed_to_benign": 1,
+      "miss_rate": 0.005,
+      "wrong_attack_family": 2,
+      "predicted_anomalous": 0,
+      "rf_benign_on_misses": 1,
+      "fedprox_benign_on_misses": 1,
+      "cnn_benign_on_misses": 1,
+      "global_benign_consensus_on_misses": 1,
+      "ae_anomaly_on_misses": 0,
+      "mean_ae_score_on_misses": 0.43167826533317566
+    },
+    {
+      "true_class_id": 2,
+      "true_class": "DoS GoldenEye",
+      "total_sequences": 200,
+      "correct": 139,
+      "missed_to_benign": 30,
+      "miss_rate": 0.15,
+      "wrong_attack_family": 20,
+      "predicted_anomalous": 11,
+      "rf_benign_on_misses": 30,
+      "fedprox_benign_on_misses": 30,
+      "cnn_benign_on_misses": 30,
+      "global_benign_consensus_on_misses": 30,
+      "ae_anomaly_on_misses": 0,
+      "mean_ae_score_on_misses": 0.14211167761435112
+    },
+    {
+      "true_class_id": 3,
+      "true_class": "DoS Hulk",
+      "total_sequences": 200,
+      "correct": 136,
+      "missed_to_benign": 60,
+      "miss_rate": 0.3,
+      "wrong_attack_family": 4,
+      "predicted_anomalous": 0,
+      "rf_benign_on_misses": 60,
+      "fedprox_benign_on_misses": 60,
+      "cnn_benign_on_misses": 60,
+      "global_benign_consensus_on_misses": 60,
+      "ae_anomaly_on_misses": 0,
+      "mean_ae_score_on_misses": 0.10965499452625711
+    },
+    {
+      "true_class_id": 4,
+      "true_class": "FTP-Patator",
+      "total_sequences": 200,
+      "correct": 137,
+      "missed_to_benign": 63,
+      "miss_rate": 0.315,
+      "wrong_attack_family": 0,
+      "predicted_anomalous": 0,
+      "rf_benign_on_misses": 63,
+      "fedprox_benign_on_misses": 63,
+      "cnn_benign_on_misses": 63,
+      "global_benign_consensus_on_misses": 63,
+      "ae_anomaly_on_misses": 0,
+      "mean_ae_score_on_misses": 0.04397424399143174
+    },
+    {
+      "true_class_id": 5,
+      "true_class": "PortScan",
+      "total_sequences": 200,
+      "correct": 133,
+      "missed_to_benign": 67,
+      "miss_rate": 0.335,
+      "wrong_attack_family": 0,
+      "predicted_anomalous": 0,
+      "rf_benign_on_misses": 67,
+      "fedprox_benign_on_misses": 67,
+      "cnn_benign_on_misses": 67,
+      "global_benign_consensus_on_misses": 67,
+      "ae_anomaly_on_misses": 0,
+      "mean_ae_score_on_misses": 0.05167262978962998
+    }
+  ],
+  "model_behavior_on_misses": [
+    {
+      "pattern": "RF predicted BENIGN",
+      "count": 221,
+      "share_of_221_style_misses": 1.0
+    },
+    {
+      "pattern": "FedProx70 predicted BENIGN",
+      "count": 221,
+      "share_of_221_style_misses": 1.0
+    },
+    {
+      "pattern": "CNN-BiLSTM predicted BENIGN",
+      "count": 221,
+      "share_of_221_style_misses": 1.0
+    },
+    {
+      "pattern": "FedProx70 + CNN both BENIGN",
+      "count": 221,
+      "share_of_221_style_misses": 1.0
+    },
+    {
+      "pattern": "RF + FedProx70 + CNN all BENIGN",
+      "count": 221,
+      "share_of_221_style_misses": 1.0
+    },
+    {
+      "pattern": "AE flagged anomaly",
+      "count": 0,
+      "share_of_221_style_misses": 0.0
+    }
+  ],
+  "routing_analysis": [
+    {
+      "routing_group": "assigned client matches attack specialist",
+      "analysis_only": true,
+      "total_sequences": 200,
+      "correct": 200,
+      "accuracy": 1.0,
+      "missed_to_benign": 0,
+      "miss_rate": 0.0
+    },
+    {
+      "routing_group": "assigned client does NOT match attack specialist",
+      "analysis_only": true,
+      "total_sequences": 800,
+      "correct": 542,
+      "accuracy": 0.6775,
+      "missed_to_benign": 221,
+      "miss_rate": 0.27625
+    }
+  ],
+  "primary_routing_policy": "deterministic round-robin; true label not used",
+  "specialist_client_id_policy": "analysis only; derived from known attack class; never used to route primary predictions",
+  "locked_test_used": false,
+  "models_retrained": false,
+  "runtime_seconds": 0.5644903999636881
+}

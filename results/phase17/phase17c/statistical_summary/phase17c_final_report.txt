@@ -1,0 +1,53 @@
+============================================================================================
+PHASE 17C — REPEATED-SEED STATISTICAL SUMMARY
+============================================================================================
+
+Scenario             : non_iid
+Seeds                : 42, 52, 62, 72, 82
+Number of seeds      : 5
+Attack               : Byzantine model-update sign flip
+Formula              : delta_attack = -scale * delta
+Validation poisoned  : NO
+Locked test used     : NO
+
+OVERALL PERFORMANCE (mean ± sample SD)
+--------------------------------------------------------------------------------------------
+Experiment                  Accuracy      Balanced Acc          Macro F1       Weighted F1
+Clean              0.953408 ± 0.001321  0.637303 ± 0.057451  0.713180 ± 0.066998  0.947735 ± 0.001505
+Sign-Flip x1       0.874090 ± 0.006536  0.390375 ± 0.077870  0.458592 ± 0.086416  0.830898 ± 0.009579
+Sign-Flip x2       0.838490 ± 0.002120  0.171362 ± 0.006853  0.160729 ± 0.012824  0.766089 ± 0.004796
+Sign-Flip x5       0.048411 ± 0.006807  0.176322 ± 0.021599  0.029178 ± 0.031289  0.008593 ± 0.009355
+
+ATTACK DEGRADATION VS SAME-SEED CLEAN BASELINE
+--------------------------------------------------------------------------------------------
+Sign-Flip x1       | Accuracy drop=0.079318 | Balanced-Acc drop=0.246928 | Macro-F1 drop=0.254588 | Relative Macro-F1 drop=35.07% | Worst-attack-recall drop=0.172801
+Sign-Flip x2       | Accuracy drop=0.114918 | Balanced-Acc drop=0.465941 | Macro-F1 drop=0.552451 | Relative Macro-F1 drop=77.30% | Worst-attack-recall drop=0.172801
+Sign-Flip x5       | Accuracy drop=0.904997 | Balanced-Acc drop=0.460981 | Macro-F1 drop=0.684002 | Relative Macro-F1 drop=95.77% | Worst-attack-recall drop=0.172801
+
+BYZANTINE UPDATE AUDIT
+--------------------------------------------------------------------------------------------
+Maximum norm-check error : 1.00766207822e-07
+Allowed tolerance        : 1e-05
+Norm validation          : PASS
+
+WORST ATTACK-CLASS RECALL
+--------------------------------------------------------------------------------------------
+Clean             : 0.172801
+Sign-Flip x1      : 0.000000
+Sign-Flip x2      : 0.000000
+Sign-Flip x5      : 0.000000
+
+CLASSES WITH ZERO MEAN RECALL
+--------------------------------------------------------------------------------------------
+Sign-Flip x1      : DoS Hulk
+Sign-Flip x2      : DoS GoldenEye, DoS Hulk, FTP-Patator, PortScan
+Sign-Flip x5      : BENIGN, DoS GoldenEye, DoS Hulk, FTP-Patator
+
+INTERPRETATION
+--------------------------------------------------------------------------------------------
+Increasing sign-flip magnitude causes progressively stronger degradation of the FedAvg global model. The x1 condition already causes a substantial reduction in balanced accuracy and Macro F1, while x2 produces severe class-wise degradation. The x5 condition represents an extreme stress-test regime and can drive the model toward near-collapse.
+
+The repeated-seed analysis should be used for the final Phase 17C conclusion rather than relying on a single seed.
+
+STATUS: PASS
+============================================================================================

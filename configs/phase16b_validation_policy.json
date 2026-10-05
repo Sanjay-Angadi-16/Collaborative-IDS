@@ -1,0 +1,55 @@
+{
+  "phase_version": "phase16b_v1",
+  "baseline": {
+    "window_seconds": 60,
+    "min_cross_client_clients": 2,
+    "min_multi_class_clients": 2,
+    "min_multi_class_classes": 2,
+    "min_destination_clients": 2,
+    "min_destination_sources": 3
+  },
+  "window_sensitivity_seconds": [
+    15,
+    30,
+    60,
+    120,
+    300
+  ],
+  "threshold_sensitivity": {
+    "r1_min_clients": [
+      2,
+      3,
+      4
+    ],
+    "r2_min_clients": [
+      2,
+      3
+    ],
+    "r2_min_classes": [
+      2,
+      3
+    ],
+    "r3_min_clients": [
+      2,
+      3
+    ],
+    "r3_min_sources": [
+      2,
+      3,
+      4
+    ]
+  },
+  "controlled_dataset": {
+    "positive_scenarios": 4,
+    "negative_scenarios": 4,
+    "exceptional_scenarios": 6,
+    "uses_locked_test": false,
+    "uses_raw_identifiers": false
+  },
+  "scientific_policy": {
+    "phase16a_baseline_is_modified": false,
+    "phase14_risk_semantics_are_modified": false,
+    "sensitivity_results_are_validation_only": true,
+    "configuration_freeze_deferred_to_phase16c": true
+  }
+}

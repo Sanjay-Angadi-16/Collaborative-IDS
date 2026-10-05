@@ -1,0 +1,186 @@
+{
+    "temporal_boundary": {
+        "overall": {
+            "tp": 3,
+            "fp": 0,
+            "tn": 2,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        },
+        "per_rule": {
+            "R1_CROSS_CLIENT_SHARED_SOURCE": {
+                "tp": 2,
+                "fp": 0,
+                "tn": 3,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "accuracy": 1.0,
+                "false_positive_rate": 0.0,
+                "false_correlation_rate": 0.0
+            },
+            "R2_MULTI_CLASS_SHARED_SOURCE": {
+                "tp": 2,
+                "fp": 0,
+                "tn": 3,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "accuracy": 1.0,
+                "false_positive_rate": 0.0,
+                "false_correlation_rate": 0.0
+            },
+            "R3_SHARED_DESTINATION_MULTI_SOURCE": {
+                "tp": 1,
+                "fp": 0,
+                "tn": 4,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "accuracy": 1.0,
+                "false_positive_rate": 0.0,
+                "false_correlation_rate": 0.0
+            }
+        },
+        "scenarios": [
+            {
+                "scenario_id": "B_R12_SEPARATION_59s",
+                "description": "Two-client shared-source boundary at 59 seconds.",
+                "exceptional_case": "TEMPORAL_BOUNDARY",
+                "expected_correlated": true,
+                "predicted_correlated": true,
+                "expected_rules": [
+                    "R1_CROSS_CLIENT_SHARED_SOURCE",
+                    "R2_MULTI_CLASS_SHARED_SOURCE"
+                ],
+                "predicted_rules": [
+                    "R1_CROSS_CLIENT_SHARED_SOURCE",
+                    "R2_MULTI_CLASS_SHARED_SOURCE"
+                ],
+                "event_count": 2,
+                "duplicates_removed": 0,
+                "passed": true
+            },
+            {
+                "scenario_id": "B_R12_SEPARATION_60s",
+                "description": "Two-client shared-source boundary at 60 seconds.",
+                "exceptional_case": "TEMPORAL_BOUNDARY",
+                "expected_correlated": true,
+                "predicted_correlated": true,
+                "expected_rules": [
+                    "R1_CROSS_CLIENT_SHARED_SOURCE",
+                    "R2_MULTI_CLASS_SHARED_SOURCE"
+                ],
+                "predicted_rules": [
+                    "R1_CROSS_CLIENT_SHARED_SOURCE",
+                    "R2_MULTI_CLASS_SHARED_SOURCE"
+                ],
+                "event_count": 2,
+                "duplicates_removed": 0,
+                "passed": true
+            },
+            {
+                "scenario_id": "B_R12_SEPARATION_61s",
+                "description": "Two-client shared-source boundary at 61 seconds.",
+                "exceptional_case": "TEMPORAL_BOUNDARY",
+                "expected_correlated": false,
+                "predicted_correlated": false,
+                "expected_rules": [],
+                "predicted_rules": [],
+                "event_count": 0,
+                "duplicates_removed": 0,
+                "passed": true
+            },
+            {
+                "scenario_id": "B_R3_SPAN_60s",
+                "description": "Three-source shared-destination boundary at total span 60 seconds.",
+                "exceptional_case": "TEMPORAL_BOUNDARY",
+                "expected_correlated": true,
+                "predicted_correlated": true,
+                "expected_rules": [
+                    "R3_SHARED_DESTINATION_MULTI_SOURCE"
+                ],
+                "predicted_rules": [
+                    "R3_SHARED_DESTINATION_MULTI_SOURCE"
+                ],
+                "event_count": 1,
+                "duplicates_removed": 0,
+                "passed": true
+            },
+            {
+                "scenario_id": "B_R3_SPAN_61s",
+                "description": "Three-source shared-destination boundary at total span 61 seconds.",
+                "exceptional_case": "TEMPORAL_BOUNDARY",
+                "expected_correlated": false,
+                "predicted_correlated": false,
+                "expected_rules": [],
+                "predicted_rules": [],
+                "event_count": 0,
+                "duplicates_removed": 0,
+                "passed": true
+            }
+        ]
+    },
+    "permutation_invariance": {
+        "passed": true,
+        "permutations_tested": 20,
+        "reference_rules": [
+            "R1_CROSS_CLIENT_SHARED_SOURCE",
+            "R2_MULTI_CLASS_SHARED_SOURCE"
+        ]
+    },
+    "delayed_arrival_invariance": {
+        "passed": true,
+        "arrival_delays_seconds": [
+            1,
+            5,
+            120
+        ],
+        "predicted_rules": [
+            "R1_CROSS_CLIENT_SHARED_SOURCE",
+            "R2_MULTI_CLASS_SHARED_SOURCE"
+        ],
+        "expected_rules": [
+            "R1_CROSS_CLIENT_SHARED_SOURCE",
+            "R2_MULTI_CLASS_SHARED_SOURCE"
+        ],
+        "uses_event_time_for_correlation": true
+    },
+    "missing_evidence_boundary": {
+        "passed": true,
+        "cases": [
+            {
+                "alerts_retained": 3,
+                "predicted_correlated": true,
+                "expected_correlated": true,
+                "passed": true
+            },
+            {
+                "alerts_retained": 2,
+                "predicted_correlated": true,
+                "expected_correlated": true,
+                "passed": true
+            },
+            {
+                "alerts_retained": 1,
+                "predicted_correlated": false,
+                "expected_correlated": false,
+                "passed": true
+            }
+        ]
+    },
+    "replay_characterization": {
+        "exact_alert_id_replay_removed": true,
+        "new_alert_id_semantic_replay_removed": false,
+        "known_limitation": "A semantically repeated alert carrying a fresh alert_id is not deduplicated by the current exact-id defense. This is documented for later replay/authentication hardening.",
+        "passed_for_current_contract": true
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.8563791675212354,
+    "balanced_accuracy": 0.3272805526727041,
+    "macro_precision": 0.25556491288356026,
+    "macro_recall": 0.3272805526727041,
+    "macro_f1": 0.28576902036262825,
+    "weighted_f1": 0.7991627930687222,
+    "local_seen_attack": "PortScan",
+    "seen_attack_recall": 0.9831704269861101,
+    "seen_attack_f1": 0.7942765540580656,
+    "mean_unseen_attack_recall": 0.0,
+    "mean_unseen_attack_f1": 0.0,
+    "training_time_seconds": 1.526513500022702,
+    "inference_time_seconds": 2.929051300045103
+}

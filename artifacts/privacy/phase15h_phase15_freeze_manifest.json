@@ -1,0 +1,31 @@
+{
+    "phase": "15H",
+    "phase15_status": "FROZEN",
+    "freeze_scope": [
+        "Phase15A privacy-aware alert schema",
+        "Phase15B HMAC-SHA256 pseudonymization format",
+        "Phase15C explicit allowlist privacy filter",
+        "Phase15D canonical serialization contract",
+        "Phase15E1 collector application semantics",
+        "Phase15E2 mTLS proof-of-function security contract",
+        "Phase15F central privacy-safe persistence/indexes",
+        "Phase15G retention-audit methodology"
+    ],
+    "do_not_change_without_new_version": [
+        "schema_version",
+        "privacy_version",
+        "HMAC token namespace/prefix format",
+        "Phase14G2 FAST/DEEP risk semantics",
+        "outbound allowlist",
+        "privacy leakage rules"
+    ],
+    "production_not_claimed": [
+        "ephemeral HMAC key runs",
+        "RFC5737 demo network context",
+        "short-lived local mTLS certificates",
+        "Phase15E1/E2 latency",
+        "Phase15G local SQLite throughput"
+    ],
+    "locked_test_used": false,
+    "ready_for_phase16": true
+}

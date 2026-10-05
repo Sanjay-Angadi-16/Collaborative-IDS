@@ -1,0 +1,7 @@
+{
+    "target_attack_recalls": {
+        "PortScan": 0.9971334068357222
+    },
+    "target_attack_mean_recall": 0.9971334068357222,
+    "target_attack_worst_recall": 0.9971334068357222
+}

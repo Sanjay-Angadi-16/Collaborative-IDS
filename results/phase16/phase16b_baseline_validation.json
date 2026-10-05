@@ -1,0 +1,170 @@
+{
+    "overall": {
+        "tp": 4,
+        "fp": 0,
+        "tn": 4,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "false_correlation_rate": 0.0
+    },
+    "per_rule": {
+        "R1_CROSS_CLIENT_SHARED_SOURCE": {
+            "tp": 3,
+            "fp": 0,
+            "tn": 5,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        },
+        "R2_MULTI_CLASS_SHARED_SOURCE": {
+            "tp": 2,
+            "fp": 0,
+            "tn": 6,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        },
+        "R3_SHARED_DESTINATION_MULTI_SOURCE": {
+            "tp": 1,
+            "fp": 0,
+            "tn": 7,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        }
+    },
+    "scenarios": [
+        {
+            "scenario_id": "P1_SHARED_SOURCE_MULTI_CLASS",
+            "description": "One pseudonymous source appears across three clients and three attack classes.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "P2_SHARED_DESTINATION_MULTI_SOURCE",
+            "description": "Four distinct pseudonymous sources across four clients target one destination/port.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R3_SHARED_DESTINATION_MULTI_SOURCE"
+            ],
+            "predicted_rules": [
+                "R3_SHARED_DESTINATION_MULTI_SOURCE"
+            ],
+            "event_count": 1,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "P3_SHARED_SOURCE_SAME_CLASS",
+            "description": "One source appears across two clients but only one attack class.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE"
+            ],
+            "event_count": 1,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "P4_FOUR_CLIENT_MULTI_CLASS",
+            "description": "One source appears across four clients and four classes within 30 seconds.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "N1_SHARED_SOURCE_OUTSIDE_WINDOW",
+            "description": "Same source appears on two clients but 95 seconds apart.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": false,
+            "predicted_correlated": false,
+            "expected_rules": [],
+            "predicted_rules": [],
+            "event_count": 0,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "N2_INSUFFICIENT_SOURCES",
+            "description": "Only two sources target the same destination/port.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": false,
+            "predicted_correlated": false,
+            "expected_rules": [],
+            "predicted_rules": [],
+            "event_count": 0,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "N3_INDEPENDENT_ALERTS",
+            "description": "Independent clients, sources and destinations should not correlate.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": false,
+            "predicted_correlated": false,
+            "expected_rules": [],
+            "predicted_rules": [],
+            "event_count": 0,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "N4_SINGLE_CLIENT_REPETITION",
+            "description": "Repeated source on one client must not become a cross-client incident.",
+            "exceptional_case": "NORMAL",
+            "expected_correlated": false,
+            "predicted_correlated": false,
+            "expected_rules": [],
+            "predicted_rules": [],
+            "event_count": 0,
+            "duplicates_removed": 0,
+            "passed": true
+        }
+    ]
+}

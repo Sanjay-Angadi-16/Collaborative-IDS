@@ -1,0 +1,28 @@
+{
+    "scenario": "non_iid",
+    "completed_seeds": [
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102,
+        112,
+        122,
+        132
+    ],
+    "number_of_completed_seeds": 10,
+    "scipy_available": true,
+    "retention": {
+        "mean_local_seen_recall": 0.9985857672378528,
+        "mean_fedprox70_seen_recall": 0.5541374688154204,
+        "mean_retention_delta": -0.44444829842243216,
+        "mean_retention_ratio": 0.5546662726555912
+    },
+    "transfer": {
+        "mean_local_unseen_recall": 0.0,
+        "mean_fedprox70_unseen_recall": 0.5541374688154205,
+        "mean_transfer_gain": 0.5541374688154205
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "phase": "15G",
+    "phase_name": "PHASE 15G \u2014 PRIVACY / RETENTION AUDIT + CENTRAL-STORE PERFORMANCE EVALUATION",
+    "privacy_at_rest_before_retention": {
+        "passed": true,
+        "rows_scanned": 1000,
+        "findings": []
+    },
+    "retention_preview": {
+        "retention_days": 30,
+        "cutoff_utc": "2026-08-15T10:20:05+00:00",
+        "dry_run": true,
+        "matching_rows": 250,
+        "deleted_rows": 0,
+        "remaining_rows": 1000
+    },
+    "retention_apply": {
+        "retention_days": 30,
+        "cutoff_utc": "2026-08-15T10:20:05+00:00",
+        "dry_run": false,
+        "matching_rows": 250,
+        "deleted_rows": 250,
+        "remaining_rows": 750
+    },
+    "event_time_range_before": {
+        "oldest_event_time": "2026-08-05T10:20:05+00:00",
+        "newest_event_time": "2026-09-14T10:20:05+00:00"
+    },
+    "event_time_range_after": {
+        "oldest_event_time": "2026-08-15T10:34:30+00:00",
+        "newest_event_time": "2026-09-14T10:20:05+00:00"
+    },
+    "post_retention_privacy_audit": {
+        "passed": true,
+        "rows_scanned": 750,
+        "findings": []
+    },
+    "all_tests_passed": true,
+    "synthetic_privacy_safe_benchmark_alerts": true,
+    "locked_test_used": false
+}

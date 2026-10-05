@@ -1,0 +1,88 @@
+{
+  "aggregators": [
+    "fedavg",
+    "coordinate_median",
+    "trimmed_mean"
+  ],
+  "attack_audits_pass": true,
+  "attacks": "Phase17E SCALE x5 / RANDOM x5",
+  "comparison_csv": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase17\\phase17f\\seed_122\\phase17f_matched_defense_comparison.csv",
+  "experiments": [
+    {
+      "attack_type": "NONE",
+      "id": "E0_CLEAN",
+      "magnitude": 1.0,
+      "malicious_clients": []
+    },
+    {
+      "attack_type": "SCALE",
+      "id": "E_SCALE_C1",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "attack_type": "SCALE",
+      "id": "E_SCALE_C1_C2",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1,
+        2
+      ]
+    },
+    {
+      "attack_type": "RANDOM",
+      "id": "E_RANDOM_C1",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1
+      ]
+    },
+    {
+      "attack_type": "RANDOM",
+      "id": "E_RANDOM_C1_C2",
+      "magnitude": 5.0,
+      "malicious_clients": [
+        1,
+        2
+      ]
+    }
+  ],
+  "features": 70,
+  "local_epochs": 1,
+  "local_training": {
+    "algorithm": "FedProx",
+    "mu": 0.01
+  },
+  "locked_test_used": false,
+  "macro_f1_pivot_csv": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase17\\phase17f\\seed_122\\phase17f_macro_f1_pivot.csv",
+  "matched_seed_reset_per_run": true,
+  "matrix": "matched",
+  "max_aggregation_audit_error": 0.0,
+  "num_clients": 5,
+  "per_class_csv": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase17\\phase17f\\seed_122\\phase17f_per_class_comparison.csv",
+  "phase": "17F",
+  "prerequisite_audit": {
+    "phase17a_status": "FROZEN",
+    "phase17db_status": "PASS",
+    "source_hashes": {
+      "scripts/phase10_fedprox70.py": {
+        "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+        "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+        "match": true
+      },
+      "scripts/phase9_fedavg70.py": {
+        "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+        "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+        "match": true
+      }
+    }
+  },
+  "rounds": 10,
+  "scenario": "non_iid",
+  "seed": 122,
+  "status": "PASS",
+  "trim_count": 1,
+  "validation_poisoned": false
+}

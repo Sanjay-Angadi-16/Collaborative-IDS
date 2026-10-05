@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.8290746950854081,
+    "balanced_accuracy": 0.33052237650878535,
+    "macro_precision": 0.16112154335071646,
+    "macro_recall": 0.33052237650878535,
+    "macro_f1": 0.18835114689457821,
+    "weighted_f1": 0.7617326933346223,
+    "local_seen_attack": "FTP-Patator",
+    "seen_attack_recall": 0.9954648526077098,
+    "seen_attack_f1": 0.22071392659627953,
+    "mean_unseen_attack_recall": 0.0,
+    "mean_unseen_attack_f1": 0.0,
+    "training_time_seconds": 1.4924929999979213,
+    "inference_time_seconds": 2.9540852000936866
+}

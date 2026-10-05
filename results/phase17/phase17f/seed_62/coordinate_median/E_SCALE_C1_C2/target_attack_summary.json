@@ -1,0 +1,8 @@
+{
+  "target_attack_mean_recall": 0.802501853043842,
+  "target_attack_recalls": {
+    "DDoS": 0.8125968791980985,
+    "DoS Hulk": 0.7924068268895855
+  },
+  "target_attack_worst_recall": 0.7924068268895855
+}

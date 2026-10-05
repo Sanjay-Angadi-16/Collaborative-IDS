@@ -1,0 +1,12 @@
+{
+    "phase4_parameter_count": 60614,
+    "trimmed_mean_parameter_count": 52166,
+    "parameter_reduction_ratio": 0.1393737420397928,
+    "phase4_model_payload_mib": 0.23122406005859375,
+    "trimmed_mean_model_payload_mib": 0.19899749755859375,
+    "phase4_total_communication_mib": 23.122406005859375,
+    "trimmed_mean_total_communication_mib": 19.899749755859375,
+    "communication_reduction_ratio": 0.1393737420397928,
+    "extra_client_communication": 0,
+    "note": "Trimmed Mean changes only server aggregation. Model payload is identical to other 37-feature methods."
+}

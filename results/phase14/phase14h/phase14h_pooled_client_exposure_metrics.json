@@ -1,0 +1,36 @@
+{
+    "important_interpretation": "These are pooled CLIENT-EXPOSURE metrics. The same validation sequences are replayed at multiple client-local stacks, so exposures are not independent unique flows.",
+    "selected_clients": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "unique_validation_sequences": 50000,
+    "pooled_client_exposures": 250000,
+    "adaptive_gate": {
+        "accuracy": 0.94088,
+        "balanced_accuracy": 0.7933932233519524,
+        "macro_precision": 0.9617378890989081,
+        "macro_recall": 0.7933932233519524,
+        "macro_f1": 0.862198137795367,
+        "weighted_f1": 0.9404177885472738,
+        "anomalous_traffic_predictions": 1696
+    },
+    "always_run_all": {
+        "accuracy": 0.940892,
+        "balanced_accuracy": 0.7938537287684149,
+        "macro_precision": 0.9617775799024422,
+        "macro_recall": 0.7938537287684149,
+        "macro_f1": 0.8625252464177194,
+        "weighted_f1": 0.9404320045271388,
+        "anomalous_traffic_predictions": 1696
+    },
+    "adaptive_minus_always": {
+        "accuracy": -1.1999999999900979e-05,
+        "balanced_accuracy": -0.00046050541646247556,
+        "macro_f1": -0.0003271086223524122,
+        "weighted_f1": -1.4215979865062067e-05
+    }
+}

@@ -1,0 +1,37 @@
+selected_order,active_feature_index,original_scaler_index,feature_name
+1,0,0,Destination Port
+2,3,3,Total Backward Packets
+3,4,4,Total Length of Fwd Packets
+4,5,5,Total Length of Bwd Packets
+5,8,8,Fwd Packet Length Mean
+6,11,11,Bwd Packet Length Min
+7,12,12,Bwd Packet Length Mean
+8,13,13,Bwd Packet Length Std
+9,15,15,Flow Packets/s
+10,17,17,Flow IAT Std
+11,18,18,Flow IAT Max
+12,22,22,Fwd IAT Std
+13,23,23,Fwd IAT Max
+14,24,24,Fwd IAT Min
+15,25,25,Bwd IAT Total
+16,26,26,Bwd IAT Mean
+17,27,27,Bwd IAT Std
+18,30,30,Fwd PSH Flags
+19,31,32,Fwd URG Flags
+20,33,35,Bwd Header Length
+21,34,36,Fwd Packets/s
+22,35,37,Bwd Packets/s
+23,36,38,Min Packet Length
+24,39,41,Packet Length Std
+25,40,42,Packet Length Variance
+26,41,43,FIN Flag Count
+27,45,47,ACK Flag Count
+28,46,48,URG Flag Count
+29,49,51,Down/Up Ratio
+30,51,53,Avg Fwd Segment Size
+31,54,62,Subflow Fwd Packets
+32,63,71,Active Std
+33,64,72,Active Max
+34,67,75,Idle Std
+35,68,76,Idle Max
+36,69,77,Idle Min

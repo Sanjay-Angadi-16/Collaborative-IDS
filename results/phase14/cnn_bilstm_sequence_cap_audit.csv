@@ -1,0 +1,7 @@
+dataset,max_sequence_limit,pre_cap_sequence_count,post_cap_sequence_count,pre_cap_benign_count,post_cap_benign_count,pre_cap_non_benign_count,post_cap_non_benign_count,benign_removed_by_cap,non_benign_removed_by_cap,cap_policy,nominal_cap_exceeded_to_preserve_attacks,pre_cap_class_counts_json,post_cap_class_counts_json
+client_1,50000,180280,50000,162078,31798,18202,18202,130280,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 162078, ""3"": 18202}","{""0"": 31798, ""3"": 18202}"
+client_2,50000,171291,50000,161068,39777,10223,10223,121291,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 161068, ""1"": 10223}","{""0"": 39777, ""1"": 10223}"
+client_3,50000,173671,50000,161534,37863,12137,12137,123671,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 161534, ""5"": 12137}","{""0"": 37863, ""5"": 12137}"
+client_4,50000,169088,50000,168348,49260,740,740,119088,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 168348, ""2"": 740}","{""0"": 49260, ""2"": 740}"
+client_5,50000,162954,50000,162400,49446,554,554,112954,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 162400, ""4"": 554}","{""0"": 49446, ""4"": 554}"
+validation,50000,54894,50000,43905,39011,10989,10989,4894,0,keep_all_non_benign_sample_benign_without_replacement,False,"{""0"": 43905, ""1"": 2386, ""2"": 285, ""3"": 4547, ""4"": 250, ""5"": 3521}","{""0"": 39011, ""1"": 2386, ""2"": 285, ""3"": 4547, ""4"": 250, ""5"": 3521}"

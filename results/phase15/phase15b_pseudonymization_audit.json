@@ -1,0 +1,81 @@
+{
+    "phase": "15B",
+    "phase_name": "PHASE 15B \u2014 KEYED HMAC-SHA256 PSEUDONYMIZATION",
+    "algorithm": "HMAC-SHA256",
+    "key_id": "phase15_hmac_v1",
+    "key_mode": "EPHEMERAL_TEST_KEY",
+    "ephemeral_test_key": true,
+    "secret_written_to_disk": false,
+    "raw_identifiers_written_to_disk": false,
+    "digest_bytes_exposed": 16,
+    "token_format": "src_<32 hex> / dst_<32 hex>",
+    "domain_separation": true,
+    "tests_total": 12,
+    "tests_passed": 12,
+    "tests_failed": 0,
+    "all_tests_passed": true,
+    "pseudonymization_test_batch_ms": 13.053600006969646,
+    "tests": [
+        {
+            "test": "same_input_same_token",
+            "passed": true,
+            "detail": "Repeated source identifier is deterministic for the same key."
+        },
+        {
+            "test": "different_input_different_token",
+            "passed": true,
+            "detail": "Different source identifiers produce different tokens."
+        },
+        {
+            "test": "domain_separation",
+            "passed": true,
+            "detail": "The same raw identifier produces different source/destination tokens."
+        },
+        {
+            "test": "source_token_format",
+            "passed": true,
+            "detail": "Source token has the frozen src_<32 hex> format."
+        },
+        {
+            "test": "destination_token_format",
+            "passed": true,
+            "detail": "Destination token has the frozen dst_<32 hex> format."
+        },
+        {
+            "test": "raw_source_not_exposed",
+            "passed": true,
+            "detail": "Raw source IP is not present in the token."
+        },
+        {
+            "test": "raw_destination_not_exposed",
+            "passed": true,
+            "detail": "Raw destination IP is not present in the token."
+        },
+        {
+            "test": "same_key_cross_instance_stability",
+            "passed": true,
+            "detail": "Same key and namespace preserve cross-instance linkability."
+        },
+        {
+            "test": "different_key_unlinkability",
+            "passed": true,
+            "detail": "Changing the HMAC key changes the pseudonym."
+        },
+        {
+            "test": "invalid_ip_rejected",
+            "passed": true,
+            "detail": "Invalid IP addresses are rejected rather than silently hashed."
+        },
+        {
+            "test": "phase15a_schema_integration",
+            "passed": true,
+            "detail": "Pseudonymized source/destination tokens are accepted by the frozen Phase15A alert schema."
+        },
+        {
+            "test": "hmac_secret_not_in_alert",
+            "passed": true,
+            "detail": "HMAC secret is absent from the serialized shared alert."
+        }
+    ],
+    "locked_test_used": false
+}

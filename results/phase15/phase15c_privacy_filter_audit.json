@@ -1,0 +1,146 @@
+{
+    "phase": "15C",
+    "phase_name": "PHASE 15C \u2014 ALLOWLIST PRIVACY FILTER + LEAKAGE AUDIT",
+    "filter_policy": "ALLOWLIST_ONLY",
+    "shared_field_count": 19,
+    "pseudonymization": "HMAC-SHA256",
+    "key_mode": "EPHEMERAL_TEST_KEY",
+    "raw_identifiers_written_to_results": false,
+    "raw_packet_or_payload_written": false,
+    "raw_features_written": false,
+    "cnn_sequences_written": false,
+    "model_state_written": false,
+    "require_source_destination_tokens": true,
+    "tests_total": 17,
+    "tests_passed": 17,
+    "tests_failed": 0,
+    "all_tests_passed": true,
+    "fast_leakage_report": {
+        "passed": true,
+        "schema_valid": true,
+        "unknown_fields": [],
+        "forbidden_fields": [],
+        "raw_ip_literals": [],
+        "mac_literals": [],
+        "known_secret_literals_found": [],
+        "known_raw_identifiers_found": [],
+        "source_token_present": true,
+        "destination_token_present": true
+    },
+    "deep_leakage_report": {
+        "passed": true,
+        "schema_valid": true,
+        "unknown_fields": [],
+        "forbidden_fields": [],
+        "raw_ip_literals": [],
+        "mac_literals": [],
+        "known_secret_literals_found": [],
+        "known_raw_identifiers_found": [],
+        "source_token_present": true,
+        "destination_token_present": true
+    },
+    "size_metrics": [
+        {
+            "alert_type": "FAST",
+            "local_json_bytes": 767,
+            "shared_json_bytes": 642,
+            "size_reduction_percent": 16.297262059973924,
+            "filter_plus_schema_ms": 0.2510999911464751
+        },
+        {
+            "alert_type": "DEEP",
+            "local_json_bytes": 693,
+            "shared_json_bytes": 600,
+            "size_reduction_percent": 13.41991341991342,
+            "filter_plus_schema_ms": 0.22899999748915434
+        }
+    ],
+    "tests": [
+        {
+            "test": "fast_alert_leakage_audit",
+            "passed": true,
+            "detail": "Filtered FAST alert contains no detected sensitive material."
+        },
+        {
+            "test": "fast_alert_phase15a_schema",
+            "passed": true,
+            "detail": "Filtered FAST alert preserves the frozen Phase15A schema."
+        },
+        {
+            "test": "fast_raw_fields_removed",
+            "passed": true,
+            "detail": "Raw IPs, payload, flow features and sequence are absent."
+        },
+        {
+            "test": "fast_nested_model_details_removed",
+            "passed": true,
+            "detail": "Nested model/debug objects remain local."
+        },
+        {
+            "test": "fast_phase14g2_semantics",
+            "passed": true,
+            "detail": "FAST risk/evidence/severity semantics are unchanged."
+        },
+        {
+            "test": "deep_alert_leakage_audit",
+            "passed": true,
+            "detail": "Filtered DEEP alert contains no detected sensitive material."
+        },
+        {
+            "test": "deep_alert_phase15a_schema",
+            "passed": true,
+            "detail": "Filtered DEEP alert preserves the frozen Phase15A schema."
+        },
+        {
+            "test": "deep_raw_ml_material_removed",
+            "passed": true,
+            "detail": "Raw ML/network material remains local."
+        },
+        {
+            "test": "deep_phase14g2_semantics",
+            "passed": true,
+            "detail": "DEEP fused-risk semantics are unchanged."
+        },
+        {
+            "test": "same_source_cross_alert_linkability",
+            "passed": true,
+            "detail": "Same raw source links across alerts through the same pseudonym."
+        },
+        {
+            "test": "same_destination_cross_alert_linkability",
+            "passed": true,
+            "detail": "Same raw destination links across alerts through the same pseudonym."
+        },
+        {
+            "test": "local_fast_alert_not_mutated",
+            "passed": true,
+            "detail": "Privacy filtering does not mutate the original local FAST alert."
+        },
+        {
+            "test": "local_deep_alert_not_mutated",
+            "passed": true,
+            "detail": "Privacy filtering does not mutate the original local DEEP alert."
+        },
+        {
+            "test": "outbound_keys_are_allowlisted",
+            "passed": true,
+            "detail": "Every outbound top-level key is explicitly allowlisted."
+        },
+        {
+            "test": "validator_rejects_raw_ip_field",
+            "passed": true,
+            "detail": "Leakage validator rejects a reintroduced raw source_ip field."
+        },
+        {
+            "test": "validator_detects_ip_hidden_in_allowed_field",
+            "passed": true,
+            "detail": "Leakage validator scans values, not only field names."
+        },
+        {
+            "test": "validator_requires_link_tokens",
+            "passed": true,
+            "detail": "Phase15C shared-alert policy requires pseudonymous link tokens."
+        }
+    ],
+    "locked_test_used": false
+}

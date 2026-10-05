@@ -1,0 +1,290 @@
+{
+    "phase": "13A",
+    "experiment": "Local-Attack-Retention-Aware Hybrid EVO-GA Feature Selection",
+    "scenario": "non_iid",
+    "seed": 42,
+    "device": "cpu",
+    "research_design": {
+        "primary_search_unit": "local_client_seen_attack_recall",
+        "aggregation_used_for_primary_search": false,
+        "all_five_attacks_protected_symmetrically": true,
+        "client_attack_mapping": {
+            "1": "DoS Hulk",
+            "2": "DDoS",
+            "3": "PortScan",
+            "4": "DoS GoldenEye",
+            "5": "FTP-Patator"
+        },
+        "hard_retention_ratio": 0.8,
+        "retention_definition": "candidate local seen-attack recall / 70-feature local seen-attack recall"
+    },
+    "data_integrity": {
+        "federated_training_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\federated\\non_iid",
+        "validation_source": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+        "locked_test_path_documented_only": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\test_locked.csv",
+        "locked_test_used": false,
+        "locked_test_allowed_in_phase13a": false
+    },
+    "validation_metadata": {
+        "original_validation_rows": 378120,
+        "six_class_validation_rows": 375442,
+        "search_validation_rows": 42385
+    },
+    "proxy_data": {
+        "max_rows_per_client": 20000,
+        "attack_fraction": 0.2,
+        "oversampling": false,
+        "synthetic_data": false
+    },
+    "local_training": {
+        "local_epochs": 1,
+        "fedprox_mu": 0.01,
+        "batch_size": 1024,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "gradient_clip": 5.0,
+        "aggregation_during_search": false
+    },
+    "fitness_weights": {
+        "mean_local_attack_recall": 0.3,
+        "worst_local_attack_recall": 0.25,
+        "mean_local_retention": 0.25,
+        "worst_local_retention": 0.1,
+        "feature_reduction": 0.1
+    },
+    "feature_space": {
+        "starting_features": 70,
+        "selected_features": 17,
+        "feature_reduction_ratio": 0.7571428571428571,
+        "selected_feature_names": [
+            "Destination Port",
+            "Total Backward Packets",
+            "Fwd Packet Length Mean",
+            "Bwd Packet Length Std",
+            "Flow Packets/s",
+            "Fwd IAT Std",
+            "Fwd IAT Min",
+            "Bwd IAT Std",
+            "Bwd Packets/s",
+            "FIN Flag Count",
+            "SYN Flag Count",
+            "ACK Flag Count",
+            "URG Flag Count",
+            "Subflow Fwd Packets",
+            "Active Mean",
+            "Idle Max",
+            "Idle Min"
+        ],
+        "selected_indices": [
+            0,
+            3,
+            8,
+            13,
+            15,
+            22,
+            24,
+            27,
+            35,
+            41,
+            42,
+            45,
+            46,
+            54,
+            62,
+            68,
+            69
+        ]
+    },
+    "local_70_baselines": {
+        "DoS Hulk": 0.9466,
+        "DDoS": 0.999,
+        "PortScan": 0.9853,
+        "DoS GoldenEye": 0.9913563829787234,
+        "FTP-Patator": 0.9954597048808173
+    },
+    "local_retention_thresholds": {
+        "DoS Hulk": 0.7572800000000001,
+        "DDoS": 0.7992,
+        "PortScan": 0.78824,
+        "DoS GoldenEye": 0.7930851063829788,
+        "FTP-Patator": 0.7963677639046538
+    },
+    "frozen_candidate": {
+        "local_attack_recalls": {
+            "DoS Hulk": 0.9469,
+            "DDoS": 0.9994,
+            "PortScan": 0.981,
+            "DoS GoldenEye": 0.9913563829787234,
+            "FTP-Patator": 0.9977298524404086
+        },
+        "local_retention_ratios": {
+            "DoS Hulk": 1.000316923727023,
+            "DDoS": 1.0004004004004003,
+            "PortScan": 0.9956358469501675,
+            "DoS GoldenEye": 1.0,
+            "FTP-Patator": 1.0022805017103762
+        },
+        "mean_local_attack_recall": 0.9832772470838265,
+        "worst_local_attack_recall": 0.9469,
+        "mean_local_retention": 0.9997267345575935,
+        "worst_local_retention": 0.9956358469501675,
+        "feasible": true,
+        "utility": 0.9569177281738487,
+        "fitness": 0.04308227182615132
+    },
+    "hybrid_search": {
+        "lower_bound": -6.0,
+        "upper_bound": 6.0,
+        "evo_population": 10,
+        "evo_iterations": 10,
+        "ga_population": 10,
+        "ga_generations": 10,
+        "optimizer_best_fitness": 0.04308227182615132,
+        "frozen_candidate_fitness": 0.04308227182615132,
+        "optimization_seconds": 276.8832822999975
+    },
+    "selector_statistics": {
+        "unique_candidate_evaluations": 182,
+        "cache_hits": 87,
+        "cached_masks": 183,
+        "history_rows": 183
+    },
+    "search_comparison": [
+        {
+            "client_id": 1,
+            "seen_attack": "DoS Hulk",
+            "baseline_70_recall": 0.9466,
+            "selected_subset_recall": 0.9469,
+            "absolute_delta": 0.00029999999999996696,
+            "retention_ratio": 1.000316923727023,
+            "required_retention_ratio": 0.8,
+            "required_minimum_recall": 0.7572800000000001,
+            "constraint_passed": true
+        },
+        {
+            "client_id": 2,
+            "seen_attack": "DDoS",
+            "baseline_70_recall": 0.999,
+            "selected_subset_recall": 0.9994,
+            "absolute_delta": 0.00039999999999995595,
+            "retention_ratio": 1.0004004004004003,
+            "required_retention_ratio": 0.8,
+            "required_minimum_recall": 0.7992,
+            "constraint_passed": true
+        },
+        {
+            "client_id": 3,
+            "seen_attack": "PortScan",
+            "baseline_70_recall": 0.9853,
+            "selected_subset_recall": 0.981,
+            "absolute_delta": -0.0042999999999999705,
+            "retention_ratio": 0.9956358469501675,
+            "required_retention_ratio": 0.8,
+            "required_minimum_recall": 0.78824,
+            "constraint_passed": true
+        },
+        {
+            "client_id": 4,
+            "seen_attack": "DoS GoldenEye",
+            "baseline_70_recall": 0.9913563829787234,
+            "selected_subset_recall": 0.9913563829787234,
+            "absolute_delta": 0.0,
+            "retention_ratio": 1.0,
+            "required_retention_ratio": 0.8,
+            "required_minimum_recall": 0.7930851063829788,
+            "constraint_passed": true
+        },
+        {
+            "client_id": 5,
+            "seen_attack": "FTP-Patator",
+            "baseline_70_recall": 0.9954597048808173,
+            "selected_subset_recall": 0.9977298524404086,
+            "absolute_delta": 0.002270147559591318,
+            "retention_ratio": 1.0022805017103762,
+            "required_retention_ratio": 0.8,
+            "required_minimum_recall": 0.7963677639046538,
+            "constraint_passed": true
+        }
+    ],
+    "full_validation_local_audit": {
+        "results": [
+            {
+                "client_id": 1,
+                "seen_attack": "DoS Hulk",
+                "baseline_70_full_validation_recall": 0.945547428306049,
+                "selected_full_validation_recall": 0.9462440496923256,
+                "absolute_delta": 0.0006966213862765747,
+                "retention_ratio": 1.00073673870334,
+                "search_required_retention_ratio": 0.8,
+                "reporting_only": true,
+                "used_for_further_tuning": false,
+                "locked_test_used": false
+            },
+            {
+                "client_id": 2,
+                "seen_attack": "DDoS",
+                "baseline_70_full_validation_recall": 0.9989149529812958,
+                "selected_full_validation_recall": 0.9993283042265165,
+                "absolute_delta": 0.00041335124522068334,
+                "retention_ratio": 1.0004138002379352,
+                "search_required_retention_ratio": 0.8,
+                "reporting_only": true,
+                "used_for_further_tuning": false,
+                "locked_test_used": false
+            },
+            {
+                "client_id": 3,
+                "seen_attack": "PortScan",
+                "baseline_70_full_validation_recall": 0.9856670341786108,
+                "selected_full_validation_recall": 0.9815509004042632,
+                "absolute_delta": -0.004116133774347608,
+                "retention_ratio": 0.9958240119313946,
+                "search_required_retention_ratio": 0.8,
+                "reporting_only": true,
+                "used_for_further_tuning": false,
+                "locked_test_used": false
+            },
+            {
+                "client_id": 4,
+                "seen_attack": "DoS GoldenEye",
+                "baseline_70_full_validation_recall": 0.9913563829787234,
+                "selected_full_validation_recall": 0.9913563829787234,
+                "absolute_delta": 0.0,
+                "retention_ratio": 1.0,
+                "search_required_retention_ratio": 0.8,
+                "reporting_only": true,
+                "used_for_further_tuning": false,
+                "locked_test_used": false
+            },
+            {
+                "client_id": 5,
+                "seen_attack": "FTP-Patator",
+                "baseline_70_full_validation_recall": 0.9954597048808173,
+                "selected_full_validation_recall": 0.9977298524404086,
+                "absolute_delta": 0.002270147559591318,
+                "retention_ratio": 1.0022805017103762,
+                "search_required_retention_ratio": 0.8,
+                "reporting_only": true,
+                "used_for_further_tuning": false,
+                "locked_test_used": false
+            }
+        ],
+        "used_for_further_tuning": false,
+        "locked_test_used": false
+    },
+    "runtime": {
+        "optimization_seconds": 276.8832822999975,
+        "total_script_seconds": 309.32952790000127
+    },
+    "outputs": {
+        "candidate_history": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_candidate_history.csv",
+        "local_70_baseline": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_local_70_baseline.csv",
+        "local_selected_comparison": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_local_selected_comparison.csv",
+        "full_validation_local_comparison": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_full_validation_local_comparison.csv",
+        "selected_features": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_selected_features.csv",
+        "feature_mask": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_feature_mask.csv",
+        "selected_features_json": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_selected_features.json",
+        "selected_mask_npy": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13_selected_mask.npy",
+        "summary": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase13\\feature_search\\phase13a_summary.json"
+    }
+}

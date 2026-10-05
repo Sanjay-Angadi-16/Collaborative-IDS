@@ -1,0 +1,51 @@
+{
+  "phase_version": "phase16e_v1",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    111
+  ],
+  "dataset_per_seed": {
+    "train_graphs": 800,
+    "validation_graphs": 200,
+    "test_graphs": 250,
+    "locked_test": false,
+    "raw_identifiers": false
+  },
+  "gnn": {
+    "hidden_dim": 64,
+    "dropout": 0.2,
+    "epochs": 25,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 6
+  },
+  "hybrid": {
+    "policy": "RULE_POSITIVE_OR_GNN_HIGH_CONFIDENCE_RESCUE",
+    "gnn_positive_threshold_when_rules_silent": 0.99,
+    "threshold_is_predeclared": true
+  },
+  "selection": {
+    "primary_metric": "macro_f1",
+    "minimum_material_macro_f1_gain": 0.005,
+    "paired_significance_alpha": 0.05,
+    "max_precision_drop": 0.005,
+    "incumbent": "RULE_ONLY"
+  },
+  "scientific_policy": {
+    "phase16c_rules_remain_frozen": true,
+    "phase16d_architecture_is_reused": true,
+    "benchmark_is_synthetic_rule_aligned": true,
+    "do_not_claim_real_world_superiority": true,
+    "do_not_use_locked_ids_test": true,
+    "final_policy_decision_is_phase16_benchmark_specific": true
+  }
+}

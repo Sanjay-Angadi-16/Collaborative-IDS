@@ -1,0 +1,7 @@
+,BENIGN,DDoS,DoS GoldenEye,DoS Hulk,FTP-Patator,PortScan
+BENIGN,310274,3,1,3978,0,3
+DDoS,6985,3701,0,8668,0,0
+DoS GoldenEye,736,42,614,112,0,0
+DoS Hulk,1148,0,0,24691,0,0
+FTP-Patator,879,0,0,2,0,0
+PortScan,8944,3,0,15,0,4643

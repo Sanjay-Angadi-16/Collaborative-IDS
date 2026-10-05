@@ -1,0 +1,7 @@
+{
+    "target_attack_recalls": {
+        "DoS GoldenEye": 0.9920212765957447
+    },
+    "target_attack_mean_recall": 0.9920212765957447,
+    "target_attack_worst_recall": 0.9920212765957447
+}

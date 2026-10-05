@@ -1,0 +1,6 @@
+client_id,local_seen_attack,original_rows,proxy_rows,count_BENIGN,count_DDoS,count_DoS GoldenEye,count_DoS Hulk,count_FTP-Patator,count_PortScan
+1,DoS Hulk,414258,20000,16000,0,0,4000,0,0
+2,DDoS,382880,20000,16000,4000,0,0,0,0
+3,PortScan,356790,20000,16000,0,0,0,0,4000
+4,DoS GoldenEye,300550,20000,16000,0,4000,0,0,0
+5,FTP-Patator,297475,20000,16000,0,0,0,4000,0

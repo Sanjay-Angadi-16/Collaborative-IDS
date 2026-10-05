@@ -1,0 +1,8 @@
+{
+    "attack_type": "RANDOM",
+    "malicious_clients": [
+        1
+    ],
+    "magnitude": 5.0,
+    "attack_seed": 1704
+}

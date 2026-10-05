@@ -1,0 +1,18 @@
+{
+    "phase": "17C",
+    "attack": "sign_flip",
+    "seed": 42,
+    "num_clients": 5,
+    "num_malicious_clients": 1,
+    "malicious_client_ids_zero_based": [
+        0
+    ],
+    "malicious_client_names": [
+        "client_1"
+    ],
+    "sign_flip_scale": 1.0,
+    "formula": "poisoned_update = -scale * (local_model - global_model)",
+    "data_modified": false,
+    "labels_modified": false,
+    "locked_test_modified": false
+}

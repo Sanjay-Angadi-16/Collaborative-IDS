@@ -1,0 +1,17 @@
+{
+    "phase": "14E",
+    "seed": 42,
+    "device": "cpu",
+    "best_epoch": 14,
+    "best_validation_loss": 0.06502580976899786,
+    "accuracy": 0.99244,
+    "balanced_accuracy": 0.9250532519729058,
+    "macro_precision": 0.9473329058110603,
+    "macro_recall": 0.9250532519729058,
+    "macro_f1": 0.9315469315663992,
+    "weighted_f1": 0.992278410932621,
+    "training_seconds": 168.7660471999843,
+    "final_validation_inference_seconds": 1.4278568000008818,
+    "locked_test_used": false,
+    "scientific_label": "source_ordered_sequences_not_timestamp_confirmed"
+}

@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.8405308004357636,
+    "balanced_accuracy": 0.33180813929790093,
+    "macro_precision": 0.16347238981839826,
+    "macro_recall": 0.33180813929790093,
+    "macro_f1": 0.18866944279601594,
+    "weighted_f1": 0.7783117604168666,
+    "local_seen_attack": "DoS GoldenEye",
+    "seen_attack_recall": 0.9915584415584415,
+    "seen_attack_f1": 0.2031936127744511,
+    "mean_unseen_attack_recall": 0.0,
+    "mean_unseen_attack_f1": 0.0,
+    "training_time_seconds": 20.561453499947675,
+    "inference_time_seconds": 2.9683668999932706
+}

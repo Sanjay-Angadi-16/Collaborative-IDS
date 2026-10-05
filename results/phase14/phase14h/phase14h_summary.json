@@ -1,0 +1,53 @@
+{
+    "phase": "14H",
+    "policy": "phase14g2_v1",
+    "selected_clients": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "unique_validation_sequences": 50000,
+    "pooled_client_exposures": 250000,
+    "full_validation": true,
+    "pooled_adaptive_gate_metrics": {
+        "accuracy": 0.94088,
+        "balanced_accuracy": 0.7933932233519524,
+        "macro_precision": 0.9617378890989081,
+        "macro_recall": 0.7933932233519524,
+        "macro_f1": 0.862198137795367,
+        "weighted_f1": 0.9404177885472738,
+        "anomalous_traffic_predictions": 1696
+    },
+    "pooled_always_run_all_metrics": {
+        "accuracy": 0.940892,
+        "balanced_accuracy": 0.7938537287684149,
+        "macro_precision": 0.9617775799024422,
+        "macro_recall": 0.7938537287684149,
+        "macro_f1": 0.8625252464177194,
+        "weighted_f1": 0.9404320045271388,
+        "anomalous_traffic_predictions": 1696
+    },
+    "pooled_adaptive_minus_always": {
+        "accuracy": -1.1999999999900979e-05,
+        "balanced_accuracy": -0.00046050541646247556,
+        "macro_f1": -0.0003271086223524122,
+        "weighted_f1": -1.4215979865062067e-05
+    },
+    "mean_fast_path_rate": 0.03968400000000001,
+    "mean_deep_path_rate": 0.9603160000000001,
+    "mean_rf_false_fast_path_rate": 0.0017145478595120545,
+    "mean_benign_false_fast_path_rate": 5.715918833952558e-05,
+    "global_model_batched_inference_seconds": 1.2866414999880362,
+    "phase_total_seconds": 109.95036380001693,
+    "latency_profiled": true,
+    "latency_samples_total": 1500,
+    "locked_test_used": false,
+    "interpretation_warning": "Pooled results are repeated client-exposures, not independent unique validation flows.",
+    "mean_across_clients_latency": {
+        "always_mean_ms": 35.8819723331447,
+        "adaptive_mean_ms": 35.458106934345174,
+        "mean_latency_savings_percent": -1.4331237287274283
+    }
+}

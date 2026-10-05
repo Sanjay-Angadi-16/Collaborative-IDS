@@ -1,0 +1,5 @@
+comparison,n_pairs,left_mean,right_mean,mean_delta,wins_left,losses_left,ties,wilcoxon_statistic,p_value
+personalized_seen_vs_global_seen,1,0.9988054085134019,0.6438937997565644,0.3549116087568376,1,0,0,0.0,1.0
+personalized_unseen_vs_global_unseen,1,0.11735154589135459,0.6438937997565645,-0.5265422538652099,0,1,0,0.0,1.0
+personalized_seen_vs_local_seen,1,0.9988054085134019,0.998758084481377,4.732403202489799e-05,1,0,0,0.0,1.0
+personalized_utility_vs_global_utility,1,0.5580784772023784,0.6438937997565645,-0.08581532255418611,0,1,0,0.0,1.0

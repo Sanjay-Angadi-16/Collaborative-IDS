@@ -1,0 +1,94 @@
+==============================================================================================================
+PHASE 14B.1 — AUTOENCODER ERROR DISTRIBUTION & THRESHOLD STUDY
+==============================================================================================================
+
+PURPOSE
+--------------------------------------------------------------------------------------------------------------
+Diagnose whether poor Autoencoder attack recall is mainly caused by the fixed P99 threshold or by weak reconstruction-error separation.
+
+IMPORTANT SCIENTIFIC CONTROL
+--------------------------------------------------------------------------------------------------------------
+1. Existing Phase 14B models are reused; there is NO retraining.
+2. Existing frozen 70-feature preprocessing is reused.
+3. Only held-out BENIGN validation errors are used for deployable threshold candidates.
+4. ORACLE_YOUDEN and ORACLE_BEST_F1 use attack labels and are DIAGNOSTIC ONLY.
+5. Locked test is NOT used.
+
+CLIENT-LEVEL RANKING QUALITY
+--------------------------------------------------------------------------------------------------------------
+Client 1 | DoS Hulk         | ROC-AUC=0.969844 | PR-AUC=0.982807 | Mean benign=0.051460 | Mean attack=1.046582
+Client 2 | DDoS             | ROC-AUC=0.935083 | PR-AUC=0.946844 | Mean benign=0.108793 | Mean attack=0.557840
+Client 3 | PortScan         | ROC-AUC=0.872619 | PR-AUC=0.764122 | Mean benign=0.039156 | Mean attack=0.061841
+Client 4 | DoS GoldenEye    | ROC-AUC=0.925506 | PR-AUC=0.589875 | Mean benign=0.056112 | Mean attack=0.494673
+Client 5 | FTP-Patator      | ROC-AUC=0.714659 | PR-AUC=0.103315 | Mean benign=0.899264 | Mean attack=0.045973
+
+DEPLOYABLE BENIGN-ONLY THRESHOLDS
+--------------------------------------------------------------------------------------------------------------
+
+Client 1 — DoS Hulk
+  MAD      threshold=0.074068 | FPR=0.1087 | Recall=0.9385 | Precision=0.9468 | F1=0.9426 | BalAcc=0.9149
+  P95      threshold=0.203707 | FPR=0.0500 | Recall=0.8856 | Precision=0.9733 | F1=0.9274 | BalAcc=0.9178
+  P97      threshold=0.381044 | FPR=0.0300 | Recall=0.8725 | Precision=0.9836 | F1=0.9247 | BalAcc=0.9212
+  P98      threshold=0.430529 | FPR=0.0200 | Recall=0.8246 | Precision=0.9884 | F1=0.8991 | BalAcc=0.9023
+  P99      threshold=0.645766 | FPR=0.0100 | Recall=0.8155 | Precision=0.9941 | F1=0.8960 | BalAcc=0.9027
+
+Client 2 — DDoS
+  MAD      threshold=0.053363 | FPR=0.1054 | Recall=0.7778 | Precision=0.9185 | F1=0.8423 | BalAcc=0.8362
+  P95      threshold=0.140811 | FPR=0.0500 | Recall=0.5936 | Precision=0.9477 | F1=0.7299 | BalAcc=0.7718
+  P97      threshold=0.270842 | FPR=0.0300 | Recall=0.4448 | Precision=0.9577 | F1=0.6075 | BalAcc=0.7074
+  P98      threshold=0.313424 | FPR=0.0200 | Recall=0.4374 | Precision=0.9709 | F1=0.6031 | BalAcc=0.7087
+  P99      threshold=0.458977 | FPR=0.0100 | Recall=0.3491 | Precision=0.9816 | F1=0.5151 | BalAcc=0.6696
+
+Client 3 — PortScan
+  MAD      threshold=0.056646 | FPR=0.1039 | Recall=0.3672 | Precision=0.7928 | F1=0.5020 | BalAcc=0.6317
+  P95      threshold=0.146648 | FPR=0.0500 | Recall=0.0436 | Precision=0.4856 | F1=0.0801 | BalAcc=0.4968
+  P97      threshold=0.234195 | FPR=0.0300 | Recall=0.0008 | Precision=0.0271 | F1=0.0015 | BalAcc=0.4854
+  P98      threshold=0.283058 | FPR=0.0200 | Recall=0.0001 | Precision=0.0042 | F1=0.0002 | BalAcc=0.4900
+  P99      threshold=0.417044 | FPR=0.0100 | Recall=0.0000 | Precision=0.0000 | F1=0.0000 | BalAcc=0.4950
+
+Client 4 — DoS GoldenEye
+  MAD      threshold=0.076414 | FPR=0.1022 | Recall=0.7488 | Precision=0.4749 | F1=0.5812 | BalAcc=0.8233
+  P95      threshold=0.191035 | FPR=0.0500 | Recall=0.4858 | Precision=0.5453 | F1=0.5138 | BalAcc=0.7179
+  P97      threshold=0.265041 | FPR=0.0300 | Recall=0.4181 | Precision=0.6324 | F1=0.5034 | BalAcc=0.6941
+  P98      threshold=0.377243 | FPR=0.0200 | Recall=0.2705 | Precision=0.6253 | F1=0.3776 | BalAcc=0.6252
+  P99      threshold=0.602649 | FPR=0.0100 | Recall=0.2234 | Precision=0.7338 | F1=0.3425 | BalAcc=0.6067
+
+Client 5 — FTP-Patator
+  MAD      threshold=0.110077 | FPR=0.1083 | Recall=0.0010 | Precision=0.0006 | F1=0.0008 | BalAcc=0.4463
+  P95      threshold=0.243993 | FPR=0.0500 | Recall=0.0007 | Precision=0.0010 | F1=0.0008 | BalAcc=0.4754
+  P97      threshold=0.400918 | FPR=0.0300 | Recall=0.0007 | Precision=0.0017 | F1=0.0010 | BalAcc=0.4854
+  P98      threshold=0.488456 | FPR=0.0200 | Recall=0.0007 | Precision=0.0025 | F1=0.0011 | BalAcc=0.4904
+  P99      threshold=0.787584 | FPR=0.0100 | Recall=0.0005 | Precision=0.0034 | F1=0.0008 | BalAcc=0.4952
+
+DIAGNOSTIC ORACLE THRESHOLDS — NOT FOR DEPLOYMENT
+--------------------------------------------------------------------------------------------------------------
+
+Client 1 — DoS Hulk
+  ORACLE_YOUDEN      threshold=0.386430 | FPR=0.0283 | Recall=0.8723 | F1=0.9250
+  ORACLE_BEST_F1     threshold=0.078106 | FPR=0.1046 | Recall=0.9375 | F1=0.9430
+
+Client 2 — DDoS
+  ORACLE_YOUDEN      threshold=0.023353 | FPR=0.2671 | Recall=0.9999 | F1=0.9195
+  ORACLE_BEST_F1     threshold=0.023353 | FPR=0.2671 | Recall=0.9999 | F1=0.9195
+
+Client 3 — PortScan
+  ORACLE_YOUDEN      threshold=0.032446 | FPR=0.1881 | Recall=0.9828 | F1=0.9114
+  ORACLE_BEST_F1     threshold=0.032081 | FPR=0.1903 | Recall=0.9845 | F1=0.9114
+
+Client 4 — DoS GoldenEye
+  ORACLE_YOUDEN      threshold=0.053315 | FPR=0.1542 | Recall=0.9270 | F1=0.5837
+  ORACLE_BEST_F1     threshold=0.101787 | FPR=0.0797 | Recall=0.7107 | F1=0.6032
+
+Client 5 — FTP-Patator
+  ORACLE_YOUDEN      threshold=0.034275 | FPR=0.3506 | Recall=0.9978 | F1=0.2879
+  ORACLE_BEST_F1     threshold=0.034935 | FPR=0.3463 | Recall=0.9918 | F1=0.2889
+
+INTERPRETATION GUIDE
+--------------------------------------------------------------------------------------------------------------
+A. If P95/P97/P98 greatly improve recall while ROC-AUC is already high, the major issue is threshold strictness / calibration.
+B. If even oracle thresholds cannot achieve useful recall and precision, the reconstruction representation itself is weak for that attack family.
+C. If attack reconstruction errors are systematically LOWER than benign errors, one-sided 'high reconstruction error = attack' is fundamentally unsuitable for that attack.
+D. In Phase 18, the Autoencoder should remain one uncertainty signal rather than the sole final classifier.
+
+LOCKED TEST USED : NO
+==============================================================================================================

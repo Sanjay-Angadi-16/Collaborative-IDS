@@ -1,0 +1,79 @@
+{
+  "attack": "controlled sign flip in client model-update space: delta_poisoned = -scale * delta_honest",
+  "attack_location": "after local training, before FedAvg aggregation",
+  "client_partitions_frozen": true,
+  "experiments": [
+    {
+      "attack_spec": {
+        "attack_type": "NONE",
+        "formula": "identity",
+        "malicious_client": null,
+        "sign_flip_scale": null
+      },
+      "experiment_id": "C0_CLEAN",
+      "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 1.0
+      },
+      "experiment_id": "C_SIGN_FLIP_X1",
+      "final_state_sha256": "9a3495c3c3398b5310da2bc2847269fe960c34f464efd920d875bdbd4b95b40d"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 2.0
+      },
+      "experiment_id": "C_SIGN_FLIP_X2",
+      "final_state_sha256": "0af930249ee6acf56ddd66e383aea5dcd12acbd1707ebdb3604a8191f5f77397"
+    },
+    {
+      "attack_spec": {
+        "attack_type": "SIGN_FLIP",
+        "formula": "poisoned_state = global_state - scale * (local_state - global_state)",
+        "malicious_client": 1,
+        "sign_flip_scale": 5.0
+      },
+      "experiment_id": "C_SIGN_FLIP_X5",
+      "final_state_sha256": "f2bae0015feec76c72642210bf1736f44e4e64c7d908469e9fda24c9ea5b3cb5"
+    }
+  ],
+  "feature_set_frozen": true,
+  "local_epochs": 1,
+  "local_training_path_frozen_from_phase17a": true,
+  "locked_test_used": false,
+  "malicious_client": 1,
+  "model_architecture_frozen": true,
+  "next": "After seed 42 is validated, repeat Phase17C with seeds 52, 62, 72 and 82 using identical configuration.",
+  "original_client_data_modified": false,
+  "phase": "17C",
+  "rounds": 10,
+  "scenario": "non_iid",
+  "seed": 42,
+  "server_aggregation": "existing phase4.federated_average",
+  "sign_flip_scales": [
+    1.0,
+    2.0,
+    5.0
+  ],
+  "source_hash_audit": {
+    "scripts/phase10_fedprox70.py": {
+      "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+      "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+      "match": true
+    },
+    "scripts/phase9_fedavg70.py": {
+      "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+      "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+      "match": true
+    }
+  },
+  "status": "PASS",
+  "validation_poisoned": false
+}

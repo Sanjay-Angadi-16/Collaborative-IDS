@@ -1,0 +1,11 @@
+experiment_id,aggregator,aggregator_display,highest_macro_f1_count
+E0_CLEAN,coordinate_median,Coordinate Median,1
+E0_CLEAN,fedavg,FedAvg,3
+E0_CLEAN,trimmed_mean,Trimmed Mean,6
+E_RANDOM_C1,trimmed_mean,Trimmed Mean,10
+E_RANDOM_C1_C2,coordinate_median,Coordinate Median,1
+E_RANDOM_C1_C2,trimmed_mean,Trimmed Mean,9
+E_SCALE_C1,coordinate_median,Coordinate Median,3
+E_SCALE_C1,trimmed_mean,Trimmed Mean,7
+E_SCALE_C1_C2,coordinate_median,Coordinate Median,4
+E_SCALE_C1_C2,trimmed_mean,Trimmed Mean,6

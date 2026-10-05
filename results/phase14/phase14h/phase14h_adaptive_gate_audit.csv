@@ -1,0 +1,6 @@
+validation_exposures,fast_path_count,fast_path_rate,deep_path_count,deep_path_rate,fast_path_correct,fast_path_wrong,fast_path_precision,rf_false_fast_path_rate,benign_false_fast_path_count,benign_false_fast_path_rate,wrong_attack_class_fast_path_count,deep_path_correct,deep_path_accuracy,rf_fast_threshold,client_id,seen_attack
+50000,3499,0.06998,46501,0.93002,3470,29,0.9917119176907688,0.008288082309231209,1,0.0002857959416976279,28,44404,0.9549041956086965,0.95,1,DoS Hulk
+50000,2381,0.04762,47619,0.95238,2381,0,1.0,0.0,0,0.0,0,44022,0.9244629244629244,0.95,2,DDoS
+50000,3513,0.07026,46487,0.92974,3512,1,0.999715343011671,0.0002846569883290635,0,0.0,1,44387,0.9548260804095768,0.95,3,PortScan
+50000,281,0.00562,49719,0.99438,281,0,1.0,0.0,0,0.0,0,46236,0.9299462981958607,0.95,4,DoS GoldenEye
+50000,247,0.00494,49753,0.99506,247,0,1.0,0.0,0,0.0,0,46280,0.9301951641107069,0.95,5,FTP-Patator

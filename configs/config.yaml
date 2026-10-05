@@ -1,0 +1,22 @@
+project:
+  name: federated_collaborative_ids
+  random_seed: 42
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  partitions_dir: data/partitions
+  reports_dir: artifacts/reports
+  logs_dir: logs
+dataset:
+  label_candidates: [Label, label]
+  drop_duplicate_rows: true
+  replace_infinite_with_nan: true
+  drop_rows_with_nan: true
+split:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+  stratify: true
+partitioning:
+  mild_non_iid:
+    dominant_fraction: 0.70

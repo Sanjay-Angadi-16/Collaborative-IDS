@@ -1,0 +1,19 @@
+{
+    "accuracy": 0.8980270780671917,
+    "balanced_accuracy": 0.41657095374761427,
+    "macro_precision": 0.6046418706279607,
+    "macro_recall": 0.41657095374761427,
+    "macro_f1": 0.46269846382169755,
+    "weighted_f1": 0.8690939997635998,
+    "test_samples": 375433,
+    "training_time_seconds": 301.9791514999233,
+    "inference_time_seconds": 3.3039007000625134,
+    "selected_feature_count": 37,
+    "feature_reduction_ratio": 0.4714285714285714,
+    "aggregation": "coordinate-wise trimmed mean",
+    "trim_count": 1,
+    "retained_client_values_per_coordinate": 3,
+    "seed": 112,
+    "method": "trimmed_mean",
+    "phase": 9
+}

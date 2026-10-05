@@ -1,0 +1,102 @@
+{
+    "phase": "17D-B",
+    "version": "phase17db_v1",
+    "scenario": "non_iid",
+    "seed": 42,
+    "rounds": 10,
+    "matrix": "full",
+    "experiments_completed": [
+        "DB0_CLEAN",
+        "DB_SCALE_X2",
+        "DB_SCALE_X5",
+        "DB_SCALE_X10",
+        "DB_RANDOM_X1",
+        "DB_RANDOM_X2",
+        "DB_RANDOM_X5"
+    ],
+    "attack_audits": {
+        "DB0_CLEAN": {
+            "attack_type": "NONE",
+            "malicious_events": 0,
+            "passed": true,
+            "reason": "Clean control contains no malicious transformation."
+        },
+        "DB_SCALE_X2": {
+            "attack_type": "SCALE",
+            "malicious_events": 10,
+            "requested_magnitude": 2.0,
+            "max_norm_ratio_abs_error": 2.8229203419272153e-09,
+            "minimum_update_cosine": 0.9999999999999863,
+            "passed": true,
+            "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+        },
+        "DB_SCALE_X5": {
+            "attack_type": "SCALE",
+            "malicious_events": 10,
+            "requested_magnitude": 5.0,
+            "max_norm_ratio_abs_error": 4.466444991635399e-09,
+            "minimum_update_cosine": 0.9999999999999938,
+            "passed": true,
+            "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+        },
+        "DB_SCALE_X10": {
+            "attack_type": "SCALE",
+            "malicious_events": 10,
+            "requested_magnitude": 10.0,
+            "max_norm_ratio_abs_error": 5.2675588335659995e-09,
+            "minimum_update_cosine": 0.9999999999999981,
+            "passed": true,
+            "reason": "Positive scaling must preserve update direction and multiply the full-model update norm by the requested factor."
+        },
+        "DB_RANDOM_X1": {
+            "attack_type": "RANDOM",
+            "malicious_events": 10,
+            "requested_magnitude": 1.0,
+            "max_norm_ratio_abs_error": 3.006740079136705e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.002669668218898848,
+            "passed": true,
+            "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+        },
+        "DB_RANDOM_X2": {
+            "attack_type": "RANDOM",
+            "malicious_events": 10,
+            "requested_magnitude": 2.0,
+            "max_norm_ratio_abs_error": 3.3738345450728957e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.0030725929555857753,
+            "passed": true,
+            "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+        },
+        "DB_RANDOM_X5": {
+            "attack_type": "RANDOM",
+            "malicious_events": 10,
+            "requested_magnitude": 5.0,
+            "max_norm_ratio_abs_error": 2.67083155591763e-09,
+            "all_random_events_seeded": true,
+            "mean_abs_cosine_with_legitimate_update": 0.002972579258213582,
+            "passed": true,
+            "reason": "Random Byzantine direction must be deterministic and have the requested norm relative to the legitimate update."
+        }
+    },
+    "prerequisite_audit": {
+        "phase17a_status": "FROZEN",
+        "phase17a_locked_test_used": false,
+        "source_hashes": {
+            "scripts/phase10_fedprox70.py": {
+                "expected_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+                "actual_sha256": "e29928a1885eb949bfb58e97ded154875607abf910d8cb65f6b134c17883194b",
+                "match": true
+            },
+            "scripts/phase9_fedavg70.py": {
+                "expected_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+                "actual_sha256": "5fb9b40cd44ecab926f55fe6e51b32b9209a8c208011d2388e5a2be3086696a5",
+                "match": true
+            }
+        }
+    },
+    "robust_defense_used": false,
+    "locked_test_used": false,
+    "all_tests_passed": true,
+    "status_meaning": "PASS means attack implementation/audit integrity passed. It does not imply attack effectiveness or model robustness."
+}

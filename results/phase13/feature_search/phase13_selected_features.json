@@ -1,0 +1,77 @@
+{
+    "phase": "13A",
+    "selection_strategy": "local_attack_retention_aware_hybrid_evo_ga",
+    "selected_count": 17,
+    "total_features": 70,
+    "feature_reduction": 0.7571428571428571,
+    "selected_indices": [
+        0,
+        3,
+        8,
+        13,
+        15,
+        22,
+        24,
+        27,
+        35,
+        41,
+        42,
+        45,
+        46,
+        54,
+        62,
+        68,
+        69
+    ],
+    "selected_features": [
+        "Destination Port",
+        "Total Backward Packets",
+        "Fwd Packet Length Mean",
+        "Bwd Packet Length Std",
+        "Flow Packets/s",
+        "Fwd IAT Std",
+        "Fwd IAT Min",
+        "Bwd IAT Std",
+        "Bwd Packets/s",
+        "FIN Flag Count",
+        "SYN Flag Count",
+        "ACK Flag Count",
+        "URG Flag Count",
+        "Subflow Fwd Packets",
+        "Active Mean",
+        "Idle Max",
+        "Idle Min"
+    ],
+    "local_attack_recalls": {
+        "DoS Hulk": 0.9469,
+        "DDoS": 0.9994,
+        "PortScan": 0.981,
+        "DoS GoldenEye": 0.9913563829787234,
+        "FTP-Patator": 0.9977298524404086
+    },
+    "local_baseline_recalls": {
+        "DoS Hulk": 0.9466,
+        "DDoS": 0.999,
+        "PortScan": 0.9853,
+        "DoS GoldenEye": 0.9913563829787234,
+        "FTP-Patator": 0.9954597048808173
+    },
+    "local_retention_ratios": {
+        "DoS Hulk": 1.000316923727023,
+        "DDoS": 1.0004004004004003,
+        "PortScan": 0.9956358469501675,
+        "DoS GoldenEye": 1.0,
+        "FTP-Patator": 1.0022805017103762
+    },
+    "retention_thresholds": {
+        "DoS Hulk": 0.7572800000000001,
+        "DDoS": 0.7992,
+        "PortScan": 0.78824,
+        "DoS GoldenEye": 0.7930851063829788,
+        "FTP-Patator": 0.7963677639046538
+    },
+    "fitness": 0.04308227182615132,
+    "utility": 0.9569177281738487,
+    "feasible": true,
+    "locked_test_used": false
+}

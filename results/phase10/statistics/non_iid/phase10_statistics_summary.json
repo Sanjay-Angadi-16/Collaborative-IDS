@@ -1,0 +1,135 @@
+{
+    "phase": 10,
+    "experiment": "FedProx37_vs_FedProx70_feature_preservation_ablation",
+    "scenario": "non_iid",
+    "seeds": [
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102,
+        112,
+        122,
+        132
+    ],
+    "number_of_seeds": 10,
+    "methods": {
+        "fedavg70": {
+            "display_name": "FedAvg70",
+            "features": 70,
+            "phase": 9
+        },
+        "fedprox37": {
+            "display_name": "FedProx37",
+            "features": 37,
+            "phase": 9
+        },
+        "fedprox70": {
+            "display_name": "FedProx70",
+            "features": 70,
+            "phase": 10
+        }
+    },
+    "confidence_interval": "95% Student-t confidence interval",
+    "pairwise_test": "Two-sided Wilcoxon signed-rank",
+    "multiple_comparison_correction": "Holm-Bonferroni within each metric comparison family",
+    "global_test": "Friedman repeated-measures",
+    "effect_sizes": [
+        "paired Cohen dz",
+        "matched-pairs rank-biserial correlation",
+        "Kendall's W"
+    ],
+    "alpha": 0.05,
+    "winner": {
+        "selection_rule": "Primary: highest mean Balanced Accuracy; secondary: Macro F1, paired significance, per-class recall, stability, knowledge transfer and efficiency.",
+        "recommended_method_key": "fedprox70",
+        "recommended_method": "FedProx70",
+        "recommended_features": 70,
+        "overall_means": {
+            "fedavg70": {
+                "accuracy": 0.923650025437295,
+                "balanced_accuracy": 0.4469826709705312,
+                "macro_f1": 0.503611966743512,
+                "weighted_f1": 0.9023872846907022,
+                "training_time_seconds": 293.04404928002043,
+                "inference_time_seconds": 3.1887336999643594
+            },
+            "fedprox37": {
+                "accuracy": 0.9313992110443141,
+                "balanced_accuracy": 0.5126746234522279,
+                "macro_f1": 0.5500232321896287,
+                "weighted_f1": 0.9112437749812392,
+                "training_time_seconds": 260.83293627001115,
+                "inference_time_seconds": 3.051215160044376
+            },
+            "fedprox70": {
+                "accuracy": 0.952819810725216,
+                "balanced_accuracy": 0.628408750989007,
+                "macro_f1": 0.7037051548870432,
+                "weighted_f1": 0.9469343486602119,
+                "training_time_seconds": 290.2758266499965,
+                "inference_time_seconds": 3.1590604700380935
+            }
+        },
+        "fedprox70_vs_fedprox37_primary_tests": {
+            "balanced_accuracy": {
+                "mean_delta": 0.11573412753677892,
+                "wins": 10,
+                "losses": 0,
+                "raw_p": 0.001953125,
+                "holm_adjusted_p": 0.005859375,
+                "cohen_dz": 1.8905143243163853,
+                "rank_biserial": 1.0
+            },
+            "macro_f1": {
+                "mean_delta": 0.15368192269741437,
+                "wins": 10,
+                "losses": 0,
+                "raw_p": 0.001953125,
+                "holm_adjusted_p": 0.005859375,
+                "cohen_dz": 2.4266843477921007,
+                "rank_biserial": 1.0
+            }
+        },
+        "portscan": {
+            "fedavg70": {
+                "mean_recall": 0.028007643124862185,
+                "mean_f1": 0.04914552325335902
+            },
+            "fedprox37": {
+                "mean_recall": 0.0007496141691776201,
+                "mean_f1": 0.00148623051143814
+            },
+            "fedprox70": {
+                "mean_recall": 0.4224222826486367,
+                "mean_f1": 0.5932597379489041
+            }
+        },
+        "ftp_patator": {
+            "fedavg70": {
+                "mean_recall": 0.0,
+                "mean_f1": 0.0
+            },
+            "fedprox37": {
+                "mean_recall": 0.00204081632653056,
+                "mean_f1": 0.00387534496050409
+            },
+            "fedprox70": {
+                "mean_recall": 0.21383219954648527,
+                "mean_f1": 0.257261499596823
+            }
+        },
+        "mean_knowledge_transfer_gain": {
+            "fedavg70": 0.3363809871342866,
+            "fedprox37": 0.41525314275730685,
+            "fedprox70": 0.5541374688154206
+        },
+        "interpretation_flags": {
+            "fedprox70_restores_portscan": true,
+            "fedprox70_improves_balanced_accuracy": true,
+            "feature_reduction_tradeoff_detected": true
+        }
+    }
+}

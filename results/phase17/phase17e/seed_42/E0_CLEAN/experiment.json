@@ -1,0 +1,8 @@
+{
+    "experiment_id": "E0_CLEAN",
+    "attack_type": "NONE",
+    "magnitude": 1.0,
+    "malicious_clients": [],
+    "malicious_ratio": 0.0,
+    "specialized_attacks": []
+}

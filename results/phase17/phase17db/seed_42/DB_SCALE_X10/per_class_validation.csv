@@ -1,0 +1,7 @@
+class,precision,recall,f1,support
+BENIGN,0.0,0.0,0.0,314259
+DDoS,0.0,0.0,0.0,19354
+DoS GoldenEye,0.0,0.0,0.0,1504
+DoS Hulk,0.06882288076453887,1.0,0.12878257380738187,25839
+FTP-Patator,0.0,0.0,0.0,881
+PortScan,0.0,0.0,0.0,13605

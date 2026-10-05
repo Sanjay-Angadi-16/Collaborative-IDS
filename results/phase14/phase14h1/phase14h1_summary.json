@@ -1,0 +1,48 @@
+{
+    "phase": "14H1",
+    "always_run_all_reference": {
+        "accuracy": 0.940892,
+        "balanced_accuracy": 0.7938537287684149,
+        "macro_precision": 0.9617775799024422,
+        "macro_recall": 0.7938537287684149,
+        "macro_f1": 0.8625252464177194,
+        "weighted_f1": 0.9404320045271388,
+        "anomalous_traffic_predictions": 1696
+    },
+    "baseline_threshold_0_95": {
+        "threshold": 0.95,
+        "accuracy": 0.94088,
+        "balanced_accuracy": 0.7933932233519524,
+        "macro_f1": 0.862198137795367,
+        "weighted_f1": 0.9404177885472738,
+        "macro_f1_drop_vs_always": 0.0003271086223524122,
+        "balanced_accuracy_drop_vs_always": 0.00046050541646247556,
+        "fast_path_count": 9921,
+        "fast_path_rate": 0.039684,
+        "deep_path_rate": 0.960316,
+        "fast_path_correct": 9891,
+        "fast_path_wrong": 30,
+        "false_fast_path_rate": 0.0030238887208950713,
+        "wrong_attack_family_fast_count": 29,
+        "benign_false_fast_path_count": 1,
+        "estimated_mean_latency_ms": 35.52511073412219,
+        "always_component_mean_latency_ms": 35.867671134124976,
+        "estimated_latency_saving_percent": 0.9550673048211161,
+        "candidate_eligible": true,
+        "pareto_optimal": true
+    },
+    "recommended_threshold": 0.95,
+    "recommendation_reason": "Lowest component-estimated mean adaptive latency among thresholds satisfying the predeclared Macro-F1, Balanced-Accuracy, and false-fast-path tolerances.",
+    "candidate_count": 3,
+    "pareto_thresholds": [
+        0.8,
+        0.85,
+        0.9,
+        0.925,
+        0.95,
+        0.975,
+        0.99
+    ],
+    "locked_test_used": false,
+    "important_note": "The threshold recommendation is validation-selected method development, not independent confirmatory evidence. Final claims require a separate external or re-held-out confirmatory evaluation."
+}

@@ -1,0 +1,197 @@
+{
+    "phase": "17E",
+    "version": "phase17e_v1",
+    "status": "PASS",
+    "baseline": {
+        "algorithm": "FedProx70",
+        "scenario": "non_iid",
+        "features": 70,
+        "clients": 5,
+        "rounds": 10,
+        "local_epochs": 1,
+        "batch_size": 2048,
+        "chunk_size": 100000,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "fedprox_mu": 0.01,
+        "aggregation": "sample-weighted parameter averaging",
+        "seed": 42
+    },
+    "client_specialization": {
+        "1": "DoS Hulk",
+        "2": "DDoS",
+        "3": "PortScan",
+        "4": "DoS GoldenEye",
+        "5": "FTP-Patator"
+    },
+    "selected_attacks": {
+        "scaling": {
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "reason": "Phase17D-B showed material degradation without the near-total class collapse seen at SCALE x10."
+        },
+        "random": {
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "reason": "Phase17D-B showed strong degradation and loss of client-1 class knowledge while retaining enough model utility for ratio analysis."
+        }
+    },
+    "scientific_rules": {
+        "same_attack_strength_for_20_and_40_percent": true,
+        "malicious_pair_for_40_percent": [
+            1,
+            2
+        ],
+        "identity_rotation_uses_one_malicious_client_at_a_time": true,
+        "robust_defense_used": false,
+        "locked_test_used": false,
+        "phase_pass_means": "All requested identity/ratio experiments completed and attack transformations passed implementation audits. PASS does not mean robustness."
+    },
+    "experiments_completed": [
+        {
+            "id": "E0_CLEAN",
+            "attack_type": "NONE",
+            "magnitude": 1.0,
+            "malicious_clients": [],
+            "malicious_ratio": 0.0,
+            "attack_audit_pass": true,
+            "final_state_sha256": "3966a83b05eb25764fe2ac4d3bcabcb832faf3f0a182b08fd53aa4dc2cae427a"
+        },
+        {
+            "id": "E_SCALE_C1",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "c24cd1495f9433be9e4198041bc0cbaf9ad65c073d68e883b13f23637db6448a"
+        },
+        {
+            "id": "E_SCALE_C2",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                2
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "141da0fb928055008904ea4945c68348fe43e1207235ca676e8c59f40431c70a"
+        },
+        {
+            "id": "E_SCALE_C3",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                3
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "9f7181d8c407e0c0c79b042bdc619b89f9092bdcddc5b3068d28062e93ee8cdf"
+        },
+        {
+            "id": "E_SCALE_C4",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                4
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "99dc1df36667bba58b953c6116c6b174ea0889eca6b0f54526b116234927090f"
+        },
+        {
+            "id": "E_SCALE_C5",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                5
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "55fcb0185088b82d495dde81705ef93825f38ccd8f71c7fda6c819e7ca8fb2b5"
+        },
+        {
+            "id": "E_RANDOM_C1",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "7096deb02a01eb962e01014ccbf490e3f4c13ce4f23e3537a2554ae5a6f8fbdf"
+        },
+        {
+            "id": "E_RANDOM_C2",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                2
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "3677a42d4d544701fd634604103e91e95314fa92de901a8c06de75a6b2182c9a"
+        },
+        {
+            "id": "E_RANDOM_C3",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                3
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "2c5229e57a0c17bfc145dbae70a5141a7a88d3f81a99997181f1bb7f3479fe34"
+        },
+        {
+            "id": "E_RANDOM_C4",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                4
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "bbf85dc880e422b6dd2648a605c860264ef2d4001fbf4e799d20d2931cb2e285"
+        },
+        {
+            "id": "E_RANDOM_C5",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                5
+            ],
+            "malicious_ratio": 0.2,
+            "attack_audit_pass": true,
+            "final_state_sha256": "e1796654b1d5c55341d05c38a2a698de75a3db703d16822e9fe3dffa43e35eca"
+        },
+        {
+            "id": "E_SCALE_C1_C2",
+            "attack_type": "SCALE",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1,
+                2
+            ],
+            "malicious_ratio": 0.4,
+            "attack_audit_pass": true,
+            "final_state_sha256": "b07eb2562abba537616f51f030c41246cfb763570578b2867517b817eadcd0fd"
+        },
+        {
+            "id": "E_RANDOM_C1_C2",
+            "attack_type": "RANDOM",
+            "magnitude": 5.0,
+            "malicious_clients": [
+                1,
+                2
+            ],
+            "malicious_ratio": 0.4,
+            "attack_audit_pass": true,
+            "final_state_sha256": "ed5e32515351e21480945efbebc45ef39af207869c7cda3eaaa78ef7b927f89c"
+        }
+    ],
+    "locked_test_used": false,
+    "recommended_next_step": "Use Phase17E evidence to freeze representative malicious-client identity/ratio scenarios, then run Phase17F defense comparison with identical attack definitions."
+}

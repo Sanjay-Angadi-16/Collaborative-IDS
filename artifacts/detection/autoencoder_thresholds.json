@@ -1,0 +1,45 @@
+{
+    "phase": "14B",
+    "scenario": "non_iid",
+    "threshold_source": "benign_validation_only",
+    "threshold_percentile": 99.0,
+    "risk_score_at_threshold": 0.7,
+    "clients": {
+        "1": {
+            "client_id": 1,
+            "seen_attack": "DoS Hulk",
+            "reconstruction_threshold": 0.6457662582397461,
+            "threshold_percentile": 99.0,
+            "risk_score_at_threshold": 0.7
+        },
+        "2": {
+            "client_id": 2,
+            "seen_attack": "DDoS",
+            "reconstruction_threshold": 0.4589773118495941,
+            "threshold_percentile": 99.0,
+            "risk_score_at_threshold": 0.7
+        },
+        "3": {
+            "client_id": 3,
+            "seen_attack": "PortScan",
+            "reconstruction_threshold": 0.4170443117618561,
+            "threshold_percentile": 99.0,
+            "risk_score_at_threshold": 0.7
+        },
+        "4": {
+            "client_id": 4,
+            "seen_attack": "DoS GoldenEye",
+            "reconstruction_threshold": 0.6026490926742554,
+            "threshold_percentile": 99.0,
+            "risk_score_at_threshold": 0.7
+        },
+        "5": {
+            "client_id": 5,
+            "seen_attack": "FTP-Patator",
+            "reconstruction_threshold": 0.787583589553833,
+            "threshold_percentile": 99.0,
+            "risk_score_at_threshold": 0.7
+        }
+    },
+    "locked_test_used": false
+}

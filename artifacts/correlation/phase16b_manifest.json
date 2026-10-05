@@ -1,0 +1,64 @@
+{
+    "phase": "16B",
+    "version": "phase16b_v1",
+    "purpose": "Ground-truth rule/temporal correlation validation and exceptional distributed-alert robustness testing.",
+    "exceptional_cases": [
+        "delayed alert arrival",
+        "out-of-order input",
+        "35-second client clock skew",
+        "one missing client alert",
+        "exact duplicate/replay alert_id"
+    ],
+    "metrics": [
+        "precision",
+        "recall",
+        "F1",
+        "false positive rate",
+        "false correlation rate",
+        "per-rule precision/recall/F1"
+    ],
+    "sensitivity": {
+        "windows_seconds": [
+            15,
+            30,
+            60,
+            120,
+            300
+        ],
+        "threshold_grid": {
+            "r1_min_clients": [
+                2,
+                3,
+                4
+            ],
+            "r2_min_clients": [
+                2,
+                3
+            ],
+            "r2_min_classes": [
+                2,
+                3
+            ],
+            "r3_min_clients": [
+                2,
+                3
+            ],
+            "r3_min_sources": [
+                2,
+                3,
+                4
+            ]
+        },
+        "configuration_count": 360
+    },
+    "important_limitations": [
+        "Validation alerts are synthetic privacy-safe correlation scenarios.",
+        "Results do not measure IDS attack-classification accuracy.",
+        "Arrival-time delay is evaluated while correlation continues to use event_time.",
+        "Clock-skew testing is controlled; no production clock synchronization mechanism is claimed.",
+        "Exact duplicate alert_id replay is defensively deduplicated before correlation.",
+        "The best sensitivity row is not automatically selected or frozen in Phase16B."
+    ],
+    "locked_test_used": false,
+    "ready_for_phase16c": true
+}

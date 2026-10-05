@@ -1,0 +1,59 @@
+{
+  "phase_version": "phase16g_v1",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    111
+  ],
+  "dataset_per_seed": {
+    "train_graphs": 1200,
+    "validation_graphs": 300,
+    "test_graphs": 400,
+    "rule_positive_fraction_of_positives": 0.35,
+    "locked_test": false,
+    "raw_identifiers": false
+  },
+  "gnn": {
+    "hidden_dim": 64,
+    "dropout": 0.2,
+    "epochs": 30,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 7
+  },
+  "hybrid_threshold_selection": {
+    "candidates": [
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "minimum_validation_precision": 0.99,
+    "selection_data": "VALIDATION_ONLY",
+    "test_data_used_for_selection": false
+  },
+  "research_decision": {
+    "minimum_macro_f1_gain_vs_rule": 0.05,
+    "minimum_rule_gap_recall_gain_vs_rule": 0.2,
+    "minimum_gnn_precision": 0.99,
+    "paired_significance_alpha": 0.05
+  },
+  "scientific_policy": {
+    "phase16c_rule_contract_remains_frozen": true,
+    "phase16d_gnn_architecture_reused": true,
+    "phase16f_rule_gap_grammar_reused_without_test_tuning": true,
+    "hybrid_threshold_selected_on_validation_only": true,
+    "benchmark_is_synthetic": true,
+    "do_not_claim_real_world_superiority": true,
+    "no_locked_ids_test": true
+  }
+}

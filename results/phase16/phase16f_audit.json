@@ -1,0 +1,293 @@
+{
+    "phase": "16F",
+    "version": "phase16f_v1",
+    "phase_name": "PHASE 16F \u2014 INDEPENDENT RULE-GAP CAMPAIGN BENCHMARK + GNN VALUE TEST",
+    "best_epoch": 9,
+    "best_validation_macro_f1": 1.0,
+    "frozen_rule": {
+        "accuracy": 0.676,
+        "balanced_accuracy": 0.6759999999999999,
+        "precision": 1.0,
+        "recall": 0.352,
+        "f1": 0.5207100591715976,
+        "macro_f1": 0.6379985341175209,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.648,
+        "confusion_matrix": [
+            [
+                250,
+                0
+            ],
+            [
+                162,
+                88
+            ]
+        ],
+        "roc_auc": 0.6759999999999999,
+        "rule_gap_positive_recall": 0.0,
+        "per_subtype": {
+            "HARD_NEGATIVE_RANDOM_BURST": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_SHUFFLED_A": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_TOO_SLOW": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_WRONG_CLIENT_ORDER": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_A": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 0.0,
+                "accuracy": 0.0
+            },
+            "RULE_GAP_CHAIN_B": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 0.0,
+                "accuracy": 0.0
+            },
+            "RULE_GAP_CHAIN_C": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 0.0,
+                "accuracy": 0.0
+            },
+            "RULE_POSITIVE_MIXED_WITH_DECOYS": {
+                "count": 25,
+                "positive_count": 25,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_DESTINATION": {
+                "count": 31,
+                "positive_count": 31,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_SOURCE": {
+                "count": 32,
+                "positive_count": 32,
+                "recall": 1.0,
+                "accuracy": 1.0
+            }
+        }
+    },
+    "gnn": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": [
+            [
+                250,
+                0
+            ],
+            [
+                0,
+                250
+            ]
+        ],
+        "roc_auc": 1.0,
+        "rule_gap_positive_recall": 1.0,
+        "per_subtype": {
+            "HARD_NEGATIVE_RANDOM_BURST": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_SHUFFLED_A": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_TOO_SLOW": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_WRONG_CLIENT_ORDER": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_A": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_B": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_C": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_MIXED_WITH_DECOYS": {
+                "count": 25,
+                "positive_count": 25,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_DESTINATION": {
+                "count": 31,
+                "positive_count": 31,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_SOURCE": {
+                "count": 32,
+                "positive_count": 32,
+                "recall": 1.0,
+                "accuracy": 1.0
+            }
+        }
+    },
+    "hybrid": {
+        "accuracy": 0.93,
+        "balanced_accuracy": 0.9299999999999999,
+        "precision": 1.0,
+        "recall": 0.86,
+        "f1": 0.9247311827956989,
+        "macro_f1": 0.9296553110240177,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.14,
+        "confusion_matrix": [
+            [
+                250,
+                0
+            ],
+            [
+                35,
+                215
+            ]
+        ],
+        "roc_auc": 1.0,
+        "rule_gap_positive_recall": 0.7839506172839507,
+        "per_subtype": {
+            "HARD_NEGATIVE_RANDOM_BURST": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_SHUFFLED_A": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_TOO_SLOW": {
+                "count": 62,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "HARD_NEGATIVE_WRONG_CLIENT_ORDER": {
+                "count": 63,
+                "positive_count": 0,
+                "recall": null,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_A": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 0.35185185185185186,
+                "accuracy": 0.35185185185185186
+            },
+            "RULE_GAP_CHAIN_B": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_GAP_CHAIN_C": {
+                "count": 54,
+                "positive_count": 54,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_MIXED_WITH_DECOYS": {
+                "count": 25,
+                "positive_count": 25,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_DESTINATION": {
+                "count": 31,
+                "positive_count": 31,
+                "recall": 1.0,
+                "accuracy": 1.0
+            },
+            "RULE_POSITIVE_SHARED_SOURCE": {
+                "count": 32,
+                "positive_count": 32,
+                "recall": 1.0,
+                "accuracy": 1.0
+            }
+        }
+    },
+    "rule_gap_dataset_audit": {
+        "train": {
+            "rule_gap_positive_count": 520,
+            "frozen_rule_silent_on_rule_gap_count": 520,
+            "frozen_rule_silent_on_rule_gap_rate": 1.0,
+            "hard_negative_count": 800,
+            "frozen_rule_silent_on_hard_negative_count": 800,
+            "frozen_rule_silent_on_hard_negative_rate": 1.0,
+            "passed": true
+        },
+        "validation": {
+            "rule_gap_positive_count": 130,
+            "frozen_rule_silent_on_rule_gap_count": 130,
+            "frozen_rule_silent_on_rule_gap_rate": 1.0,
+            "hard_negative_count": 200,
+            "frozen_rule_silent_on_hard_negative_count": 200,
+            "frozen_rule_silent_on_hard_negative_rate": 1.0,
+            "passed": true
+        },
+        "test": {
+            "rule_gap_positive_count": 162,
+            "frozen_rule_silent_on_rule_gap_count": 162,
+            "frozen_rule_silent_on_rule_gap_rate": 1.0,
+            "hard_negative_count": 250,
+            "frozen_rule_silent_on_hard_negative_count": 250,
+            "frozen_rule_silent_on_hard_negative_rate": 1.0,
+            "passed": true
+        }
+    },
+    "frozen_rules_modified": false,
+    "benchmark_is_synthetic": true,
+    "real_world_superiority_claimed": false,
+    "locked_test_used": false,
+    "all_tests_passed": true
+}

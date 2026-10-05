@@ -1,0 +1,15 @@
+{
+    "accuracy": 0.879714889207928,
+    "balanced_accuracy": 0.33150674620444415,
+    "macro_precision": 0.23446269154796462,
+    "macro_recall": 0.33150674620444415,
+    "macro_f1": 0.2676261912395121,
+    "weighted_f1": 0.8345528194440374,
+    "local_seen_attack": "DDoS",
+    "seen_attack_recall": 0.998742665549036,
+    "seen_attack_f1": 0.6481157252375529,
+    "mean_unseen_attack_recall": 0.0,
+    "mean_unseen_attack_f1": 0.0,
+    "training_time_seconds": 1.511084199999459,
+    "inference_time_seconds": 2.9215797000797465
+}

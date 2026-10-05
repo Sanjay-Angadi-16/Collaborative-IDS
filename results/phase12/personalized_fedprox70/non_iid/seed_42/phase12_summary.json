@@ -1,0 +1,45 @@
+{
+    "phase": 12,
+    "experiment": "Validation-selected Personalized FedProx70",
+    "scenario": "non_iid",
+    "seed": 42,
+    "features": 70,
+    "global_model": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\artifacts\\phase10\\fedprox70\\non_iid\\seed_42\\fedprox70_model.pt",
+    "validation_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\data\\processed\\validation.csv",
+    "candidate_epochs": [
+        1,
+        2,
+        3,
+        5
+    ],
+    "personalization_learning_rate": 0.0001,
+    "seen_weight": 0.5,
+    "unseen_weight": 0.5,
+    "selection_formula": "seen_weight * validation_seen_recall + (1-seen_weight) * validation_unseen_recall",
+    "global_validation_metrics": {
+        "accuracy": 0.9551621821746102,
+        "balanced_accuracy": 0.7073202153704342,
+        "macro_precision": 0.933317456394206,
+        "macro_recall": 0.7073202153704342,
+        "macro_f1": 0.7866886925871232,
+        "weighted_f1": 0.9501119963036709,
+        "test_samples": 375442
+    },
+    "global_locked_test_metrics": {
+        "accuracy": 0.9551051718948521,
+        "balanced_accuracy": 0.7031499008187995,
+        "macro_precision": 0.9316697780267794,
+        "macro_recall": 0.7031499008187995,
+        "macro_f1": 0.783563528724974,
+        "weighted_f1": 0.949934864910028,
+        "test_samples": 375433
+    },
+    "mean_personalization_gain": 0.3549116087568375,
+    "mean_global_knowledge_loss": 0.5265422538652098,
+    "mean_global_knowledge_preservation_ratio": 0.17748841198368454,
+    "mean_local_recovery_ratio": 1.0000473140344888,
+    "mean_global_utility": 0.6438937997565644,
+    "mean_personalized_utility": 0.5580784772023784,
+    "locked_test_used_for_selection": false,
+    "locked_test_usage": "Final evaluation only after validation selected personalization epochs."
+}

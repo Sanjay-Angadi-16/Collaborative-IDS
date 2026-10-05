@@ -1,0 +1,58 @@
+{
+    "phase": "15D",
+    "phase_name": "PHASE 15D \u2014 REAL PHASE14G2 ALERT -> PRIVACY-SAFE SERIALIZATION INTEGRATION",
+    "input_alert_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase14\\phase14g2\\phase14g2_corrected_alert.json",
+    "phase14_alert_classification": "PortScan",
+    "phase14_processing_path": "FAST_ATTACK_PATH",
+    "phase14_risk_mode": "FAST_PATH_RF_CONFIDENCE",
+    "network_context_mode": "RFC5737_DEMO_CONTEXT",
+    "hmac_key_mode": "EPHEMERAL_INTEGRATION_TEST_KEY",
+    "ephemeral_key": true,
+    "raw_ip_values_printed": false,
+    "raw_ip_values_persisted": false,
+    "privacy_leakage_audit": {
+        "passed": true,
+        "schema_valid": true,
+        "unknown_fields": [],
+        "forbidden_fields": [],
+        "raw_ip_literals": [],
+        "mac_literals": [],
+        "known_secret_literals_found": [],
+        "known_raw_identifiers_found": [],
+        "source_token_present": true,
+        "destination_token_present": true
+    },
+    "post_serialization_leakage_audit": {
+        "passed": true,
+        "schema_valid": true,
+        "unknown_fields": [],
+        "forbidden_fields": [],
+        "raw_ip_literals": [],
+        "mac_literals": [],
+        "known_secret_literals_found": [],
+        "known_raw_identifiers_found": [],
+        "source_token_present": true,
+        "destination_token_present": true
+    },
+    "roundtrip_equal": true,
+    "local_phase14_alert_unchanged": true,
+    "canonical_json": {
+        "utf8": true,
+        "sorted_keys": true,
+        "compact_separators": true,
+        "nan_allowed": false,
+        "duplicate_keys_on_deserialize": "REJECT"
+    },
+    "message_sha256": "cad663bdf92d3d8e99eb01e246671325be09ffb69a408af851a939aed78ffc08",
+    "metrics": {
+        "original_local_alert_bytes": 787,
+        "privacy_safe_shared_bytes": 642,
+        "size_reduction_percent": 18.424396442185515,
+        "privacy_filter_ms": 0.23179998970590532,
+        "leakage_audit_ms": 0.17610000213608146,
+        "serialization_ms": 0.056899996707215905,
+        "deserialization_roundtrip_ms": 0.04709998029284179,
+        "integration_total_ms": 0.5118999688420445
+    },
+    "locked_test_used": false
+}

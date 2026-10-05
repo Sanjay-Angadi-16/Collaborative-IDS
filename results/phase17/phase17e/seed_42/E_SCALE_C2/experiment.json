@@ -1,0 +1,12 @@
+{
+    "experiment_id": "E_SCALE_C2",
+    "attack_type": "SCALE",
+    "magnitude": 5.0,
+    "malicious_clients": [
+        2
+    ],
+    "malicious_ratio": 0.2,
+    "specialized_attacks": [
+        "DDoS"
+    ]
+}

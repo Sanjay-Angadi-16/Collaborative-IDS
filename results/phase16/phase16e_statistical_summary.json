@@ -1,0 +1,175 @@
+{
+    "rule": {
+        "accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "precision": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "f1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "false_positive_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "false_negative_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    },
+    "gnn": {
+        "accuracy": {
+            "mean": 0.9944,
+            "std": 0.007351492667781458,
+            "min": 0.98,
+            "max": 1.0
+        },
+        "balanced_accuracy": {
+            "mean": 0.9944,
+            "std": 0.007351492667781458,
+            "min": 0.98,
+            "max": 1.0
+        },
+        "precision": {
+            "mean": 0.9983803278688524,
+            "std": 0.003414883471801298,
+            "min": 0.9918032786885246,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 0.9904,
+            "std": 0.012954621654923873,
+            "min": 0.968,
+            "max": 1.0
+        },
+        "f1": {
+            "mean": 0.9943416342032556,
+            "std": 0.0074473160886868554,
+            "min": 0.979757085020243,
+            "max": 1.0
+        },
+        "macro_f1": {
+            "mean": 0.9943992446502582,
+            "std": 0.007352780631683795,
+            "min": 0.9799971195852203,
+            "max": 1.0
+        },
+        "false_positive_rate": {
+            "mean": 0.0016,
+            "std": 0.0033730961708462715,
+            "min": 0.0,
+            "max": 0.008
+        },
+        "false_negative_rate": {
+            "mean": 0.009600000000000001,
+            "std": 0.01295462165492386,
+            "min": 0.0,
+            "max": 0.032
+        }
+    },
+    "hybrid": {
+        "accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "precision": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "recall": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "f1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+        },
+        "false_positive_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        "false_negative_rate": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    },
+    "paired_tests": {
+        "gnn_vs_rule_macro_f1": {
+            "wins": 0,
+            "losses": 5,
+            "ties": 5,
+            "non_tied_pairs": 5,
+            "two_sided_exact_p": 0.0625
+        },
+        "hybrid_vs_rule_macro_f1": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 10,
+            "non_tied_pairs": 0,
+            "two_sided_exact_p": 1.0
+        },
+        "hybrid_vs_gnn_macro_f1": {
+            "wins": 5,
+            "losses": 0,
+            "ties": 5,
+            "non_tied_pairs": 5,
+            "two_sided_exact_p": 0.0625
+        }
+    }
+}

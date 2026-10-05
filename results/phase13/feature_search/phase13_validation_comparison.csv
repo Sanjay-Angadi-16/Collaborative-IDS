@@ -1,0 +1,3 @@
+method,features,feature_reduction,accuracy,balanced_accuracy,macro_f1,attack_macro_recall,worst_attack_recall,minority_mean_recall
+FedProxy70,70,0.0,0.837037411903836,0.16666666666666666,0.15188175745721696,0.0,0.0,0.0
+MinorityAware_Hybrid_EVO_GA,70,0.0,0.837037411903836,0.16666666666666666,0.15188175745721696,0.0,0.0,0.0

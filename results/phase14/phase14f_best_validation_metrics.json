@@ -1,0 +1,16 @@
+{
+    "phase": "14F",
+    "aggregation": "FedProx",
+    "round": 10,
+    "validation_loss": 0.5571467491162103,
+    "accuracy": 0.92112,
+    "balanced_accuracy": 0.5526695572850447,
+    "macro_precision": 0.9731577242252666,
+    "macro_recall": 0.5526695572850447,
+    "macro_f1": 0.620529309499109,
+    "weighted_f1": 0.9099920034214314,
+    "training_seconds": 303.08095789997606,
+    "validation_inference_seconds": 0.0,
+    "locked_test_used": false,
+    "scientific_label": "source_ordered_sequences_not_timestamp_confirmed"
+}

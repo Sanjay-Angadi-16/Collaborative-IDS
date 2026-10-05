@@ -1,0 +1,12 @@
+{
+    "phase4_parameter_count": 60614,
+    "median_parameter_count": 52166,
+    "parameter_reduction_ratio": 0.1393737420397928,
+    "phase4_model_payload_mib": 0.23122406005859375,
+    "median_model_payload_mib": 0.19899749755859375,
+    "phase4_total_communication_mib": 23.122406005859375,
+    "median_total_communication_mib": 19.899749755859375,
+    "communication_reduction_ratio": 0.1393737420397928,
+    "extra_client_communication": 0,
+    "note": "Coordinate-wise Median uses the same model payload as FedAvg; only server aggregation changes."
+}

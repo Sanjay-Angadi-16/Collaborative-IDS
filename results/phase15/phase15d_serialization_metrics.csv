@@ -1,0 +1,2 @@
+original_local_alert_bytes,privacy_safe_shared_bytes,size_reduction_percent,privacy_filter_ms,leakage_audit_ms,serialization_ms,deserialization_roundtrip_ms,integration_total_ms
+787,642,18.424396442185515,0.23179998970590532,0.17610000213608146,0.056899996707215905,0.04709998029284179,0.5118999688420445

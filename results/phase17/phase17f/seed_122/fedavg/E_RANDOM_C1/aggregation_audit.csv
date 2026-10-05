@@ -1,0 +1,11 @@
+aggregator,max_recomputation_abs_error,passed,round
+fedavg,0.0,True,1
+fedavg,0.0,True,2
+fedavg,0.0,True,3
+fedavg,0.0,True,4
+fedavg,0.0,True,5
+fedavg,0.0,True,6
+fedavg,0.0,True,7
+fedavg,0.0,True,8
+fedavg,0.0,True,9
+fedavg,0.0,True,10

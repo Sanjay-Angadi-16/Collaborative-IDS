@@ -1,0 +1,47 @@
+{
+    "accuracy": 0.9966666666666667,
+    "balanced_accuracy": 0.9966666666666666,
+    "precision": 0.9933774834437086,
+    "recall": 1.0,
+    "f1": 0.9966777408637874,
+    "macro_f1": 0.9966666296292181,
+    "confusion_matrix": [
+        [
+            149,
+            1
+        ],
+        [
+            0,
+            150
+        ]
+    ],
+    "roc_auc": 1.0,
+    "per_subtype": {
+        "INSUFFICIENT_DESTINATION_SOURCES": {
+            "count": 75,
+            "accuracy": 1.0
+        },
+        "MIXED_WITH_DECOYS": {
+            "count": 50,
+            "accuracy": 1.0
+        },
+        "SAME_SOURCE_SINGLE_CLIENT": {
+            "count": 75,
+            "accuracy": 0.9866666666666667
+        },
+        "SHARED_DESTINATION": {
+            "count": 50,
+            "accuracy": 1.0
+        },
+        "SHARED_SOURCE": {
+            "count": 50,
+            "accuracy": 1.0
+        }
+    },
+    "count": 300,
+    "best_epoch": 17,
+    "best_validation_macro_f1": 1.0,
+    "training_seconds": 1.8453195999900345,
+    "test_inference_seconds": 0.020481400017160922,
+    "mean_graph_inference_ms": 0.06827133339053641
+}

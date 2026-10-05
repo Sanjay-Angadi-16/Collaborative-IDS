@@ -1,0 +1,254 @@
+{
+    "phase": "16E",
+    "version": "phase16e_v1",
+    "phase_name": "PHASE 16E \u2014 REPEATED-SEED RULE vs GNN vs RULE+GNN HYBRID COMPARISON",
+    "seed_count": 10,
+    "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88,
+        99,
+        111
+    ],
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "summary": {
+        "rule": {
+            "accuracy": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "balanced_accuracy": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "precision": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "recall": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "f1": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "macro_f1": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "false_positive_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "min": 0.0,
+                "max": 0.0
+            },
+            "false_negative_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "min": 0.0,
+                "max": 0.0
+            }
+        },
+        "gnn": {
+            "accuracy": {
+                "mean": 0.9944,
+                "std": 0.007351492667781458,
+                "min": 0.98,
+                "max": 1.0
+            },
+            "balanced_accuracy": {
+                "mean": 0.9944,
+                "std": 0.007351492667781458,
+                "min": 0.98,
+                "max": 1.0
+            },
+            "precision": {
+                "mean": 0.9983803278688524,
+                "std": 0.003414883471801298,
+                "min": 0.9918032786885246,
+                "max": 1.0
+            },
+            "recall": {
+                "mean": 0.9904,
+                "std": 0.012954621654923873,
+                "min": 0.968,
+                "max": 1.0
+            },
+            "f1": {
+                "mean": 0.9943416342032556,
+                "std": 0.0074473160886868554,
+                "min": 0.979757085020243,
+                "max": 1.0
+            },
+            "macro_f1": {
+                "mean": 0.9943992446502582,
+                "std": 0.007352780631683795,
+                "min": 0.9799971195852203,
+                "max": 1.0
+            },
+            "false_positive_rate": {
+                "mean": 0.0016,
+                "std": 0.0033730961708462715,
+                "min": 0.0,
+                "max": 0.008
+            },
+            "false_negative_rate": {
+                "mean": 0.009600000000000001,
+                "std": 0.01295462165492386,
+                "min": 0.0,
+                "max": 0.032
+            }
+        },
+        "hybrid": {
+            "accuracy": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "balanced_accuracy": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "precision": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "recall": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "f1": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "macro_f1": {
+                "mean": 1.0,
+                "std": 0.0,
+                "min": 1.0,
+                "max": 1.0
+            },
+            "false_positive_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "min": 0.0,
+                "max": 0.0
+            },
+            "false_negative_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "min": 0.0,
+                "max": 0.0
+            }
+        },
+        "paired_tests": {
+            "gnn_vs_rule_macro_f1": {
+                "wins": 0,
+                "losses": 5,
+                "ties": 5,
+                "non_tied_pairs": 5,
+                "two_sided_exact_p": 0.0625
+            },
+            "hybrid_vs_rule_macro_f1": {
+                "wins": 0,
+                "losses": 0,
+                "ties": 10,
+                "non_tied_pairs": 0,
+                "two_sided_exact_p": 1.0
+            },
+            "hybrid_vs_gnn_macro_f1": {
+                "wins": 5,
+                "losses": 0,
+                "ties": 5,
+                "non_tied_pairs": 5,
+                "two_sided_exact_p": 0.0625
+            }
+        }
+    },
+    "policy_decision": {
+        "selected_policy": "RULE_ONLY",
+        "reason": "No alternative met all predeclared replacement criteria; the frozen Phase16C rule correlator remains the operational policy.",
+        "candidates": [
+            {
+                "method": "gnn",
+                "mean_macro_f1": 0.9943992446502582,
+                "mean_precision": 0.9983803278688524,
+                "macro_f1_gain_vs_rule": -0.005600755349741804,
+                "precision_drop_vs_rule": 0.0016196721311475537,
+                "paired_sign_test": {
+                    "wins": 0,
+                    "losses": 5,
+                    "ties": 5,
+                    "non_tied_pairs": 5,
+                    "two_sided_exact_p": 0.0625
+                },
+                "qualifies": false
+            },
+            {
+                "method": "hybrid",
+                "mean_macro_f1": 1.0,
+                "mean_precision": 1.0,
+                "macro_f1_gain_vs_rule": 0.0,
+                "precision_drop_vs_rule": 0.0,
+                "paired_sign_test": {
+                    "wins": 0,
+                    "losses": 0,
+                    "ties": 10,
+                    "non_tied_pairs": 0,
+                    "two_sided_exact_p": 1.0
+                },
+                "qualifies": false
+            }
+        ],
+        "selection_criteria": {
+            "minimum_material_macro_f1_gain": 0.005,
+            "significance_alpha": 0.05,
+            "max_precision_drop": 0.005
+        },
+        "scope": "Synthetic Phase16 correlation benchmark only; not a production or real-world superiority claim."
+    },
+    "phase16c_rules_modified": false,
+    "phase16d_architecture_modified": false,
+    "hybrid_policy": {
+        "policy": "RULE_POSITIVE_OR_GNN_HIGH_CONFIDENCE_RESCUE",
+        "gnn_positive_threshold_when_rules_silent": 0.99,
+        "threshold_is_predeclared": true
+    },
+    "benchmark_is_synthetic_rule_aligned": true,
+    "real_world_superiority_claimed": false,
+    "locked_test_used": false,
+    "all_tests_passed": true
+}

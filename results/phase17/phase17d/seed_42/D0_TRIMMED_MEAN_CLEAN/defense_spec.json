@@ -1,0 +1,8 @@
+{
+  "aggregation": "coordinate_wise_trimmed_mean",
+  "non_float_policy": "preserve_current_global_state",
+  "num_clients": 5,
+  "trim_count": 0,
+  "values_retained": 5,
+  "weighted": false
+}

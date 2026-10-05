@@ -1,0 +1,13 @@
+{
+  "attack_type": "LABEL_FLIP",
+  "feature_modification": false,
+  "locked_test_used": false,
+  "malicious_client": null,
+  "phase": "17B",
+  "poison_rate": 0.0,
+  "rate_denominator": "eligible_attack_rows",
+  "seed": 42,
+  "source_attack_labels": [],
+  "target_label": "BENIGN",
+  "validation_poisoned": false
+}

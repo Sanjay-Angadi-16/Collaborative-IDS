@@ -1,0 +1,2 @@
+requested_cap,pre_cap_sequence_count,pre_cap_benign_count,pre_cap_non_benign_count,pre_cap_class_counts_json,cap_policy,oversampling,synthetic_data,post_cap_sequence_count,post_cap_benign_count,post_cap_non_benign_count,benign_removed,non_benign_removed,post_cap_class_counts_json
+100000,213132,171276,41856,"{""0"": 171276, ""1"": 10223, ""2"": 740, ""3"": 18202, ""4"": 554, ""5"": 12137}",keep_all_non_benign_sample_benign_without_replacement,False,False,100000,58144,41856,113132,0,"{""0"": 58144, ""1"": 10223, ""2"": 740, ""3"": 18202, ""4"": 554, ""5"": 12137}"

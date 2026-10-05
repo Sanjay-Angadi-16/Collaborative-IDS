@@ -1,0 +1,6 @@
+true_class_id,true_class,total_sequences,correct,missed_to_benign,miss_rate,wrong_attack_family,predicted_anomalous,rf_benign_on_misses,fedprox_benign_on_misses,cnn_benign_on_misses,global_benign_consensus_on_misses,ae_anomaly_on_misses,mean_ae_score_on_misses
+1,DDoS,200,197,1,0.005,2,0,1,1,1,1,0,0.43167826533317566
+2,DoS GoldenEye,200,139,30,0.15,20,11,30,30,30,30,0,0.14211167761435112
+3,DoS Hulk,200,136,60,0.3,4,0,60,60,60,60,0,0.10965499452625711
+4,FTP-Patator,200,137,63,0.315,0,0,63,63,63,63,0,0.04397424399143174
+5,PortScan,200,133,67,0.335,0,0,67,67,67,67,0,0.05167262978962998

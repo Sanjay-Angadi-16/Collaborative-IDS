@@ -1,0 +1,15 @@
+{
+  "attack_type": "LABEL_FLIP",
+  "feature_modification": false,
+  "locked_test_used": false,
+  "malicious_client": 1,
+  "phase": "17B",
+  "poison_rate": 0.25,
+  "rate_denominator": "eligible_attack_rows",
+  "seed": 42,
+  "source_attack_labels": [
+    "DoS Hulk"
+  ],
+  "target_label": "BENIGN",
+  "validation_poisoned": false
+}

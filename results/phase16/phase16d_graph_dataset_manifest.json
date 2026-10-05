@@ -1,0 +1,70 @@
+{
+    "phase": "16D",
+    "version": "phase16d_v1",
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "train_graphs": 1200,
+    "validation_graphs": 300,
+    "test_graphs": 300,
+    "train_label_counts": {
+        "0": 600,
+        "1": 600
+    },
+    "validation_label_counts": {
+        "1": 150,
+        "0": 150
+    },
+    "test_label_counts": {
+        "1": 150,
+        "0": 150
+    },
+    "train_subtypes": {
+        "INSUFFICIENT_DESTINATION_SOURCES": 300,
+        "MIXED_WITH_DECOYS": 200,
+        "SHARED_DESTINATION": 200,
+        "SHARED_SOURCE": 200,
+        "SAME_SOURCE_SINGLE_CLIENT": 300
+    },
+    "validation_subtypes": {
+        "SHARED_SOURCE": 50,
+        "INSUFFICIENT_DESTINATION_SOURCES": 75,
+        "SAME_SOURCE_SINGLE_CLIENT": 75,
+        "SHARED_DESTINATION": 50,
+        "MIXED_WITH_DECOYS": 50
+    },
+    "test_subtypes": {
+        "SHARED_DESTINATION": 50,
+        "INSUFFICIENT_DESTINATION_SOURCES": 75,
+        "MIXED_WITH_DECOYS": 50,
+        "SAME_SOURCE_SINGLE_CLIENT": 75,
+        "SHARED_SOURCE": 50
+    },
+    "privacy_audit": {
+        "train": {
+            "passed": true,
+            "forbidden_fields_found": [],
+            "token_format_ok": true,
+            "scenario_count": 1200
+        },
+        "validation": {
+            "passed": true,
+            "forbidden_fields_found": [],
+            "token_format_ok": true,
+            "scenario_count": 300
+        },
+        "test": {
+            "passed": true,
+            "forbidden_fields_found": [],
+            "token_format_ok": true,
+            "scenario_count": 300
+        }
+    },
+    "raw_identifiers_used": false,
+    "locked_test_used": false
+}

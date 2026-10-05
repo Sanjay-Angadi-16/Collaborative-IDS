@@ -1,0 +1,122 @@
+{
+    "phase": "16D",
+    "phase_version": "phase16d_v1",
+    "phase_name": "PHASE 16D \u2014 PRIVACY-SAFE GNN ALERT-CORRELATION GRAPH DATASET + GCN BASELINE",
+    "frozen_phase16c_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "graph_privacy_audit_passed": true,
+    "best_epoch": 17,
+    "best_validation_macro_f1": 1.0,
+    "gnn_test": {
+        "accuracy": 0.9966666666666667,
+        "balanced_accuracy": 0.9966666666666666,
+        "precision": 0.9933774834437086,
+        "recall": 1.0,
+        "f1": 0.9966777408637874,
+        "macro_f1": 0.9966666296292181,
+        "confusion_matrix": [
+            [
+                149,
+                1
+            ],
+            [
+                0,
+                150
+            ]
+        ],
+        "roc_auc": 1.0,
+        "per_subtype": {
+            "INSUFFICIENT_DESTINATION_SOURCES": {
+                "count": 75,
+                "accuracy": 1.0
+            },
+            "MIXED_WITH_DECOYS": {
+                "count": 50,
+                "accuracy": 1.0
+            },
+            "SAME_SOURCE_SINGLE_CLIENT": {
+                "count": 75,
+                "accuracy": 0.9866666666666667
+            },
+            "SHARED_DESTINATION": {
+                "count": 50,
+                "accuracy": 1.0
+            },
+            "SHARED_SOURCE": {
+                "count": 50,
+                "accuracy": 1.0
+            }
+        },
+        "count": 300,
+        "best_epoch": 17,
+        "best_validation_macro_f1": 1.0,
+        "training_seconds": 1.8453195999900345,
+        "test_inference_seconds": 0.020481400017160922,
+        "mean_graph_inference_ms": 0.06827133339053641
+    },
+    "frozen_rule_test": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "confusion_matrix": [
+            [
+                150,
+                0
+            ],
+            [
+                0,
+                150
+            ]
+        ],
+        "roc_auc": 1.0,
+        "per_subtype": {
+            "INSUFFICIENT_DESTINATION_SOURCES": {
+                "count": 75,
+                "accuracy": 1.0
+            },
+            "MIXED_WITH_DECOYS": {
+                "count": 50,
+                "accuracy": 1.0
+            },
+            "SAME_SOURCE_SINGLE_CLIENT": {
+                "count": 75,
+                "accuracy": 1.0
+            },
+            "SHARED_DESTINATION": {
+                "count": 50,
+                "accuracy": 1.0
+            },
+            "SHARED_SOURCE": {
+                "count": 50,
+                "accuracy": 1.0
+            }
+        },
+        "count": 300,
+        "test_inference_seconds": 0.016881999996257946,
+        "mean_graph_inference_ms": 0.05627333332085982,
+        "scores_are_probabilities": false
+    },
+    "comparison": {
+        "gnn_macro_f1": 0.9966666296292181,
+        "rule_macro_f1": 1.0,
+        "gnn_minus_rule_macro_f1": -0.003333370370781852,
+        "gnn_mean_graph_inference_ms": 0.06827133339053641,
+        "rule_mean_graph_inference_ms": 0.05627333332085982,
+        "superiority_claimed": false
+    },
+    "gnn_checkpoint_is_final_model": false,
+    "phase16c_rule_baseline_modified": false,
+    "phase14_risk_semantics_modified": false,
+    "raw_identifiers_used": false,
+    "locked_test_used": false,
+    "all_tests_passed": true
+}

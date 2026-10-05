@@ -1,0 +1,209 @@
+{
+    "phase": "15H",
+    "phase_name": "PHASE 15H \u2014 FINAL END-TO-END AUDIT / REPORT FREEZE",
+    "required_evidence_count": 8,
+    "passed_evidence_count": 8,
+    "all_required_phases_passed": true,
+    "locked_test_used_anywhere_in_phase15": false,
+    "locked_test_isolation_passed": true,
+    "phase15_frozen": true,
+    "phase_status": [
+        {
+            "phase": "15A",
+            "name": "Privacy-aware alert schema",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15a_schema_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15B",
+            "name": "HMAC-SHA256 pseudonymization",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15b_pseudonymization_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15C",
+            "name": "Allowlist privacy filter + leakage audit",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15c_privacy_filter_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15D",
+            "name": "Real Phase14G2 privacy-safe serialization integration",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15d_integration_audit.json",
+            "passed": true,
+            "status_basis": "derived from Phase15D integration checks",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15E1",
+            "name": "Local collector + sender HTTP smoke test",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15e1_smoke_test_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15E2",
+            "name": "HTTPS/TLS + mutual-TLS authentication smoke test",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15e2_mtls_smoke_test_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15F",
+            "name": "Central persistence/indexing + multi-client ingestion",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15f_persistence_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        },
+        {
+            "phase": "15G",
+            "name": "Privacy/retention + central-store performance evaluation",
+            "path": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15g_privacy_retention_audit.json",
+            "passed": true,
+            "status_basis": "direct status flag",
+            "locked_test_used": false
+        }
+    ],
+    "selected_metrics": {
+        "phase15c": {
+            "tests_total": 17,
+            "tests_passed": 17,
+            "fast_size_metrics": {
+                "alert_type": "FAST",
+                "local_json_bytes": 767,
+                "shared_json_bytes": 642,
+                "size_reduction_percent": 16.297262059973924,
+                "filter_plus_schema_ms": 0.2510999911464751
+            },
+            "deep_size_metrics": {
+                "alert_type": "DEEP",
+                "local_json_bytes": 693,
+                "shared_json_bytes": 600,
+                "size_reduction_percent": 13.41991341991342,
+                "filter_plus_schema_ms": 0.22899999748915434
+            }
+        },
+        "phase15d": {
+            "classification": "PortScan",
+            "processing_path": "FAST_ATTACK_PATH",
+            "network_context_mode": "RFC5737_DEMO_CONTEXT",
+            "hmac_key_mode": "EPHEMERAL_INTEGRATION_TEST_KEY",
+            "metrics": {
+                "original_local_alert_bytes": 787,
+                "privacy_safe_shared_bytes": 642,
+                "size_reduction_percent": 18.424396442185515,
+                "privacy_filter_ms": 0.23179998970590532,
+                "leakage_audit_ms": 0.17610000213608146,
+                "serialization_ms": 0.056899996707215905,
+                "deserialization_roundtrip_ms": 0.04709998029284179,
+                "integration_total_ms": 0.5118999688420445
+            }
+        },
+        "phase15e1": {
+            "unique_sends_accepted": 5,
+            "mean_round_trip_ms": 139.8567800060846
+        },
+        "phase15e2": {
+            "accepted_unique_alerts": 3,
+            "mean_mtls_round_trip_ms": 2058.2993333324944,
+            "mutual_tls": true
+        },
+        "phase15f": {
+            "alerts_inserted": 20,
+            "mean_insert_ms": 5.524325001169927,
+            "median_insert_ms": 5.186100010178052,
+            "min_insert_ms": 3.795700002228841,
+            "max_insert_ms": 9.22159999026917,
+            "database_bytes": 81920
+        },
+        "phase15g": {
+            "performance": {
+                "phase": "15G",
+                "benchmark_alerts": 1000,
+                "insert_latency": {
+                    "count": 1000,
+                    "mean_ms": 3.2418010991241317,
+                    "median_ms": 3.0269499984569848,
+                    "p95_ms": 4.410324995114934,
+                    "p99_ms": 6.5226550059742285,
+                    "min_ms": 2.5332999939564615,
+                    "max_ms": 8.18279999657534
+                },
+                "sequential_ingest_seconds": 3.374319299997296,
+                "sequential_ingest_throughput_alerts_per_second": 296.35606802260867,
+                "indexed_queries": {
+                    "client_id": {
+                        "count": 100,
+                        "mean_ms": 0.04623800079571083,
+                        "median_ms": 0.045900000259280205,
+                        "p95_ms": 0.047120009548962116,
+                        "p99_ms": 0.05464300804305824,
+                        "min_ms": 0.04529999569058418,
+                        "max_ms": 0.05889998283237219,
+                        "rows_returned_last": 100
+                    },
+                    "source_token": {
+                        "count": 100,
+                        "mean_ms": 0.059349000512156636,
+                        "median_ms": 0.0475000124424696,
+                        "p95_ms": 0.09758501400938258,
+                        "p99_ms": 0.12936599436216065,
+                        "min_ms": 0.04530002479441464,
+                        "max_ms": 0.145800004247576,
+                        "rows_returned_last": 100
+                    },
+                    "recent_alerts": {
+                        "count": 100,
+                        "mean_ms": 0.04851499979849905,
+                        "median_ms": 0.04364999767858535,
+                        "p95_ms": 0.07077500922605391,
+                        "p99_ms": 0.08726599306100993,
+                        "min_ms": 0.04299997817724943,
+                        "max_ms": 0.11359999189153314,
+                        "rows_returned_last": 100
+                    },
+                    "classification_plus_severity": {
+                        "count": 100,
+                        "mean_ms": 0.13133999978890643,
+                        "median_ms": 0.12064998736605048,
+                        "p95_ms": 0.17589999915799123,
+                        "p99_ms": 0.24629998253658425,
+                        "min_ms": 0.11610001092776656,
+                        "max_ms": 0.26610001805238426,
+                        "rows_returned_last": 100
+                    }
+                },
+                "database_bytes_before_process_end": 1515520,
+                "benchmark_scope": "single-process local SQLite implementation benchmark",
+                "network_throughput_claim": false,
+                "locked_test_used": false
+            },
+            "retention_preview": {
+                "retention_days": 30,
+                "cutoff_utc": "2026-08-15T10:20:05+00:00",
+                "dry_run": true,
+                "matching_rows": 250,
+                "deleted_rows": 0,
+                "remaining_rows": 1000
+            },
+            "retention_apply": {
+                "retention_days": 30,
+                "cutoff_utc": "2026-08-15T10:20:05+00:00",
+                "dry_run": false,
+                "matching_rows": 250,
+                "deleted_rows": 250,
+                "remaining_rows": 750
+            }
+        }
+    },
+    "next_phase": "Phase16 cross-cloud correlation"
+}

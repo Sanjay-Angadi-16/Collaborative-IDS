@@ -1,0 +1,28 @@
+{
+    "phase": "15F",
+    "storage_backend": "SQLite",
+    "schema": "Phase15A privacy-aware shared alert only",
+    "privacy_validation": "Phase15C leakage audit before persistence",
+    "primary_identity": "alert_id UNIQUE",
+    "indexed_fields": [
+        "event_time",
+        "client_id",
+        "classification",
+        "severity",
+        "source_token",
+        "destination_token",
+        "client_id + event_time",
+        "source_token + event_time",
+        "classification + severity"
+    ],
+    "cross_cloud_correlation_ready": true,
+    "raw_source_ip_stored": false,
+    "raw_destination_ip_stored": false,
+    "raw_payload_stored": false,
+    "raw_features_stored": false,
+    "cnn_sequence_stored": false,
+    "model_state_stored": false,
+    "hmac_secret_stored": false,
+    "multi_client_ingestion_test": "20 synthetic privacy-safe alerts across five clients; storage/indexing test only",
+    "locked_test_used": false
+}

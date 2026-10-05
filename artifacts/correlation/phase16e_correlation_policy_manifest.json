@@ -1,0 +1,36 @@
+{
+    "phase": "16E",
+    "version": "phase16e_v1",
+    "status": "PASS",
+    "selected_phase16_benchmark_policy": "RULE_ONLY",
+    "frozen_rule_contract": {
+        "window_seconds": 60,
+        "r1_min_clients": 2,
+        "r2_min_clients": 2,
+        "r2_min_classes": 2,
+        "r3_min_clients": 2,
+        "r3_min_sources": 3
+    },
+    "hybrid_policy": {
+        "policy": "RULE_POSITIVE_OR_GNN_HIGH_CONFIDENCE_RESCUE",
+        "gnn_positive_threshold_when_rules_silent": 0.99,
+        "threshold_is_predeclared": true
+    },
+    "selection_policy": {
+        "primary_metric": "macro_f1",
+        "minimum_material_macro_f1_gain": 0.005,
+        "paired_significance_alpha": 0.05,
+        "max_precision_drop": 0.005,
+        "incumbent": "RULE_ONLY"
+    },
+    "important_limitations": [
+        "The Phase16 synthetic graph generator contains rule-aligned campaign structures.",
+        "A perfect or near-perfect rule result does not prove real-world superiority.",
+        "A GNN result from these experiments does not prove real-world generalization.",
+        "The selected policy is specific to the Phase16 synthetic benchmark.",
+        "Fresh-alert_id semantic replay remains a documented limitation from Phase16C.",
+        "No locked CICIDS IDS test data are used."
+    ],
+    "recommended_next_step": "If stronger GNN evidence is required, build an independent campaign-ground-truth benchmark containing correlations that are not defined directly by R1/R2/R3, then evaluate rule, GNN and hybrid without retuning the frozen rule baseline.",
+    "locked_test_used": false
+}

@@ -1,0 +1,32 @@
+{
+    "phase": "16A",
+    "version": "phase16a_v1",
+    "correlation_type": "deterministic rule + event-time temporal correlation",
+    "input_contract": "Phase15 frozen privacy-safe alerts only",
+    "rules": [
+        {
+            "rule_id": "R1_CROSS_CLIENT_SHARED_SOURCE",
+            "meaning": "same source pseudonym across multiple clients"
+        },
+        {
+            "rule_id": "R2_MULTI_CLASS_SHARED_SOURCE",
+            "meaning": "same source pseudonym across multiple attack classifications and clients"
+        },
+        {
+            "rule_id": "R3_SHARED_DESTINATION_MULTI_SOURCE",
+            "meaning": "same destination pseudonym/port targeted by multiple pseudonymous sources across clients"
+        }
+    ],
+    "window_strategy": "deterministic non-overlapping windows anchored at first event",
+    "important_limitations": [
+        "Boundary-sensitive baseline windowing.",
+        "Rule thresholds are engineering baseline values, not statistically optimized.",
+        "Correlation priority is deterministic rule priority, not a probability.",
+        "Phase15F input messages are synthetic infrastructure-test alerts.",
+        "No claim of correlation precision/recall is made in Phase16A.",
+        "No locked test is used."
+    ],
+    "raw_identifiers_used": false,
+    "phase14_risk_semantics_modified": false,
+    "ready_for_next_stage": true
+}

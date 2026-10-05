@@ -1,0 +1,45 @@
+{
+    "phase": 9,
+    "algorithm": "FedAvg70",
+    "seed": 102,
+    "scenario": "non_iid",
+    "clients": 5,
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch_size": 2048,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "aggregation": "sample-weighted FedAvg",
+    "architecture": [
+        70,
+        256,
+        128,
+        64,
+        6
+    ],
+    "client_sample_counts": {
+        "client_1": 414258,
+        "client_2": 382880,
+        "client_3": 356790,
+        "client_4": 300550,
+        "client_5": 297475
+    },
+    "total_federated_training_seconds": 323.7161155999638,
+    "final_inference_seconds": 3.2612752998247743,
+    "locked_test_used_during_training": false,
+    "locked_test_used_for": "final evaluation only",
+    "final_metrics": {
+        "accuracy": 0.9264289500390216,
+        "balanced_accuracy": 0.45211846608851375,
+        "macro_precision": 0.8104856351645879,
+        "macro_recall": 0.45211846608851375,
+        "macro_f1": 0.5062578631371312,
+        "weighted_f1": 0.9046316851211702,
+        "test_samples": 375433,
+        "training_time_seconds": 323.7161155999638,
+        "inference_time_seconds": 3.2612752998247743,
+        "seed": 102,
+        "method": "FedAvg70",
+        "scenario": "non_iid"
+    }
+}

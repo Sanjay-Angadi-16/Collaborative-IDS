@@ -1,0 +1,18 @@
+{
+    "phase": "15B",
+    "algorithm": "HMAC-SHA256",
+    "key_environment_variable": "PHASE15_HMAC_KEY_B64",
+    "key_id": "phase15_hmac_v1",
+    "minimum_key_bytes": 32,
+    "digest_bytes_exposed": 16,
+    "source_namespace": "source_ip",
+    "destination_namespace": "destination_ip",
+    "source_prefix": "src_",
+    "destination_prefix": "dst_",
+    "raw_ip_normalization": "canonical ipaddress compressed representation",
+    "key_material_in_manifest": false,
+    "plain_sha256_used": false,
+    "stable_cross_alert_linkability": "YES only when the same secret key and key_id are reused.",
+    "phase15a_schema_compatible": true,
+    "locked_test_used": false
+}

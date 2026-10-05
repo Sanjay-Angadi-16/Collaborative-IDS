@@ -1,0 +1,25 @@
+{
+    "phase": "15F",
+    "phase_name": "PHASE 15F \u2014 CENTRAL ALERT PERSISTENCE / INDEXING + MULTI-CLIENT PRIVACY-AWARE INGESTION",
+    "database_backend": "SQLite",
+    "database_file": "A:\\MP\\Federated_Collaborative_IDS_Starter\\federated_collaborative_ids\\results\\phase15\\phase15f_central_alerts.sqlite3",
+    "synthetic_ingestion_test_alerts": true,
+    "detection_performance_claim": false,
+    "clients": 5,
+    "alerts_per_client": 4,
+    "total_alerts": 20,
+    "duplicate_rejection": true,
+    "per_client_count_check": true,
+    "per_classification_count_check": true,
+    "cross_client_source_token_correlation": true,
+    "canonical_readback_check": true,
+    "required_indexes_present": true,
+    "privacy_at_rest_audit": {
+        "passed": true,
+        "rows_scanned": 20,
+        "findings": []
+    },
+    "recent_query_check": true,
+    "all_tests_passed": true,
+    "locked_test_used": false
+}

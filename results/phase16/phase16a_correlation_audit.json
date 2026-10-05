@@ -1,0 +1,36 @@
+{
+    "phase": "16A",
+    "phase_name": "PHASE 16A \u2014 PRIVACY-SAFE RULE / TEMPORAL CROSS-CLOUD CORRELATION",
+    "input_source": "Phase15F synthetic privacy-safe central alert store",
+    "input_alert_count": 20,
+    "window_seconds": 60,
+    "rules": {
+        "R1_CROSS_CLIENT_SHARED_SOURCE": {
+            "events": 1,
+            "passed": true
+        },
+        "R2_MULTI_CLASS_SHARED_SOURCE": {
+            "events": 1,
+            "passed": true
+        },
+        "R3_SHARED_DESTINATION_MULTI_SOURCE": {
+            "events": 1,
+            "passed": true
+        }
+    },
+    "total_correlation_events": 3,
+    "expected_total_events": 3,
+    "privacy_audit": {
+        "passed": true,
+        "event_count": 3,
+        "forbidden_fields": [],
+        "raw_ipv4_literals": [],
+        "source_token_format_ok": true,
+        "destination_token_format_ok": true
+    },
+    "phase14_risk_recalculated": false,
+    "correlation_priority_is_probability": false,
+    "correlation_priority_is_phase14_risk": false,
+    "all_tests_passed": true,
+    "locked_test_used": false
+}

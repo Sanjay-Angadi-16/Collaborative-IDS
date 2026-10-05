@@ -1,0 +1,108 @@
+{
+    "overall": {
+        "accuracy": {
+            "method": "FedProx",
+            "mean": 0.9322478311709412,
+            "std": 0.0023561165477014303
+        },
+        "balanced_accuracy": {
+            "method": "FedProx",
+            "mean": 0.519122733366405,
+            "std": 0.016963966877266087
+        },
+        "macro_precision": {
+            "method": "FedAvg70",
+            "mean": 0.7043013994559464,
+            "std": 0.09187012433956901
+        },
+        "macro_recall": {
+            "method": "FedProx",
+            "mean": 0.519122733366405,
+            "std": 0.016963966877266087
+        },
+        "macro_f1": {
+            "method": "FedProx",
+            "mean": 0.5548516789253533,
+            "std": 0.013454806098264086
+        },
+        "weighted_f1": {
+            "method": "FedProx",
+            "mean": 0.9123726732081574,
+            "std": 0.0025778512726232243
+        }
+    },
+    "per_class": {
+        "BENIGN": {
+            "recall": {
+                "method": "FedAvg70",
+                "mean": 0.9999885444808264,
+                "std": 9.96151317385886e-06
+            },
+            "f1": {
+                "method": "FedProx",
+                "mean": 0.965827398895373,
+                "std": 0.001150129414278388
+            }
+        },
+        "DDoS": {
+            "recall": {
+                "method": "FedProx",
+                "mean": 0.7304798826487845,
+                "std": 0.037140274795351744
+            },
+            "f1": {
+                "method": "FedProx",
+                "mean": 0.7975403757483657,
+                "std": 0.02373731995323877
+            }
+        },
+        "DoS GoldenEye": {
+            "recall": {
+                "method": "FedProx",
+                "mean": 0.5755844155844156,
+                "std": 0.06681152390693346
+            },
+            "f1": {
+                "method": "FedProx",
+                "mean": 0.6883917772181805,
+                "std": 0.0618261554724161
+            }
+        },
+        "DoS Hulk": {
+            "recall": {
+                "method": "FedAvg70",
+                "mean": 0.8208696319607016,
+                "std": 0.061648772035828914
+            },
+            "f1": {
+                "method": "FedAvg70",
+                "mean": 0.883995197033769,
+                "std": 0.031553291242430774
+            }
+        },
+        "FTP-Patator": {
+            "recall": {
+                "method": "Median",
+                "mean": 0.4238095238095238,
+                "std": 0.30012967616053043
+            },
+            "f1": {
+                "method": "Median",
+                "mean": 0.5213207697701343,
+                "std": 0.35697010010551683
+            }
+        },
+        "PortScan": {
+            "recall": {
+                "method": "FedAvg70",
+                "mean": 0.055897699713382806,
+                "std": 0.07653040853806956
+            },
+            "f1": {
+                "method": "FedAvg70",
+                "mean": 0.09805606754998245,
+                "std": 0.13423351590911542
+            }
+        }
+    }
+}

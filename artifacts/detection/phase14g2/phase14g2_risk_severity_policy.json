@@ -1,0 +1,43 @@
+{
+    "phase": "14G2",
+    "policy_version": "phase14g2_v1",
+    "risk_weights": {
+        "rf": 0.2,
+        "fedprox70": 0.3,
+        "cnn_bilstm": 0.35,
+        "autoencoder": 0.15
+    },
+    "severity_thresholds_for_full_fusion": {
+        "normal_max": 0.2,
+        "low_max": 0.4,
+        "medium_max": 0.6,
+        "high_max": 0.8
+    },
+    "rf_fast_attack_threshold": 0.95,
+    "fast_path": {
+        "condition": "RF predicts non-BENIGN and confidence >= 0.95",
+        "classification": "Random Forest predicted class",
+        "confidence": "Random Forest confidence",
+        "risk_score": null,
+        "evidence_score": "Random Forest confidence",
+        "severity": "HIGH",
+        "severity_basis": "Operational high-confidence known-attack policy, not ensemble-risk thresholding.",
+        "critical_allowed": false,
+        "risk_score_comparable_to_full_fusion": false
+    },
+    "deep_path": {
+        "models": [
+            "Random Forest",
+            "Personalized Autoencoder",
+            "FedProx70 MLP",
+            "Frozen Round-20 CNN-BiLSTM"
+        ],
+        "risk_score": "weighted four-model ensemble risk",
+        "severity": "NORMAL/LOW/MEDIUM/HIGH/CRITICAL from frozen risk thresholds",
+        "critical_allowed": true,
+        "risk_score_comparable_to_full_fusion": true
+    },
+    "critical_requires_full_fusion": true,
+    "locked_test_used": false,
+    "scientific_label": "SOURCE-ORDERED CNN-BiLSTM sequences; NOT timestamp-confirmed temporal sequences."
+}

@@ -1,0 +1,7 @@
+dataset,class_id,class_name,sequences,percentage
+global_train,0,BENIGN,58144,58.144
+global_train,1,DDoS,10223,10.223
+global_train,2,DoS GoldenEye,740,0.74
+global_train,3,DoS Hulk,18202,18.201999999999998
+global_train,4,FTP-Patator,554,0.5539999999999999
+global_train,5,PortScan,12137,12.137

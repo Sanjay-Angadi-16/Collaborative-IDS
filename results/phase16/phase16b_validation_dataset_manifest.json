@@ -1,0 +1,150 @@
+{
+    "phase": "16B",
+    "version": "phase16b_v1",
+    "validation_scenarios": [
+        {
+            "scenario_id": "P1_SHARED_SOURCE_MULTI_CLASS",
+            "description": "One pseudonymous source appears across three clients and three attack classes.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "NORMAL",
+            "alert_count": 3
+        },
+        {
+            "scenario_id": "P2_SHARED_DESTINATION_MULTI_SOURCE",
+            "description": "Four distinct pseudonymous sources across four clients target one destination/port.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R3_SHARED_DESTINATION_MULTI_SOURCE"
+            ],
+            "exceptional_case": "NORMAL",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "P3_SHARED_SOURCE_SAME_CLASS",
+            "description": "One source appears across two clients but only one attack class.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE"
+            ],
+            "exceptional_case": "NORMAL",
+            "alert_count": 2
+        },
+        {
+            "scenario_id": "P4_FOUR_CLIENT_MULTI_CLASS",
+            "description": "One source appears across four clients and four classes within 30 seconds.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "NORMAL",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "N1_SHARED_SOURCE_OUTSIDE_WINDOW",
+            "description": "Same source appears on two clients but 95 seconds apart.",
+            "expected_correlated": false,
+            "expected_rules": [],
+            "exceptional_case": "NORMAL",
+            "alert_count": 2
+        },
+        {
+            "scenario_id": "N2_INSUFFICIENT_SOURCES",
+            "description": "Only two sources target the same destination/port.",
+            "expected_correlated": false,
+            "expected_rules": [],
+            "exceptional_case": "NORMAL",
+            "alert_count": 2
+        },
+        {
+            "scenario_id": "N3_INDEPENDENT_ALERTS",
+            "description": "Independent clients, sources and destinations should not correlate.",
+            "expected_correlated": false,
+            "expected_rules": [],
+            "exceptional_case": "NORMAL",
+            "alert_count": 3
+        },
+        {
+            "scenario_id": "N4_SINGLE_CLIENT_REPETITION",
+            "description": "Repeated source on one client must not become a cross-client incident.",
+            "expected_correlated": false,
+            "expected_rules": [],
+            "exceptional_case": "NORMAL",
+            "alert_count": 3
+        }
+    ],
+    "exceptional_scenarios": [
+        {
+            "scenario_id": "E0_NORMAL_REFERENCE",
+            "description": "Unperturbed four-client coordinated campaign.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "NORMAL_REFERENCE",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "E1_DELAYED_ARRIVAL",
+            "description": "One client's alert arrives much later, but event_time remains correct.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "DELAYED_ALERTS",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "E2_OUT_OF_ORDER",
+            "description": "Alerts are supplied in non-chronological order.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "OUT_OF_ORDER",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "E3_CLOCK_SKEW_35S",
+            "description": "Client 4 clock is 35 seconds ahead; campaign should still be detectable.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "CLOCK_SKEW",
+            "alert_count": 4
+        },
+        {
+            "scenario_id": "E4_MISSING_ONE_ALERT",
+            "description": "One of four client alerts is missing; three-client evidence remains.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "MISSING_ALERT",
+            "alert_count": 3
+        },
+        {
+            "scenario_id": "E5_EXACT_DUPLICATE_REPLAY",
+            "description": "Exact duplicate alert_id is replayed; deduplication must avoid evidence inflation.",
+            "expected_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "exceptional_case": "DUPLICATE_REPLAY",
+            "alert_count": 5
+        }
+    ],
+    "raw_identifiers_used": false,
+    "locked_test_used": false
+}

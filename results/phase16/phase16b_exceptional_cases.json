@@ -1,0 +1,162 @@
+{
+    "overall": {
+        "tp": 6,
+        "fp": 0,
+        "tn": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "false_positive_rate": 0.0,
+        "false_correlation_rate": 0.0
+    },
+    "per_rule": {
+        "R1_CROSS_CLIENT_SHARED_SOURCE": {
+            "tp": 6,
+            "fp": 0,
+            "tn": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        },
+        "R2_MULTI_CLASS_SHARED_SOURCE": {
+            "tp": 6,
+            "fp": 0,
+            "tn": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        },
+        "R3_SHARED_DESTINATION_MULTI_SOURCE": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 6,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "accuracy": 1.0,
+            "false_positive_rate": 0.0,
+            "false_correlation_rate": 0.0
+        }
+    },
+    "scenarios": [
+        {
+            "scenario_id": "E0_NORMAL_REFERENCE",
+            "description": "Unperturbed four-client coordinated campaign.",
+            "exceptional_case": "NORMAL_REFERENCE",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "E1_DELAYED_ARRIVAL",
+            "description": "One client's alert arrives much later, but event_time remains correct.",
+            "exceptional_case": "DELAYED_ALERTS",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "E2_OUT_OF_ORDER",
+            "description": "Alerts are supplied in non-chronological order.",
+            "exceptional_case": "OUT_OF_ORDER",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "E3_CLOCK_SKEW_35S",
+            "description": "Client 4 clock is 35 seconds ahead; campaign should still be detectable.",
+            "exceptional_case": "CLOCK_SKEW",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "E4_MISSING_ONE_ALERT",
+            "description": "One of four client alerts is missing; three-client evidence remains.",
+            "exceptional_case": "MISSING_ALERT",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 0,
+            "passed": true
+        },
+        {
+            "scenario_id": "E5_EXACT_DUPLICATE_REPLAY",
+            "description": "Exact duplicate alert_id is replayed; deduplication must avoid evidence inflation.",
+            "exceptional_case": "DUPLICATE_REPLAY",
+            "expected_correlated": true,
+            "predicted_correlated": true,
+            "expected_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "predicted_rules": [
+                "R1_CROSS_CLIENT_SHARED_SOURCE",
+                "R2_MULTI_CLASS_SHARED_SOURCE"
+            ],
+            "event_count": 2,
+            "duplicates_removed": 1,
+            "passed": true
+        }
+    ]
+}

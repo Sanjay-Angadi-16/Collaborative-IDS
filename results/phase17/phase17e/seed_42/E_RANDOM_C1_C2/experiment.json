@@ -1,0 +1,14 @@
+{
+    "experiment_id": "E_RANDOM_C1_C2",
+    "attack_type": "RANDOM",
+    "magnitude": 5.0,
+    "malicious_clients": [
+        1,
+        2
+    ],
+    "malicious_ratio": 0.4,
+    "specialized_attacks": [
+        "DoS Hulk",
+        "DDoS"
+    ]
+}

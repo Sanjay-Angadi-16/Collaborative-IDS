@@ -1,0 +1,7 @@
+class,protected_minority,baseline_70_recall,selected_subset_recall,absolute_delta,retention_ratio
+BENIGN,False,1.0,1.0,0.0,1.0
+DDoS,False,0.0,0.0,0.0,
+DoS GoldenEye,True,0.0,0.0,0.0,
+DoS Hulk,False,0.0,0.0,0.0,
+FTP-Patator,True,0.0,0.0,0.0,
+PortScan,True,0.0,0.0,0.0,

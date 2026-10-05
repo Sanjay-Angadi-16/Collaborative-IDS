@@ -1,0 +1,20 @@
+{
+    "phase": "15E1",
+    "collector_endpoint": "/api/alerts",
+    "health_endpoint": "/health",
+    "collector_validation_pipeline": [
+        "raw request bytes",
+        "optional SHA-256 equality check",
+        "canonical JSON deserialization",
+        "Phase15A schema validation",
+        "Phase15C leakage audit",
+        "duplicate alert_id rejection",
+        "canonical privacy-safe JSONL persistence"
+    ],
+    "transport_security": "localhost HTTP smoke test only",
+    "message_sha256_authentication": false,
+    "message_sha256_purpose": "integrity/tamper detection only",
+    "tls_required_next": true,
+    "phase15e2": "HTTPS/TLS transport",
+    "locked_test_used": false
+}

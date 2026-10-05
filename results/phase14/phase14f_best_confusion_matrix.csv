@@ -1,0 +1,7 @@
+,pred_BENIGN,pred_DDoS,pred_DoS GoldenEye,pred_DoS Hulk,pred_FTP-Patator,pred_PortScan
+true_BENIGN,39011,0,0,0,0,0
+true_DDoS,28,2293,0,65,0,0
+true_DoS GoldenEye,183,0,44,58,0,0
+true_DoS Hulk,1706,73,0,2768,0,0
+true_FTP-Patator,239,0,0,0,11,0
+true_PortScan,1592,0,0,0,0,1929

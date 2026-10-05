@@ -1,0 +1,12 @@
+{
+    "experiment_id": "E_RANDOM_C5",
+    "attack_type": "RANDOM",
+    "magnitude": 5.0,
+    "malicious_clients": [
+        5
+    ],
+    "malicious_ratio": 0.2,
+    "specialized_attacks": [
+        "FTP-Patator"
+    ]
+}

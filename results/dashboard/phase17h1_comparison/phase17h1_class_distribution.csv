@@ -1,0 +1,19 @@
+experiment,class_id,class_name,rows,share
+A_balanced_round_robin,0,BENIGN,169,0.169
+A_balanced_round_robin,1,DDoS,166,0.166
+A_balanced_round_robin,2,DoS GoldenEye,166,0.166
+A_balanced_round_robin,3,DoS Hulk,167,0.167
+A_balanced_round_robin,4,FTP-Patator,166,0.166
+A_balanced_round_robin,5,PortScan,166,0.166
+B_natural_round_robin,0,BENIGN,768,0.768
+B_natural_round_robin,1,DDoS,43,0.043
+B_natural_round_robin,2,DoS GoldenEye,3,0.003
+B_natural_round_robin,3,DoS Hulk,95,0.095
+B_natural_round_robin,4,FTP-Patator,4,0.004
+B_natural_round_robin,5,PortScan,87,0.087
+C_natural_phase14h_all_clients_unique_sample_distribution,0,BENIGN,768,0.768
+C_natural_phase14h_all_clients_unique_sample_distribution,1,DDoS,43,0.043
+C_natural_phase14h_all_clients_unique_sample_distribution,2,DoS GoldenEye,3,0.003
+C_natural_phase14h_all_clients_unique_sample_distribution,3,DoS Hulk,95,0.095
+C_natural_phase14h_all_clients_unique_sample_distribution,4,FTP-Patator,4,0.004
+C_natural_phase14h_all_clients_unique_sample_distribution,5,PortScan,87,0.087

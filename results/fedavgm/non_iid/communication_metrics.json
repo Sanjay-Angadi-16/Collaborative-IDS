@@ -1,0 +1,12 @@
+{
+    "phase4_parameter_count": 60614,
+    "fedavgm_parameter_count": 52166,
+    "parameter_reduction_ratio": 0.1393737420397928,
+    "phase4_payload_mib": 0.23122406005859375,
+    "fedavgm_payload_mib": 0.19899749755859375,
+    "phase4_total_communication_mib": 23.122406005859375,
+    "fedavgm_total_communication_mib": 19.899749755859375,
+    "communication_reduction_ratio": 0.1393737420397928,
+    "server_momentum_extra_client_communication": 0,
+    "note": "Server momentum is maintained centrally, therefore FedAvgM adds no extra client-server payload under this implementation."
+}

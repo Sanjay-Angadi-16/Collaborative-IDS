@@ -1,0 +1,9 @@
+phase,name,passed,locked_test_used,status_basis,path
+15A,Privacy-aware alert schema,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15a_schema_audit.json
+15B,HMAC-SHA256 pseudonymization,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15b_pseudonymization_audit.json
+15C,Allowlist privacy filter + leakage audit,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15c_privacy_filter_audit.json
+15D,Real Phase14G2 privacy-safe serialization integration,True,False,derived from Phase15D integration checks,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15d_integration_audit.json
+15E1,Local collector + sender HTTP smoke test,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15e1_smoke_test_audit.json
+15E2,HTTPS/TLS + mutual-TLS authentication smoke test,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15e2_mtls_smoke_test_audit.json
+15F,Central persistence/indexing + multi-client ingestion,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15f_persistence_audit.json
+15G,Privacy/retention + central-store performance evaluation,True,False,direct status flag,A:\MP\Federated_Collaborative_IDS_Starter\federated_collaborative_ids\results\phase15\phase15g_privacy_retention_audit.json

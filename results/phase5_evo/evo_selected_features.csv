@@ -1,0 +1,11 @@
+feature_index,feature_name
+7,Fwd Packet Length Min
+10,Bwd Packet Length Max
+14,Flow Bytes/s
+19,Flow IAT Min
+42,SYN Flag Count
+48,ECE Flag Count
+54,Subflow Fwd Packets
+57,Subflow Bwd Bytes
+58,Init_Win_bytes_forward
+66,Idle Mean

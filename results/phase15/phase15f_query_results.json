@@ -1,0 +1,171 @@
+{
+    "count_by_client": [
+        {
+            "client_id": "client_1",
+            "alert_count": 4
+        },
+        {
+            "client_id": "client_2",
+            "alert_count": 4
+        },
+        {
+            "client_id": "client_3",
+            "alert_count": 4
+        },
+        {
+            "client_id": "client_4",
+            "alert_count": 4
+        },
+        {
+            "client_id": "client_5",
+            "alert_count": 4
+        }
+    ],
+    "count_by_classification": [
+        {
+            "classification": "DDoS",
+            "alert_count": 4
+        },
+        {
+            "classification": "DoS GoldenEye",
+            "alert_count": 4
+        },
+        {
+            "classification": "DoS Hulk",
+            "alert_count": 4
+        },
+        {
+            "classification": "FTP-Patator",
+            "alert_count": 4
+        },
+        {
+            "classification": "PortScan",
+            "alert_count": 4
+        }
+    ],
+    "count_by_severity": [
+        {
+            "severity": "CRITICAL",
+            "alert_count": 5
+        },
+        {
+            "severity": "HIGH",
+            "alert_count": 15
+        }
+    ],
+    "shared_source_token_match_count": 5,
+    "shared_source_clients": [
+        "client_1",
+        "client_2",
+        "client_3",
+        "client_4",
+        "client_5"
+    ],
+    "recent_alerts": [
+        {
+            "alert_id": "dd086b10-68da-48c5-a6a8-721cdf2990a9",
+            "client_id": "client_5",
+            "event_time": "2026-09-14T10:16:18+00:00",
+            "classification": "FTP-Patator",
+            "severity": "HIGH",
+            "confidence": 0.89,
+            "risk_score": 0.76,
+            "evidence_score": 0.76,
+            "risk_mode": "FULL_FOUR_MODEL_FUSION",
+            "decision_source": "CNN-BiLSTM",
+            "processing_path": "DEEP_ANALYSIS",
+            "source_token": "src_2409103d5d9203d634c127da979fc24b",
+            "destination_token": "dst_590ee80acba80180f8ba6bdcb8ccb04f",
+            "protocol": "TCP",
+            "destination_port": 443,
+            "model_version": "phase14_final",
+            "policy_version": "phase14g2_v1",
+            "privacy_version": "phase15_v1",
+            "schema_version": "phase15a_v1"
+        },
+        {
+            "alert_id": "5b2db982-c945-4934-b0cb-2e96e253a53a",
+            "client_id": "client_5",
+            "event_time": "2026-09-14T10:16:17+00:00",
+            "classification": "FTP-Patator",
+            "severity": "CRITICAL",
+            "confidence": 0.91,
+            "risk_score": 0.83,
+            "evidence_score": 0.83,
+            "risk_mode": "FULL_FOUR_MODEL_FUSION",
+            "decision_source": "CNN-BiLSTM",
+            "processing_path": "DEEP_ANALYSIS",
+            "source_token": "src_5c6df2097f425e7f6d46ee69ddefbb0d",
+            "destination_token": "dst_590ee80acba80180f8ba6bdcb8ccb04f",
+            "protocol": "TCP",
+            "destination_port": 443,
+            "model_version": "phase14_final",
+            "policy_version": "phase14g2_v1",
+            "privacy_version": "phase15_v1",
+            "schema_version": "phase15a_v1"
+        },
+        {
+            "alert_id": "58597cd0-f26b-4056-9a18-6cf1ac3e9f67",
+            "client_id": "client_5",
+            "event_time": "2026-09-14T10:16:16+00:00",
+            "classification": "FTP-Patator",
+            "severity": "HIGH",
+            "confidence": 0.985,
+            "risk_score": null,
+            "evidence_score": 0.985,
+            "risk_mode": "FAST_PATH_RF_CONFIDENCE",
+            "decision_source": "Random Forest",
+            "processing_path": "FAST_ATTACK_PATH",
+            "source_token": "src_5c6df2097f425e7f6d46ee69ddefbb0d",
+            "destination_token": "dst_590ee80acba80180f8ba6bdcb8ccb04f",
+            "protocol": "TCP",
+            "destination_port": 443,
+            "model_version": "phase14_final",
+            "policy_version": "phase14g2_v1",
+            "privacy_version": "phase15_v1",
+            "schema_version": "phase15a_v1"
+        },
+        {
+            "alert_id": "2aaddaec-ad64-4ffc-b461-6e440c84ac79",
+            "client_id": "client_5",
+            "event_time": "2026-09-14T10:16:15+00:00",
+            "classification": "FTP-Patator",
+            "severity": "HIGH",
+            "confidence": 0.995,
+            "risk_score": null,
+            "evidence_score": 0.995,
+            "risk_mode": "FAST_PATH_RF_CONFIDENCE",
+            "decision_source": "Random Forest",
+            "processing_path": "FAST_ATTACK_PATH",
+            "source_token": "src_5c6df2097f425e7f6d46ee69ddefbb0d",
+            "destination_token": "dst_590ee80acba80180f8ba6bdcb8ccb04f",
+            "protocol": "TCP",
+            "destination_port": 443,
+            "model_version": "phase14_final",
+            "policy_version": "phase14g2_v1",
+            "privacy_version": "phase15_v1",
+            "schema_version": "phase15a_v1"
+        },
+        {
+            "alert_id": "9022e1ce-bc07-43a1-a3a1-f64b23d2e27b",
+            "client_id": "client_4",
+            "event_time": "2026-09-14T10:16:08+00:00",
+            "classification": "DoS GoldenEye",
+            "severity": "HIGH",
+            "confidence": 0.89,
+            "risk_score": 0.76,
+            "evidence_score": 0.76,
+            "risk_mode": "FULL_FOUR_MODEL_FUSION",
+            "decision_source": "CNN-BiLSTM",
+            "processing_path": "DEEP_ANALYSIS",
+            "source_token": "src_2409103d5d9203d634c127da979fc24b",
+            "destination_token": "dst_590ee80acba80180f8ba6bdcb8ccb04f",
+            "protocol": "TCP",
+            "destination_port": 443,
+            "model_version": "phase14_final",
+            "policy_version": "phase14g2_v1",
+            "privacy_version": "phase15_v1",
+            "schema_version": "phase15a_v1"
+        }
+    ]
+}

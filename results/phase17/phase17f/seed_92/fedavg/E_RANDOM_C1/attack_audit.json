@@ -1,0 +1,9 @@
+{
+  "all_random_events_seeded": true,
+  "attack_type": "RANDOM",
+  "magnitude": 5.0,
+  "malicious_events": 10,
+  "max_norm_ratio_abs_error": 2.4180017987873725e-09,
+  "mean_abs_cosine_with_legitimate_update": 0.003127176924158414,
+  "passed": true
+}

@@ -1,0 +1,71 @@
+feature_index,feature_name,selected
+0,Destination Port,1
+1,Flow Duration,0
+2,Total Fwd Packets,0
+3,Total Backward Packets,1
+4,Total Length of Fwd Packets,0
+5,Total Length of Bwd Packets,0
+6,Fwd Packet Length Max,0
+7,Fwd Packet Length Min,0
+8,Fwd Packet Length Mean,1
+9,Fwd Packet Length Std,0
+10,Bwd Packet Length Max,0
+11,Bwd Packet Length Min,0
+12,Bwd Packet Length Mean,0
+13,Bwd Packet Length Std,1
+14,Flow Bytes/s,0
+15,Flow Packets/s,1
+16,Flow IAT Mean,0
+17,Flow IAT Std,0
+18,Flow IAT Max,0
+19,Flow IAT Min,0
+20,Fwd IAT Total,0
+21,Fwd IAT Mean,0
+22,Fwd IAT Std,1
+23,Fwd IAT Max,0
+24,Fwd IAT Min,1
+25,Bwd IAT Total,0
+26,Bwd IAT Mean,0
+27,Bwd IAT Std,1
+28,Bwd IAT Max,0
+29,Bwd IAT Min,0
+30,Fwd PSH Flags,0
+31,Fwd URG Flags,0
+32,Fwd Header Length,0
+33,Bwd Header Length,0
+34,Fwd Packets/s,0
+35,Bwd Packets/s,1
+36,Min Packet Length,0
+37,Max Packet Length,0
+38,Packet Length Mean,0
+39,Packet Length Std,0
+40,Packet Length Variance,0
+41,FIN Flag Count,1
+42,SYN Flag Count,1
+43,RST Flag Count,0
+44,PSH Flag Count,0
+45,ACK Flag Count,1
+46,URG Flag Count,1
+47,CWE Flag Count,0
+48,ECE Flag Count,0
+49,Down/Up Ratio,0
+50,Average Packet Size,0
+51,Avg Fwd Segment Size,0
+52,Avg Bwd Segment Size,0
+53,Fwd Header Length.1,0
+54,Subflow Fwd Packets,1
+55,Subflow Fwd Bytes,0
+56,Subflow Bwd Packets,0
+57,Subflow Bwd Bytes,0
+58,Init_Win_bytes_forward,0
+59,Init_Win_bytes_backward,0
+60,act_data_pkt_fwd,0
+61,min_seg_size_forward,0
+62,Active Mean,1
+63,Active Std,0
+64,Active Max,0
+65,Active Min,0
+66,Idle Mean,0
+67,Idle Std,0
+68,Idle Max,1
+69,Idle Min,1
